@@ -27,8 +27,6 @@ Template: /Kitura/server/Extensions.swift.vmg
 
 import Foundation
 
-
-    
     func outputJson(data: String) throws {
         addHeader("content-type", value: "application/json")
         addHeader("Access-Control-Allow-Origin", value:"*")
@@ -72,7 +70,7 @@ extension NSDate {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 8.35 minutes to type the 835+ characters in this file.
+approximately 8.29 minutes to type the 829+ characters in this file.
  */
 
 
