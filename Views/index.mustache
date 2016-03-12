@@ -19,35 +19,31 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     Package.swift
-Description:  Info.plist
+Filename:     index.mustache
+Description:  Swift Server
 Project:      TodoList
-Template: /Kitura/server/Package.swift.vmg
+Template: /Kitura/server/index.mustache.vmg
  */
-import PackageDescription
-
-let package = Package(
-    name: "TodoList",
-    targets: [
-        Target(
-            name: "TodoList",
-            dependencies: []
-        )
-    ],
-    dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura-router.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/LoggerAPI.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/Kitura-MustacheTemplateEngine.git",
-            majorVersion: 0, minor: 0),
-    ],
-    exclude: ["Makefile", "Kitura-CI"])
+<html>
+<body>
+<h1>TodoList</h1>
+engineered with<br>
+<img src="../static/img/generatron.png" height="100"/>
+<div class="footer">
+<div class="container">
+<div>Copyright NGEOSONE LLC 2016</div>
+</div>
+</div>
+</center>
+</body>
+</html>
+    
 
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.87 minutes to type the 687+ characters in this file.
+approximately 2.5 minutes to type the 250+ characters in this file.
  */
 
 

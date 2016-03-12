@@ -42,56 +42,67 @@ import Foundation
     import Mustache
 #endif
 
+// This route executes the echo middleware
+Router.sharedInstance.sharedInstance.use("/*", middleware: BasicAuthMiddleware())
 
-// Example using templating of strings
-#if os(OSX) // Mustache implented for OSX only yet
+
+Router.sharedInstance.sharedInstance.use("/static/*", middleware: StaticFileServer())
+Router.sharedInstance.setTemplateEngine(MustacheTemplateEngine())
+
 Router.sharedInstance.get("/") { _, response, next in
     defer {
         next()
     }
     do {
-
-        let template = try Template(string: "Hello {{name}}\n" +
-            "Your beard trimmer will arrive on {{format(date)}}.\n" +
-            "{{#late}}" +
-            "Well, on {{format(realDate)}} because of a Martian attack." +
-            "{{/late}}")
-        // Let template format dates with `{{format(...)}}`
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .MediumStyle
-        template.registerInBaseContext("format", Box(dateFormatter))
-
-        // The rendered data
-        let data = [
+        var context: [String: Any] = [
             "name": "Arthur",
             "date": NSDate(),
             "realDate": NSDate().dateByAddingTimeInterval(60*60*24*3),
             "late": true
         ]
-        var rendering = ""
-        
-        do {
-            rendering = try template.render(Box(data))
-        }
-        catch {
-            Log.error("Failed to render mustache template")
-        }
 
-        do {
-            try response.status(HttpStatusCode.OK).end(rendering)
-        }
-        catch {
-            Log.error("Failed to send response")
-        }
-    }
-    catch {
-        Log.error("Failed to create mustache template")
+        // Let template format dates with `{{format(...)}}`
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        context["format"] = dateFormatter
+
+        try response.render("index", context: context).end()
+    } catch {
+        Log.error("Failed to render template \(error)")
     }
 }
+
+// Handles any errors that get set
+Router.sharedInstance.error { request, response, next in
+  response.setHeader("Content-Type", value: "text/plain; charset=utf-8")
+    do {
+        try response.send("Caught the error: \(response.error!.localizedDescription)").end()
+    }
+    catch {}
+  next()
+}
+
+// A custom Not found handler
+Router.sharedInstance.all { request, response, next in
+    if  response.getStatusCode() == .NOT_FOUND  {
+        // Remove this wrapping if statement, if you want to handle requests to / as well
+        if  request.originalUrl != "/"  &&  request.originalUrl != ""  {
+            do {
+                try response.send("Route not found in Sample application!").end()
+            }
+            catch {}
+        }
+    }
+
+    next()
+}
+
+
+// Example using templating of strings
+#if os(OSX) // Mustache implemented for OSX only yet
+
 #endif
 
-
-// Listen on port 9000
 let server = HttpServer.listen(Config.sharedInstance.port,delegate: Router.sharedInstance)
 
 Server.run()
@@ -99,7 +110,7 @@ Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 17.33 minutes to type the 1733+ characters in this file.
+approximately 21.58 minutes to type the 2158+ characters in this file.
  */
 
 

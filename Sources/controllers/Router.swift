@@ -19,35 +19,28 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     Package.swift
-Description:  Info.plist
+Filename:     Router.swift
+Description:  Router Configuration
 Project:      TodoList
-Template: /Kitura/server/Package.swift.vmg
+Template: /Kitura/server/Router.swift.vmg
  */
-import PackageDescription
 
-let package = Package(
-    name: "TodoList",
-    targets: [
-        Target(
-            name: "TodoList",
-            dependencies: []
-        )
-    ],
-    dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura-router.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/LoggerAPI.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/Kitura-MustacheTemplateEngine.git",
-            majorVersion: 0, minor: 0),
-    ],
-    exclude: ["Makefile", "Kitura-CI"])
-
+/**
+* RouterMiddleware can be used for intercepting requests and handling custom behavior
+* such as authentication and other routing
+*/
+class Router  {
+    static let sharedInstance = Router()
+    var todoItem : TodoItemController!
+    init(){
+      todoItem = TodoItemController()
+    }
+}
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.87 minutes to type the 687+ characters in this file.
+approximately 3.01 minutes to type the 301+ characters in this file.
  */
 
 

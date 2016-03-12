@@ -19,35 +19,37 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     Package.swift
-Description:  Info.plist
+Filename:     RepositorySQLite.swift
+Description:  Base Repository class
 Project:      TodoList
-Template: /Kitura/server/Package.swift.vmg
+Template: /Kitura/server/RepositorySQLite.swift.vmg
  */
-import PackageDescription
 
-let package = Package(
-    name: "TodoList",
-    targets: [
-        Target(
-            name: "TodoList",
-            dependencies: []
-        )
-    ],
-    dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura-router.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/LoggerAPI.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/Kitura-MustacheTemplateEngine.git",
-            majorVersion: 0, minor: 0),
-    ],
-    exclude: ["Makefile", "Kitura-CI"])
+enum RepositoryError : ErrorType {
+    case Select(Int)
+    case Insert(Int)
+    case Update(Int)
+    case Delete(Int)
+    case CreateTable(Int)
+}
+
+class RepositorySQLite {
+    let db: SQLite!
+    
+    init(db: SQLite) {
+        self.db = db
+    }
+    
+    func lastInsertId() -> Int {
+        return db.lastInsertRowID()
+    }
+}
 
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.87 minutes to type the 687+ characters in this file.
+approximately 3.51 minutes to type the 351+ characters in this file.
  */
 
 
