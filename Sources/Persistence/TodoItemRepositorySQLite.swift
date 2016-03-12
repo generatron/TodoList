@@ -28,41 +28,41 @@ Template: /Kitura/server/EntityRepositorySQLite.swift.vm
 import SQLite
 class TodoItemSQLiteRepository : TodoItemRepository,RepositorySQLite {
 func createStorage() throws ->  Int {
-   let rs = try db.query("CREATE TABLE IF NOT EXISTS TodoItem (id TEXT, order NUMBER, title TEXT, url TEXT, PRIMARY KEY (id))")
-   let errorCode = db.errorCode()
-        if errorCode > 0 {
-            throw RepositoryError.CreateTable(errorCode)
-      }
-      return 0;
+	do {
+		let sqlite = self.db
+		defer {
+			sqlite.close()
+		}
+		try sqlite.execute("CREATE TABLE IF NOT EXISTS TodoItem (id TEXT, order NUMBER, title TEXT, url TEXT, PRIMARY KEY (id))")
+	} catch let e {
+		print("Exception creating SQLite Table for TodoItem \(e)")
+	}
+   
 }
 func insert(entity: TodoItem) throws -> Int {
        	let sql = "INSERT INTO TodoItem(order,title,url) VALUES ( :order, :title, :url)"
-       	
-       	let statement = SQLiteStmt(db)
+   do {    	
+       	let sqlite = self.db
 		defer {
-			statement.close()
+			sqlite.close()
 		}
-		let prepRes = statement.prepare(sql)
-		if(prepRes){
-	statement.bindParam(entity.completed_id)
-	statement.bindParam(entity.id)
-	statement.bindParam(entity.order)
-	statement.bindParam(entity.title)
-	statement.bindParam(entity.url)
-
-
-let execRes = statement.execute()
-if(!execRes){
-	print("\(statement.errorCode()) \(statement.errorMessage()) - \(db.errorCode()) \(db.errorMessage())")
-	let errorCode = db.errorCode()
-	if errorCode > 0 {
-	    throw RepositoryError.Insert(errorCode)
-	}
-}
+		
+		
+    try sqlite.execute(sql) {
+	(statement:SQLiteStmt) -> () in
+				
+	statement.bind(1,entity.completed_id)
+	statement.bind(2,entity.id)
+	statement.bind(3,entity.order)
+	statement.bind(4,entity.title)
+	statement.bind(5,entity.url)
+   }
+							
+let lastId = sqlite.lastInsertRowID()
 	
-statement.close()
-}        
- return 0
+} catch let e {
+		print("Exception creating SQLite Table for TodoItem \(e)")
+}
 }
     
     func update(entity: TodoItem) throws -> Int {
@@ -187,7 +187,7 @@ statement.close()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 43.57 minutes to type the 4357+ characters in this file.
+approximately 41.89 minutes to type the 4189+ characters in this file.
  */
 
 
