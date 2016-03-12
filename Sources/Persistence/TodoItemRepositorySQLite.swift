@@ -51,11 +51,11 @@ func insert(entity: TodoItem) throws -> Int {
     try sqlite.execute(sql) {
 	(statement:SQLiteStmt) -> () in
 				
-	statement.bind(1,entity.completed)
-	statement.bind(2,entity.id)
-	statement.bind(3,entity.order)
-	statement.bind(4,entity.title)
-	statement.bind(5,entity.url)
+	statement.bind(":completed",entity.completed)
+	statement.bind(":id",entity.id)
+	statement.bind(":order",entity.order)
+	statement.bind(":title",entity.title)
+	statement.bind(":url",entity.url)
    }
 							
 let lastId = sqlite.lastInsertRowID()
@@ -187,7 +187,7 @@ statement.close()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 42.56 minutes to type the 4256+ characters in this file.
+approximately 42.9 minutes to type the 4290+ characters in this file.
  */
 
 
