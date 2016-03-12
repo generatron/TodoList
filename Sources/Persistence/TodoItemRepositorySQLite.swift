@@ -41,29 +41,19 @@ func createStorage() throws ->  Int {
 }
 func insert(entity: TodoItem) throws -> Int {
        	let sql = "INSERT INTO TodoItem(completed,order,title,url) VALUES ( :completed, :order, :title, :url)"
-   do {    	
-       	let sqlite = self.db
-		defer {
-			sqlite.close()
-		}
-		
-		
-    try sqlite.execute(sql) {
-	(statement:SQLiteStmt) -> () in
-				
-	statement.bind(":completed",entity.completed)
-	statement.bind(":id",entity.id)
-	statement.bind(":order",entity.order)
-	statement.bind(":title",entity.title)
-	statement.bind(":url",entity.url)
-   }
-							
-let lastId = sqlite.lastInsertRowID()
-	
-} catch let e {
-		print("Exception creating SQLite Table for TodoItem \(e)")
-}
-}
+        try db.execute(sql) { (stmt:SQLiteStmt) -> () in
+        	        	        	        	            try stmt.bind(":completed", entity.completed)
+                                	        	            try stmt.bind(":id", entity.id)
+                                	        	            try stmt.bind(":order", entity.order)
+                                	        	            try stmt.bind(":title", entity.title)
+                                	        	            try stmt.bind(":url", entity.url)
+                                }
+        let errCode = db.errCode()
+        if errCode > 0 {
+            throw RepositoryError.Insert(errCode)
+        }
+        return db.changes()
+    }
     
     func update(entity: TodoItem) throws -> Int {
         guard let id = entity.id else {
@@ -71,114 +61,86 @@ let lastId = sqlite.lastInsertRowID()
         }
         
         let sql = "UPDATE TodoItem SET completed=:completed ,order=:order ,title=:title ,url=:url WHERE id = ?"
-
-let statement = SQLiteStmt(db)
-		defer {
-			statement.close()
-		}
-		let prepRes = statement.prepare(sql)
-		
-		if(prepRes){		
-	statement.bindParam(entity.completed)
-	statement.bindParam(entity.id)
-	statement.bindParam(entity.order)
-	statement.bindParam(entity.title)
-	statement.bindParam(entity.url)
-
-let execRes = statement.execute()
-if(!execRes){
-	print("\(statement.errorCode()) \(statement.errorMessage()) - \(db.errorCode()) \(db.errorMessage())")
-	let errorCode = db.errorCode()
-	if errorCode > 0 {
-	    throw RepositoryError.Update(errorCode)
-	}
-}
-	
-statement.close()
-		}
+        try db.execute(sql) { (stmt:SQLiteStmt) -> () in
+                   	                    	            try stmt.bind(":completed", entity.completed)
+                                            	            try stmt.bind(":id", entity.id)
+                                            	            try stmt.bind(":order", entity.order)
+                                            	            try stmt.bind(":title", entity.title)
+                                            	            try stmt.bind(":url", entity.url)
+                                }
         
-		return 0
+        let errCode = db.errCode()
+        if errCode > 0 {
+            throw RepositoryError.Update(errCode)
+        }
+        
+        return db.changes()
     }
     
-	func delete(entity: TodoItem) throws -> Int {
-	    guard let id = entity.id else {
-	        return 0
-	    }
-	    
-	    let sql = "DELETE FROM todoItem WHERE id = ?"
-	    let statement = SQLiteStmt(db)
-		defer {
-			statement.close()
-		}
-		let prepRes = statement.prepare(sql)
-		
-		if(prepRes){
-			//HARDCODED might not exist, assuming it does, need to retrieve PK
-			statement.bindParam(entity.id)
-			
-			let execRes = statement.execute()
-	        if(!execRes){
-				print("\(statement.errorCode()) \(statement.errorMessage()) - \(db.errorCode()) \(db.errorMessage())")
-				let errorCode = db.errorCode()
-				if errorCode > 0 {
-	    			throw RepositoryError.Delete(errorCode)
-				}
-				statement.close()
-			}
-				
-		}
-		return 0
-	}
+    func delete(entity: TodoItem) throws -> Int {
+        guard let id = entity.id else {
+            return 0
+        }
+        
+        let sql = "DELETE FROM todoItem WHERE id = :id"
+        try db.execute(sql) { (stmt:SQLiteStmt) -> () in
+            try stmt.bind(":id", id)
+        }
+        
+        let errCode = db.errCode()
+        if errCode > 0 {
+            throw RepositoryError.Delete(errCode)
+        }
+        
+        return db.changes()
+    }
     
     func retrieve(id: Int) throws -> TodoItem? {
-        let sql = "SELECT completed,id,order,title,url FROM TodoItem"
-       	let statement = SQLiteStmt(db)
-		defer {
-			statement.close()
-		}
-		let prepRes = statement.prepare(sql)
-		
-		if(prepRes){
-			//HARDCODED might not exist, assuming it does, need to retrieve PK
-			statement.bindParam(entity.id)
-			
-			let execRes = statement.execute()
-            if(!execRes){
-            	let result = statement.results()
-            	
-            	let ok = results.forEachRow {
-				e in
-				print(e.flatMap({ (a:Any?) -> Any? in
-					return a!
-				}))
-				}
-			
-				print("\(statement.errorCode()) \(statement.errorMessage()) - \(db.errorCode()) \(db.errorMessage())")
-				let errorCode = db.errorCode()
-				if errorCode > 0 {
-	    			throw RepositoryError.Delete(errorCode)
-				}
-				statement.close()
-			}
-				
-		}
-	    return entity;
+        let sql = "SELECT * FROM todoItem WHERE id = :id"
+        var columns = [Any]()
+        try db.forEachRow(sql, doBindings: { (stmt:SQLiteStmt) -> () in
+            try stmt.bind(":id", id)
+        }) { (stmt:SQLiteStmt, r:Int) -> () in
+        	        	        	        	            columns.append(stmt.columnText(0))
+                                	        	            columns.append(stmt.columnText(1))
+                                	        	            columns.append(stmt.columnInt(2))
+                                	        	            columns.append(stmt.columnText(3))
+                                	        	            columns.append(stmt.columnText(4))
+                                }
+        
+        let errCode = db.errCode()
+        if errCode > 0 {
+            throw RepositoryError.Select(errCode)
+        }
+        
+        guard columns.count > 0 else {
+            return nil
+        }
+        
+        return TodoItem(
+        	        	                    	            completed: columns[0] as? ${dth.findType($language,$attribute)}
+                                            	            ,id: columns[1] as? ${dth.findType($language,$attribute)}
+                                            	            ,order: columns[2] as? ${dth.findType($language,$attribute)}
+                                            	            ,title: columns[3] as? ${dth.findType($language,$attribute)}
+                                            	            ,url: columns[4] as? ${dth.findType($language,$attribute)}
+                                )
     }
     
     func list() throws -> [TodoItem] {
         let sql = "SELECT * FROM todoItem "
         var entities = [TodoItem]()
-        var columns = [Any]()
         try db.forEachRow(sql, doBindings: { (stmt:SQLiteStmt) -> () in
             //nothing to see here
         }) { (stmt:SQLiteStmt, r:Int) -> () in
-                let entity =  TodoItem()
-		entity.completed = stmt.columnText(0)
-		entity.id = stmt.columnText(1)
-		entity.order = stmt.columnInt(2)
-		entity.title = stmt.columnText(3)
-		entity.url = stmt.columnText(4)
-        	    entities.append(entity)
+        	entities.append(
+        		TodoItem(
+        		        	                    	            completed: columns[0] as? ${dth.findType($language,$attribute)}
+                                            	            ,id: columns[1] as? ${dth.findType($language,$attribute)}
+                                            	            ,order: columns[2] as? ${dth.findType($language,$attribute)}
+                                            	            ,title: columns[3] as? ${dth.findType($language,$attribute)}
+                                            	            ,url: columns[4] as? ${dth.findType($language,$attribute)}
+                                		)
+        	)
         }
         return entities
     }
@@ -187,7 +149,7 @@ statement.close()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 42.9 minutes to type the 4290+ characters in this file.
+approximately 54.64 minutes to type the 5464+ characters in this file.
  */
 
 
