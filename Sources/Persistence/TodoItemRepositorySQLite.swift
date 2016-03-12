@@ -33,14 +33,14 @@ func createStorage() throws ->  Int {
 		defer {
 			sqlite.close()
 		}
-		try sqlite.execute("CREATE TABLE IF NOT EXISTS TodoItem (id TEXT, order NUMBER, title TEXT, url TEXT, PRIMARY KEY (id))")
+		try sqlite.execute("CREATE TABLE IF NOT EXISTS TodoItem (completed NUMBER, id TEXT, order NUMBER, title TEXT, url TEXT, PRIMARY KEY (id))")
 	} catch let e {
 		print("Exception creating SQLite Table for TodoItem \(e)")
 	}
    
 }
 func insert(entity: TodoItem) throws -> Int {
-       	let sql = "INSERT INTO TodoItem(order,title,url) VALUES ( :order, :title, :url)"
+       	let sql = "INSERT INTO TodoItem(completed,order,title,url) VALUES ( :completed, :order, :title, :url)"
    do {    	
        	let sqlite = self.db
 		defer {
@@ -51,7 +51,7 @@ func insert(entity: TodoItem) throws -> Int {
     try sqlite.execute(sql) {
 	(statement:SQLiteStmt) -> () in
 				
-	statement.bind(1,entity.completed_id)
+	statement.bind(1,entity.completed)
 	statement.bind(2,entity.id)
 	statement.bind(3,entity.order)
 	statement.bind(4,entity.title)
@@ -70,7 +70,7 @@ let lastId = sqlite.lastInsertRowID()
             return 0
         }
         
-        let sql = "UPDATE TodoItem SET order=:order ,title=:title ,url=:url WHERE id = ?"
+        let sql = "UPDATE TodoItem SET completed=:completed ,order=:order ,title=:title ,url=:url WHERE id = ?"
 
 let statement = SQLiteStmt(db)
 		defer {
@@ -79,7 +79,7 @@ let statement = SQLiteStmt(db)
 		let prepRes = statement.prepare(sql)
 		
 		if(prepRes){		
-	statement.bindParam(entity.completed_id)
+	statement.bindParam(entity.completed)
 	statement.bindParam(entity.id)
 	statement.bindParam(entity.order)
 	statement.bindParam(entity.title)
@@ -131,7 +131,7 @@ statement.close()
 	}
     
     func retrieve(id: Int) throws -> TodoItem? {
-        let sql = "SELECT id,order,title,url FROM TodoItem"
+        let sql = "SELECT completed,id,order,title,url FROM TodoItem"
        	let statement = SQLiteStmt(db)
 		defer {
 			statement.close()
@@ -173,7 +173,7 @@ statement.close()
             //nothing to see here
         }) { (stmt:SQLiteStmt, r:Int) -> () in
                 let entity =  TodoItem()
-		entity.completed = stmt.columnInt(0)
+		entity.completed = stmt.columnText(0)
 		entity.id = stmt.columnText(1)
 		entity.order = stmt.columnInt(2)
 		entity.title = stmt.columnText(3)
@@ -187,7 +187,7 @@ statement.close()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 41.89 minutes to type the 4189+ characters in this file.
+approximately 42.56 minutes to type the 4256+ characters in this file.
  */
 
 

@@ -99,7 +99,7 @@ func insert(entity: TodoItem) throws -> Int {
 	}
     
     func retrieve(id: Int) throws -> TodoItem? {
-        let sql = "SELECT id,order,title,url FROM TodoItem"
+        let sql = "SELECT completed,id,order,title,url FROM TodoItem"
        	let statement = SQLiteStmt(db)
 		defer {
 			statement.close()
@@ -141,7 +141,7 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 23.26 minutes to type the 2326+ characters in this file.
+approximately 23.36 minutes to type the 2336+ characters in this file.
  */
 
 
