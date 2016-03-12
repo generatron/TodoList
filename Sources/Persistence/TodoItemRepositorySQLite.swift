@@ -42,12 +42,12 @@ func createStorage() throws ->  Int {
 func insert(entity: TodoItem) throws -> Int {
        	let sql = "INSERT INTO TodoItem(completed,order,title,url) VALUES ( :completed, :order, :title, :url)"
         try db.execute(sql) { (stmt:SQLiteStmt) -> () in
-        	        	        	        	            try stmt.bind(":completed", entity.completed)
-                                	        	            try stmt.bind(":id", entity.id)
-                                	        	            try stmt.bind(":order", entity.order)
-                                	        	            try stmt.bind(":title", entity.title)
-                                	        	            try stmt.bind(":url", entity.url)
-                                }
+		try stmt.bind(":completed", entity.completed)
+		try stmt.bind(":id", entity.id)
+		try stmt.bind(":order", entity.order)
+		try stmt.bind(":title", entity.title)
+		try stmt.bind(":url", entity.url)
+        }
         let errCode = db.errCode()
         if errCode > 0 {
             throw RepositoryError.Insert(errCode)
@@ -62,12 +62,12 @@ func insert(entity: TodoItem) throws -> Int {
         
         let sql = "UPDATE TodoItem SET completed=:completed ,order=:order ,title=:title ,url=:url WHERE id = ?"
         try db.execute(sql) { (stmt:SQLiteStmt) -> () in
-                   	                    	            try stmt.bind(":completed", entity.completed)
-                                            	            try stmt.bind(":id", entity.id)
-                                            	            try stmt.bind(":order", entity.order)
-                                            	            try stmt.bind(":title", entity.title)
-                                            	            try stmt.bind(":url", entity.url)
-                                }
+		try stmt.bind(":completed", entity.completed)
+		try stmt.bind(":id", entity.id)
+		try stmt.bind(":order", entity.order)
+		try stmt.bind(":title", entity.title)
+		try stmt.bind(":url", entity.url)
+        }
         
         let errCode = db.errCode()
         if errCode > 0 {
@@ -101,12 +101,12 @@ func insert(entity: TodoItem) throws -> Int {
         try db.forEachRow(sql, doBindings: { (stmt:SQLiteStmt) -> () in
             try stmt.bind(":id", id)
         }) { (stmt:SQLiteStmt, r:Int) -> () in
-        	        	        	        	            columns.append(stmt.columnText(0))
-                                	        	            columns.append(stmt.columnText(1))
-                                	        	            columns.append(stmt.columnInt(2))
-                                	        	            columns.append(stmt.columnText(3))
-                                	        	            columns.append(stmt.columnText(4))
-                                }
+			columns.append(stmt.columnText(0))
+			columns.append(stmt.columnText(1))
+			columns.append(stmt.columnInt(2))
+			columns.append(stmt.columnText(3))
+			columns.append(stmt.columnText(4))
+        }
         
         let errCode = db.errCode()
         if errCode > 0 {
@@ -118,12 +118,12 @@ func insert(entity: TodoItem) throws -> Int {
         }
         
         return TodoItem(
-        	        	                    	            completed: columns[0] as? Bool
-                                            	            ,id: columns[1] as? String
-                                            	            ,order: columns[2] as? Int
-                                            	            ,title: columns[3] as? String
-                                            	            ,url: columns[4] as? String
-                                )
+completed: columns[0] as? Bool
+,id: columns[1] as? String
+,order: columns[2] as? Int
+,title: columns[3] as? String
+,url: columns[4] as? String
+        )
     }
     
     func list() throws -> [TodoItem] {
@@ -134,12 +134,12 @@ func insert(entity: TodoItem) throws -> Int {
         }) { (stmt:SQLiteStmt, r:Int) -> () in
         	entities.append(
         		TodoItem(
-        		        	                    	            completed: columns[0] as? Bool
-                                            	            ,id: columns[1] as? String
-                                            	            ,order: columns[2] as? Int
-                                            	            ,title: columns[3] as? String
-                                            	            ,url: columns[4] as? String
-                                		)
+completed: columns[0] as? Bool
+,id: columns[1] as? String
+,order: columns[2] as? Int
+,title: columns[3] as? String
+,url: columns[4] as? String
+        		)
         	)
         }
         return entities
@@ -149,7 +149,7 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 51.44 minutes to type the 5144+ characters in this file.
+approximately 36.91 minutes to type the 3691+ characters in this file.
  */
 
 
