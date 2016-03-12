@@ -25,20 +25,20 @@ Project:      TodoList
 Template: /Kitura/server/PersistenceManagerMySQL.swift.vmg
  */
 
-import PerfectLib
 import MySQL
 
-class PersistenceManagerMySQL {
+class PersistenceManagerMySQL : PersistenceManager {
 	static let sharedInstance = PersistenceManagerMySQL()
     var mysql = MySQL ()
+    
         var todoItemRepository :  TodoItemRepositoryMySQL! 
 	    init() {
+    }
+    
+    func connect() {
     	// Connect to Database.
     	let datasource : GeneratronDataSource = Config.sharedInstance.datasources["mysql"]!
-    	
     	do {
-    		
- 			 
         	 let connect = mysql.connect (datasource.host, user:datasource.user, password: datasource.password)
         if (connect)
         {
@@ -48,7 +48,7 @@ class PersistenceManagerMySQL {
 			
 			//Variables for TodoItem
 			todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
-			try todoItemRepository.createTable()
+			try todoItemRepository.createStorage()
 }
 }
 
@@ -63,7 +63,7 @@ class PersistenceManagerMySQL {
     	let sql = "SELECT 1"
 		let queryResult = db.query(sql)
 		if(!queryResult){
-			 return  mysql.connect (datasource.host, user:datasource.user, password: datasource.password)
+			connect()
 		}
 		return queryResult
     }
@@ -73,7 +73,7 @@ class PersistenceManagerMySQL {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 11.71 minutes to type the 1171+ characters in this file.
+approximately 11.1 minutes to type the 1110+ characters in this file.
  */
 
 

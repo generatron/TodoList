@@ -19,13 +19,12 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     RepositoryMySQL.swift
+Filename:     RepositoryMemory.swift
 Description:  Base Repository class
 Project:      TodoList
-Template: /Kitura/server/RepositoryMySQL.swift.vmg
+Template: /Kitura/server/RepositoryMemory.swift.vmg
  */
 
-import MySQL
 
 enum RepositoryError : ErrorType {
     case Select(UInt32)
@@ -37,11 +36,10 @@ enum RepositoryError : ErrorType {
     case Retrieve(UInt32)
 }
 
-class RepositoryMySQL {
-    let db: MySQL!
+class RepositoryMemory {
     
-    init(db: MySQL) {
-        self.db = db
+    init() {
+        
     }
     
 }
@@ -50,7 +48,7 @@ class RepositoryMySQL {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.51 minutes to type the 351+ characters in this file.
+approximately 2.97 minutes to type the 297+ characters in this file.
  */
 
 

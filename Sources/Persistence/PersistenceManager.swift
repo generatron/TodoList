@@ -19,38 +19,26 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     RepositoryMySQL.swift
-Description:  Base Repository class
+Filename:     PersistenceManager.swift
+Description:  Persistence code for for TodoItem
 Project:      TodoList
-Template: /Kitura/server/RepositoryMySQL.swift.vmg
+Template: /Kitura/server/PersistenceManager.swift.vm
  */
 
-import MySQL
+protocol PersistenceManager  {
 
-enum RepositoryError : ErrorType {
-    case Select(UInt32)
-    case Insert(UInt32)
-    case Update(UInt32)
-    case Delete(UInt32)
-    case CreateTable(UInt32)
-    case List(UInt32)
-    case Retrieve(UInt32)
+	func createStorage() throws ->  Int 
+	
+	func connect() throws
+	
+	func disconnect() throws 
+	    
 }
-
-class RepositoryMySQL {
-    let db: MySQL!
-    
-    init(db: MySQL) {
-        self.db = db
-    }
-    
-}
-
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.51 minutes to type the 351+ characters in this file.
+approximately 1.41 minutes to type the 141+ characters in this file.
  */
 
 

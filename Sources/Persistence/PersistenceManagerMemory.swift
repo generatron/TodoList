@@ -19,38 +19,43 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     RepositoryMySQL.swift
-Description:  Base Repository class
+Filename:     PersistenceManagerMemory.swift
+Description:  MySQL PersistenceManager: an Adapter to deal with persistence layer
 Project:      TodoList
-Template: /Kitura/server/RepositoryMySQL.swift.vmg
+Template: /Kitura/server/PersistenceManagerMemory.swift.vmg
  */
 
-import MySQL
+class PersistenceManagerMemory : PersistenceManager {
+	static let sharedInstance = PersistenceManagerMemory()
+    
+        var todoItemRepository :  TodoItemRepositoryMemory! 
+	    init() {
+    	do {
 
-enum RepositoryError : ErrorType {
-    case Select(UInt32)
-    case Insert(UInt32)
-    case Update(UInt32)
-    case Delete(UInt32)
-    case CreateTable(UInt32)
-    case List(UInt32)
-    case Retrieve(UInt32)
+			
+			//Variables for TodoItem
+			todoItemRepository = TodoItemRepositoryMemory();
+			try todoItemRepository.createStorage()
+}
 }
 
-class RepositoryMySQL {
-    let db: MySQL!
-    
-    init(db: MySQL) {
-        self.db = db
+    	} catch (let e){
+        	print("Failure connecting to MemoryDB")
+        	print(e)
+    	}
+    	
     }
     
+    func checkConnection() -> Bool {
+    	
+    }
 }
 
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.51 minutes to type the 351+ characters in this file.
+approximately 5.23 minutes to type the 523+ characters in this file.
  */
 
 
