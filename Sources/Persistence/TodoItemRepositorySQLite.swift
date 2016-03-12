@@ -118,11 +118,11 @@ func insert(entity: TodoItem) throws -> Int {
         }
         
         return TodoItem(
-        	        	                    	            completed: columns[0] as? ${dth.findType($language,$attribute)}
-                                            	            ,id: columns[1] as? ${dth.findType($language,$attribute)}
-                                            	            ,order: columns[2] as? ${dth.findType($language,$attribute)}
-                                            	            ,title: columns[3] as? ${dth.findType($language,$attribute)}
-                                            	            ,url: columns[4] as? ${dth.findType($language,$attribute)}
+        	        	                    	            completed: columns[0] as? Bool
+                                            	            ,id: columns[1] as? String
+                                            	            ,order: columns[2] as? Int
+                                            	            ,title: columns[3] as? String
+                                            	            ,url: columns[4] as? String
                                 )
     }
     
@@ -134,11 +134,11 @@ func insert(entity: TodoItem) throws -> Int {
         }) { (stmt:SQLiteStmt, r:Int) -> () in
         	entities.append(
         		TodoItem(
-        		        	                    	            completed: columns[0] as? ${dth.findType($language,$attribute)}
-                                            	            ,id: columns[1] as? ${dth.findType($language,$attribute)}
-                                            	            ,order: columns[2] as? ${dth.findType($language,$attribute)}
-                                            	            ,title: columns[3] as? ${dth.findType($language,$attribute)}
-                                            	            ,url: columns[4] as? ${dth.findType($language,$attribute)}
+        		        	                    	            completed: columns[0] as? Bool
+                                            	            ,id: columns[1] as? String
+                                            	            ,order: columns[2] as? Int
+                                            	            ,title: columns[3] as? String
+                                            	            ,url: columns[4] as? String
                                 		)
         	)
         }
@@ -149,7 +149,7 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 54.64 minutes to type the 5464+ characters in this file.
+approximately 51.44 minutes to type the 5144+ characters in this file.
  */
 
 

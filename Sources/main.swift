@@ -44,8 +44,6 @@ import Foundation
 
 // This route executes the echo middleware
 Router.sharedInstance.sharedInstance.use("/*", middleware: BasicAuthMiddleware())
-
-
 Router.sharedInstance.sharedInstance.use("/static/*", middleware: StaticFileServer())
 Router.sharedInstance.setTemplateEngine(MustacheTemplateEngine())
 
@@ -97,8 +95,10 @@ Router.sharedInstance.all { request, response, next in
     next()
 }
 
+#let persistenceManager = PersistenceManagerMySQL();
+#let persistenceManager = PersistenceManagerSQLite();
+let persistenceManager = PersistenceManagerMemory();
 
-// Example using templating of strings
 #if os(OSX) // Mustache implemented for OSX only yet
 
 #endif
@@ -110,7 +110,7 @@ Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 21.58 minutes to type the 2158+ characters in this file.
+approximately 22.77 minutes to type the 2277+ characters in this file.
  */
 
 
