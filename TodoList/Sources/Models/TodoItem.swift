@@ -26,6 +26,7 @@ Template: /Kitura/server/Entity.swift.vm
  */
 //Data class for TodoItem
 import SwiftyJSON
+import Foundation
 
 class TodoItem  {
     var completed : Bool!
@@ -34,29 +35,8 @@ class TodoItem  {
     var title : String!
     var url : String!
     
-    
-   func toDictionary() -> Dictionary<String, JSONValue> {
-		var dict =  Dictionary<String, JSONValue>()
-		if(completed != nil){
-			dict["completed"] = completed
-		}
-		if(id != nil){
-			dict["id"] = id
-		}
-		if(order != nil){
-			dict["order"] = order
-		}
-		if(title != nil){
-			dict["title"] = title
-		}
-		if(url != nil){
-			dict["url"] = url
-		}
-		return dict        
-	}
-	
-	func toJSON() -> JSON {
-		var json =  JSON(self)
+	func deserialize() -> JSON {
+		let json =  JSON(self)
 		return json        
 	}
     
@@ -83,18 +63,15 @@ class TodoItem  {
     }
     
 	func encode() throws -> String! {
-        let json = toJSON()
-        return json.rawString
+        let json = serialize()
+        return json.rawString as! String
     }
     
     static func encodeList(elements : Array<TodoItem>) throws -> String {
         var payload : Array<JSONDictionary> = [];
         do {
-        elements.forEach { todoItem -> () in
-                payload.append(todoItem.serialize());
-           
-        }
-          var encoded = JSON(payload).rawString
+        
+          var encoded = JSON(elements).rawString
           return encoded
         }catch{
             print(error)
@@ -105,5 +82,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.22 minutes to type the 1822+ characters in this file.
+approximately 13.47 minutes to type the 1347+ characters in this file.
  */
