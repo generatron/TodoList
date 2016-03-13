@@ -26,9 +26,9 @@ Template: /Kitura/server/Router.swift.vmg
  */
 import KituraRouter
 import KituraNet
-
 import LoggerAPI
 import SwiftyJSON
+import Foundation
 /**
 * RouterMiddleware can be used for intercepting requests and handling custom behavior
 * such as authentication and other routing
@@ -99,5 +99,5 @@ self.all { request, response, next in
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.33 minutes to type the 2033+ characters in this file.
+approximately 20.5 minutes to type the 2050+ characters in this file.
  */
