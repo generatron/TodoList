@@ -41,21 +41,19 @@ import Foundation
     import Mustache
 #endif
 
-
-
-//let persistenceManager = PersistenceManagerMySQL();
-//let persistenceManager = PersistenceManagerSQLite();
 let persistenceManager = PersistenceManagerMemory();
 
+TodoListRouter.sharedInstance.setupRoutes();
+ 
 #if os(OSX) // Mustache implemented for OSX only yet
 
 #endif
 
-let server = HttpServer.listen(Config.sharedInstance.port,delegate: Router.sharedInstance)
+let server = HttpServer.listen(Config.sharedInstance.port,delegate: TodoListRouter.sharedInstance)
 
 Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.51 minutes to type the 551+ characters in this file.
+approximately 4.93 minutes to type the 493+ characters in this file.
  */
