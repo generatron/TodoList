@@ -35,8 +35,8 @@ class TodoItem  {
     var url : String!
     
     
-    func serialize() -> Dictionary {
-		var dict =  Dictionary()
+   func toDictionary() -> Dictionary<String, JSONValue> {
+		var dict =  Dictionary<String, JSONValue>()
 		if(completed != nil){
 			dict["completed"] = completed
 		}
@@ -56,22 +56,7 @@ class TodoItem  {
 	}
 	
 	func toJSON() -> JSON {
-		var json =  JSON()
-		if(completed != nil){
-			json["completed"] = completed
-		}
-		if(id != nil){
-			json["id"] = id
-		}
-		if(order != nil){
-			json["order"] = order
-		}
-		if(title != nil){
-			json["title"] = title
-		}
-		if(url != nil){
-			json["url"] = url
-		}
+		var json =  JSON(self)
 		return json        
 	}
     
@@ -120,5 +105,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.35 minutes to type the 2035+ characters in this file.
+approximately 18.22 minutes to type the 1822+ characters in this file.
  */
