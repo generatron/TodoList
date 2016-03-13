@@ -24,7 +24,11 @@ Description:  Swift Server
 Project:      TodoList
 Template: /Kitura/server/BasicAuthMiddleware.swift.vmg
  */
+import KituraRouter
+import KituraNet
 
+import LoggerAPI
+import SwiftyJSON
 /**
 * RouterMiddleware can be used for intercepting requests and handling custom behavior
 * such as authentication and other routing
@@ -46,5 +50,5 @@ class BasicAuthMiddleware: RouterMiddleware {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.06 minutes to type the 606+ characters in this file.
+approximately 6.82 minutes to type the 682+ characters in this file.
  */
