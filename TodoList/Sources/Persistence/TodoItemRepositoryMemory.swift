@@ -49,14 +49,11 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 
 
   	///
-    /// Internal storage of TodoItems as a Dictionary
+    /// Internal storage of TodoItem as a Dictionary
     ///
     private var _collection = [String: TodoItem]()
     
-    init(baseURL: String) {
-        self.baseURL = baseURL
-    }
-    
+ 
     
     var count: Int {
         return _collection.keys.count
@@ -112,5 +109,5 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.15 minutes to type the 1515+ characters in this file.
+approximately 14.43 minutes to type the 1443+ characters in this file.
  */
