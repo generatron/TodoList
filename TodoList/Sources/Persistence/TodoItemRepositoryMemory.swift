@@ -99,38 +99,10 @@ func insert(entity: TodoItem) throws -> Int {
 	}
     
     func retrieve(id: Int) throws -> TodoItem? {
-        let sql = "SELECT completed,id,order,title,url FROM TodoItem"
-       	let statement = SQLiteStmt(db)
-		defer {
-			statement.close()
-		}
-		let prepRes = statement.prepare(sql)
-		
-		if(prepRes){
-			//HARDCODED might not exist, assuming it does, need to retrieve PK
-			statement.bindParam(entity.id)
-			
-			let execRes = statement.execute()
-            if(!execRes){
-            	let result = statement.results()
-            	
-            	let ok = results.forEachRow {
-				e in
-				print(e.flatMap({ (a:Any?) -> Any? in
-					return a!
-				}))
-				}
-			
-				print("\(statement.errorCode()) \(statement.errorMessage()) - \(db.errorCode()) \(db.errorMessage())")
-				let errorCode = db.errorCode()
-				if errorCode > 0 {
-	    			throw RepositoryError.Delete(errorCode)
-				}
-				statement.close()
-			}
+        
 				
-		}
-	    return entity;
+		
+	    return TodoItem();
     }
     
     func list() throws -> [TodoItem] {
@@ -140,5 +112,5 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 23.36 minutes to type the 2336+ characters in this file.
+approximately 15.15 minutes to type the 1515+ characters in this file.
  */
