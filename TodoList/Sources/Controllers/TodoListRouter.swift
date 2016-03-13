@@ -39,13 +39,65 @@ class TodoListRouter  {
     init(){
     
     use("/*", middleware: BodyParser())
-    
     use("/*", middleware: AllRemoteOriginMiddleware())
+    
+use("/static/*", middleware: StaticFileServer())
+setTemplateEngine(MustacheTemplateEngine())
+
+get("/") { _, response, next in
+    defer {
+        next()
+    }
+    do {
+        var context: [String: Any] = [
+            "name": "Arthur",
+            "date": NSDate(),
+            "realDate": NSDate().dateByAddingTimeInterval(60*60*24*3),
+            "late": true
+        ]
+
+        // Let template format dates with `{{format(...)}}`
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        context["format"] = dateFormatter
+
+        try response.render("index", context: context).end()
+    } catch {
+        Log.error("Failed to render template \(error)")
+    }
+}
+
+// Handles any errors that get set
+error { request, response, next in
+  response.setHeader("Content-Type", value: "text/plain; charset=utf-8")
+    do {
+        try response.send("Caught the error: \(response.error!.localizedDescription)").end()
+    }
+    catch {}
+  next()
+}
+
+// A custom Not found handler
+all { request, response, next in
+    if  response.getStatusCode() == .NOT_FOUND  {
+        // Remove this wrapping if statement, if you want to handle requests to / as well
+        if  request.originalUrl != "/"  &&  request.originalUrl != ""  {
+            do {
+                try response.send("Route not found in Sample application!").end()
+            }
+            catch {}
+        }
+    }
+
+    next()
+}
+
+
       todoItem = TodoItemController()
     }
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 4.94 minutes to type the 494+ characters in this file.
+approximately 19.74 minutes to type the 1974+ characters in this file.
  */
