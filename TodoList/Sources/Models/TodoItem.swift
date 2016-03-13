@@ -24,6 +24,8 @@ Description:  Class that holds the data for TodoItem
 Project:      TodoList
 Template: /Kitura/server/Entity.swift.vm
  */
+//Data class for TodoItem
+import SwiftyJSON
 
 class TodoItem  {
     var completed : Bool!
@@ -33,8 +35,8 @@ class TodoItem  {
     var url : String!
     
     
-    func toDictionary() -> Dictionary<String, JSONValue> {
-		var dict =  Dictionary<String, JSONValue>()
+    func serialize() -> JSONDictionary {
+		var dict =  JSONDictionary()
 		if(completed != nil){
 			dict["completed"] = completed
 		}
@@ -52,44 +54,63 @@ class TodoItem  {
 		}
 		return dict        
 	}
+	
+	func toJSON() -> JSON {
+		var json =  JSON()
+		if(completed != nil){
+			json["completed"] = completed
+		}
+		if(id != nil){
+			json["id"] = id
+		}
+		if(order != nil){
+			json["order"] = order
+		}
+		if(title != nil){
+			json["title"] = title
+		}
+		if(url != nil){
+			json["url"] = url
+		}
+		return json        
+	}
     
     
-    func decode(jsonString : String) throws -> Void {
-        let decoder = JSONDecoder()
-        let payload = try decoder.decode(jsonString) as! JSONDictionaryType
-		if(payload["completed"] != nil){
-     		completed =  payload["completed"] as! Bool
+    func deserialize(jsonString : String) throws -> Void {
+        if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+    		let json = JSON(data: dataFromString)
+		if(json["completed"] != nil){
+     		completed =  json["completed"] as! Bool
 		}
-		if(payload["id"] != nil){
-     		id =  payload["id"] as! String
+		if(json["id"] != nil){
+     		id =  json["id"] as! String
 		}
-		if(payload["order"] != nil){
-     		order =  payload["order"] as! Int
+		if(json["order"] != nil){
+     		order =  json["order"] as! Int
 		}
-		if(payload["title"] != nil){
-     		title =  payload["title"] as! String
+		if(json["title"] != nil){
+     		title =  json["title"] as! String
 		}
-		if(payload["url"] != nil){
-     		url =  payload["url"] as! String
+		if(json["url"] != nil){
+     		url =  json["url"] as! String
+		}
 		}
     }
     
-	func encode() throws -> String {
-        let encoder = JSONEncoder()
-        let payload = try encoder.encode(toDictionary())
-        return payload
+	func encode() throws -> String! {
+        let json = toJSON()
+        return json.rawString
     }
     
     static func encodeList(elements : Array<TodoItem>) throws -> String {
-        var payload : Array<JSONValue> = [];
+        var payload : Array<JSONDictionary> = [];
         do {
         elements.forEach { todoItem -> () in
-                payload.append(todoItem.toDictionary());
+                payload.append(todoItem.serialize());
            
         }
-        let encoder = JSONEncoder()
-        let json = try encoder.encode(payload)
-        return json
+          var encoded = JSON(payload).rawString
+          return encoded
         }catch{
             print(error)
         }
@@ -99,5 +120,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 17.56 minutes to type the 1756+ characters in this file.
+approximately 20.43 minutes to type the 2043+ characters in this file.
  */
