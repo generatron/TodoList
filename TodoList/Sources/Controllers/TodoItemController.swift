@@ -33,6 +33,8 @@ import HeliumLogger
 import LoggerAPI
 
 import Foundation
+import Models
+import Persistence
 
 class TodoItemController  { 
 	init(){
@@ -106,5 +108,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.44 minutes to type the 2644+ characters in this file.
+approximately 26.79 minutes to type the 2679+ characters in this file.
  */

@@ -25,6 +25,7 @@ Project:      TodoList
 Template: /Kitura/server/EntityRepository.swift.vm
  */
 
+import Models
 protocol TodoItemRepository  {
 	
 	func createStorage() throws ->  Int 
@@ -42,5 +43,5 @@ protocol TodoItemRepository  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.3 minutes to type the 330+ characters in this file.
+approximately 3.45 minutes to type the 345+ characters in this file.
  */

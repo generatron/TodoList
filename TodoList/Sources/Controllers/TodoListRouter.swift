@@ -29,6 +29,8 @@ import KituraNet
 import LoggerAPI
 import SwiftyJSON
 import Foundation
+import Middleware
+import Mustache
 /**
 * RouterMiddleware can be used for intercepting requests and handling custom behavior
 * such as authentication and other routing
@@ -99,5 +101,5 @@ self.all { request, response, next in
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.5 minutes to type the 2050+ characters in this file.
+approximately 20.86 minutes to type the 2086+ characters in this file.
  */

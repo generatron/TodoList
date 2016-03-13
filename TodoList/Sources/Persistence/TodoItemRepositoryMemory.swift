@@ -30,7 +30,7 @@ import LoggerAPI
 import SwiftyJSON
 
 import Foundation
-
+import Models
 
 class TodoItemRepositoryMemory : TodoItemRepository {
     
@@ -106,5 +106,5 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.14 minutes to type the 1414+ characters in this file.
+approximately 14.27 minutes to type the 1427+ characters in this file.
  */
