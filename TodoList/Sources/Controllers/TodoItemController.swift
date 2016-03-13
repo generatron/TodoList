@@ -25,10 +25,18 @@ Project:      TodoList
 Template: /Kitura/server/EntityRouterClass.swift.vm
  */
 
+import KituraRouter
+import KituraNet
+import KituraSys
+
+import HeliumLogger
+import LoggerAPI
+
+import Foundation
 
 class TodoItemController  { 
 	init(){
-	 Router.sharedInstance.get("/api/todoItem"){ request, response, next in
+	 TodoListRouter.sharedInstance.get("/api/todoItem"){ request, response, next in
 	    do{
 	        let todoItems : [TodoItem]  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.list()
 	        print (NSJSONSerialization.isValidJSONObject (todoItems ))
@@ -44,7 +52,7 @@ class TodoItemController  {
 	  }
 	
 	
-	  Router.sharedInstance.post("/api/todoItem"){ request, response, next in
+	  TodoListRouter.sharedInstance.post("/api/todoItem"){ request, response, next in
 	     let todoItem = TodoItem() 
 	     do {
 	    	try todoItem.decode(request.postBodyString);
@@ -58,7 +66,7 @@ class TodoItemController  {
 	 }
 	
 	
-	 Router.sharedInstance.get("/api/todoItem/:id"){ request, response, next in
+	 TodoListRouter.sharedInstance.get("/api/todoItem/:id"){ request, response, next in
 	   let id = Int(request.params["id"]!)
 	    do{
 	        let todoItem : TodoItem  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.retrieve(id!)!
@@ -70,7 +78,7 @@ class TodoItemController  {
 	    next()
 	 }
 	
-	 Router.sharedInstance.put("/api/todoItem"){ request, response, next in
+	 TodoListRouter.sharedInstance.put("/api/todoItem"){ request, response, next in
 	    do {
 	     	let todoItem = TodoItem() 
 	    	try todoItem.decode(request.postBodyString);
@@ -84,7 +92,7 @@ class TodoItemController  {
 	 }
 	
 	
-	 Router.sharedInstance.delete("/api/todoItem/:id"){ request, response, next in
+	 TodoListRouter.sharedInstance.delete("/api/todoItem/:id"){ request, response, next in
 	    let id = Int(request.params["id"]!)
 	    do{
 	        let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.delete(id!)
@@ -100,5 +108,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 25.78 minutes to type the 2578+ characters in this file.
+approximately 27.37 minutes to type the 2737+ characters in this file.
  */
