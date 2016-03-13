@@ -39,9 +39,6 @@ class PersistenceManagerMemory : PersistenceManager {
 			//Variables for TodoItem
 			todoItemRepository = TodoItemRepositoryMemory();
 			try todoItemRepository.createStorage()
-}
-}
-
     	} catch (let e){
         	print("Failure connecting to MemoryDB")
         	print(e)
@@ -56,5 +53,5 @@ class PersistenceManagerMemory : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.74 minutes to type the 574+ characters in this file.
+approximately 5.66 minutes to type the 566+ characters in this file.
  */
