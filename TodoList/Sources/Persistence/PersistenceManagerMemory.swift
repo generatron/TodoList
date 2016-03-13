@@ -30,8 +30,11 @@ class PersistenceManagerMemory : PersistenceManager {
     
         var todoItemRepository :  TodoItemRepositoryMemory! 
 	    init() {
+    }
+    
+    @Override
+    func connect() throws {
     	do {
-
 			
 			//Variables for TodoItem
 			todoItemRepository = TodoItemRepositoryMemory();
@@ -46,13 +49,14 @@ class PersistenceManagerMemory : PersistenceManager {
     	
     }
     
-    func checkConnection() -> Bool {
-    	
+    
+    @Override
+    func disconnect() throws {
     }
 }
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.23 minutes to type the 523+ characters in this file.
+approximately 5.86 minutes to type the 586+ characters in this file.
  */

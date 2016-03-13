@@ -26,16 +26,15 @@ Template: /Kitura/server/PersistenceManager.swift.vm
  */
 
 protocol PersistenceManager  {
-
-	func createStorage() throws ->  Int 
-	
 	func connect() throws
 	
-	func disconnect() throws 
-	    
+	func disconnect() throws
+	
+	@Optional
+	func createStorage() throws ->  Int     
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 1.41 minutes to type the 141+ characters in this file.
+approximately 1.47 minutes to type the 147+ characters in this file.
  */
