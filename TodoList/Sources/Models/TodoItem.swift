@@ -45,13 +45,13 @@ class TodoItem  {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
 		if(json["completed"] != nil){
-     		completed =  json["completed"].Bool
+     		completed =  json["completed"].bool
 		}
 		if(json["id"] != nil){
      		id =  json["id"].string
 		}
 		if(json["order"] != nil){
-     		order =  json["order"].Integer
+     		order =  json["order"].int
 		}
 		if(json["title"] != nil){
      		title =  json["title"].string
@@ -81,5 +81,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 12.8 minutes to type the 1280+ characters in this file.
+approximately 12.76 minutes to type the 1276+ characters in this file.
  */
