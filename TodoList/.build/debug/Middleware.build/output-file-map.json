@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/master.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Middleware/AllRemoteOriginMiddleware.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/AllRemoteOriginMiddleware.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/AllRemoteOriginMiddleware.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/AllRemoteOriginMiddleware~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/AllRemoteOriginMiddleware.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Middleware/BasicAuthMiddleware.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/BasicAuthMiddleware.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/BasicAuthMiddleware.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/BasicAuthMiddleware~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Middleware.build/BasicAuthMiddleware.swiftdeps"
+  }
+}

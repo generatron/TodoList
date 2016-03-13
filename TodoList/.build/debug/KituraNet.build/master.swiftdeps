@@ -1,0 +1,16 @@
+version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
+options: "af68e3c9942634df481f02f3b70577c0"
+build_time: [511209710, 181904000]
+inputs:
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/BufferList.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/ClientRequest.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/ClientResponse.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/Http.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/HttpServer.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/HttpServerSpi.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/IncomingMessage.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/ServerRequest.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/ServerResponse.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/SpiUtils.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/HttpParser/HttpParser.swift": [511209683, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-net-0.4.0/Sources/KituraNet/HttpParser/UrlParser.swift": [511209683, 0]

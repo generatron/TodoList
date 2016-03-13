@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
+options: "13e0820aee87697f635308b07404da37"
+build_time: [511209705, 992253000]
+inputs:
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/BlueSocket-0.1.4/Sources/BlueSocket.swift": [511209689, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/BlueSocket-0.1.4/Sources/BlueSocketProtocols.swift": [511209689, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/BlueSocket-0.1.4/Sources/BlueSocketUtils.swift": [511209689, 0]

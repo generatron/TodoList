@@ -1,0 +1,7 @@
+version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
+options: "75e0267b856cd0dafa7d4105f2351302"
+build_time: [511214518, 278396000]
+inputs:
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Controllers/Router.swift": [511209337, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Controllers/TodoItemController.swift": !private [511210402, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Controllers/TodoListRouter.swift": !private [511214116, 0]

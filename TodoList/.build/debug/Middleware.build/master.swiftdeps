@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
+options: "71be86f70b3e58a1df449c5319f03460"
+build_time: [511210025, 318892000]
+inputs:
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Middleware/AllRemoteOriginMiddleware.swift": [9223372036854775807, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Middleware/BasicAuthMiddleware.swift": [511209963, 0]
