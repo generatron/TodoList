@@ -48,16 +48,16 @@ class TodoItem  {
      		completed =  json["completed"].Bool
 		}
 		if(json["id"] != nil){
-     		id =  json["id"].String
+     		id =  json["id"].string
 		}
 		if(json["order"] != nil){
      		order =  json["order"].Integer
 		}
 		if(json["title"] != nil){
-     		title =  json["title"].String
+     		title =  json["title"].string
 		}
 		if(json["url"] != nil){
-     		url =  json["url"].String
+     		url =  json["url"].string
 		}
 		}
     }
