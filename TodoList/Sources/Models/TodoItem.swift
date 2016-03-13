@@ -68,7 +68,6 @@ class TodoItem  {
     }
     
     static func encodeList(elements : Array<TodoItem>) throws -> String {
-        var payload : Array<JSONDictionary> = [];
         do {
         
           var encoded = JSON(elements).rawString
@@ -82,5 +81,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.31 minutes to type the 1331+ characters in this file.
+approximately 12.8 minutes to type the 1280+ characters in this file.
  */

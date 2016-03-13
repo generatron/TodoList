@@ -33,9 +33,6 @@ import Foundation
 
 
 class TodoItemRepositoryMemory : TodoItemRepository {
-
-
-    var baseURL: String
     
     ///
     /// Ensure in order writes to the collection
@@ -109,5 +106,5 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.43 minutes to type the 1443+ characters in this file.
+approximately 14.14 minutes to type the 1414+ characters in this file.
  */
