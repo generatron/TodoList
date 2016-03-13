@@ -39,13 +39,13 @@ class TodoListRouter  {
     init(){
     }
    func setupRoutes() { 
-    use("/*", middleware: BodyParser())
-    use("/*", middleware: AllRemoteOriginMiddleware())
+    self.use("/*", middleware: BodyParser())
+    self.use("/*", middleware: AllRemoteOriginMiddleware())
     
-use("/static/*", middleware: StaticFileServer())
+self.use("/static/*", middleware: StaticFileServer())
 setTemplateEngine(MustacheTemplateEngine())
 
-get("/") { _, response, next in
+self.get("/") { _, response, next in
     defer {
         next()
     }
@@ -69,7 +69,7 @@ get("/") { _, response, next in
 }
 
 // Handles any errors that get set
-error { request, response, next in
+self.error { request, response, next in
   response.setHeader("Content-Type", value: "text/plain; charset=utf-8")
     do {
         try response.send("Caught the error: \(response.error!.localizedDescription)").end()
@@ -79,7 +79,7 @@ error { request, response, next in
 }
 
 // A custom Not found handler
-all { request, response, next in
+self.all { request, response, next in
     if  response.getStatusCode() == .NOT_FOUND  {
         // Remove this wrapping if statement, if you want to handle requests to / as well
         if  request.originalUrl != "/"  &&  request.originalUrl != ""  {
@@ -100,5 +100,5 @@ all { request, response, next in
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.09 minutes to type the 2009+ characters in this file.
+approximately 20.39 minutes to type the 2039+ characters in this file.
  */
