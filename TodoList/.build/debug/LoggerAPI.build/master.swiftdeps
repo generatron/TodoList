@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
-options: "9fc071d3d5c6a9dcbf9c6bf78e62cae5"
-build_time: [511209705, 992243000]
-inputs:
-  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/LoggerAPI-0.4.0/Sources/LoggerAPI/Logger.swift": [511209688, 0]

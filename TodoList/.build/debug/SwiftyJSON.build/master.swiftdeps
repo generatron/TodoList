@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
-options: "54b1d81ce1df724606cb49875497b025"
-build_time: [511209705, 992242000]
-inputs:
-  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/SwiftyJSON-2.3.3/Source/SwiftyJSON.swift": [511209693, 0]

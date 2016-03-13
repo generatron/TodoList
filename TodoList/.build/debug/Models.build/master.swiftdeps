@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
-options: "1314698fa1d81447e7529a1947f49af0"
-build_time: [511214518, 278400000]
-inputs:
-  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Sources/Models/TodoItem.swift": !private [511213302, 0]

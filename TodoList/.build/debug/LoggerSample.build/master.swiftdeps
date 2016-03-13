@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
-options: "5ca4afea6cd0cf83172d8f07c1b9472e"
-build_time: [511209707, 74995000]
-inputs:
-  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/HeliumLogger-0.0.4/Sources/LoggerSample/main.swift": [511209696, 0]
