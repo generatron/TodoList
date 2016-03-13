@@ -36,8 +36,7 @@ import SwiftyJSON
 class TodoListRouter  : Router{
     static let sharedInstance = TodoListRouter()
     var todoItem : TodoItemController!
-    init(){
-    }
+    
    func setupRoutes() { 
     self.use("/*", middleware: BodyParser())
     self.use("/*", middleware: AllRemoteOriginMiddleware())
@@ -100,5 +99,5 @@ self.all { request, response, next in
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.47 minutes to type the 2047+ characters in this file.
+approximately 20.33 minutes to type the 2033+ characters in this file.
  */

@@ -38,16 +38,14 @@ class TodoItemController  {
 	init(){
 	 TodoListRouter.sharedInstance.get("/api/todoItem"){ request, response, next in
 	    do{
-	        let todoItems : [TodoItem]  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.list()
-	        print (NSJSONSerialization.isValidJSONObject (todoItems ))
-	  	
-	        let json = try TodoItem.encodeList(todoItems );
-	        addHeader("content-type", value: "application/json")
-        addHeader("Access-Control-Allow-Origin", value:"*")
+	        //let todoItems : [TodoItem]  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.list()
+	        //print (NSJSONSerialization.isValidJSONObject (todoItems ))
+	        //let json = try TodoItem.encodeList(todoItems );
+	        
 	  	}catch{
-	  	  response.setStatus (500, message: "Could not list TodoItem data")
+	  	  //response.setStatus (500, message: "Could not list TodoItem data")
 	  	}
-	    //response.appendBodyString("Index handler: You accessed path \(request.requestURI())")
+	    ////response.appendBodyString("Index handler: You accessed path \(request.requestURI())")
 	    next()
 	  }
 	
@@ -58,9 +56,9 @@ class TodoItemController  {
 	    	try todoItem.decode(request.postBodyString);
 	    	let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.insert(todoItem)
 	    	let json = try todoItem.encode()
-	    	try response.outputJson(json)
+	    	//try response.outputJson(json)
 	    }catch{
-	        response.appendBodyString("Error accessing data:  \(error)")
+	        //response.appendBodyString("Error accessing data:  \(error)")
 	    }
 	    next()
 	 }
@@ -71,9 +69,9 @@ class TodoItemController  {
 	    do{
 	        let todoItem : TodoItem  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.retrieve(id!)!
 	        let json = try todoItem.encode()
-	        try response.outputJson(json)
+	        //try response.outputJson(json)
 	    }catch{
-	        response.setStatus (500, message: "Could not retrieve TodoItem \(id) data")
+	        //response.setStatus (500, message: "Could not retrieve TodoItem \(id) data")
 	    }
 	    next()
 	 }
@@ -84,9 +82,9 @@ class TodoItemController  {
 	    	try todoItem.decode(request.postBodyString);
 	    	let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.update(todoItem)
 	    	let json = try todoItem.encode()
-	    	try response.outputJson(json)
+	    	//try response.outputJson(json)
 	    }catch{
-	        response.appendBodyString("Error accessing data:  \(error)")
+	        //response.appendBodyString("Error accessing data:  \(error)")
 	    }
 	    next()
 	 }
@@ -97,9 +95,9 @@ class TodoItemController  {
 	    do{
 	        let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.delete(id!)
 	        //let json = try todoItem.encode()
-	        try response.outputJson("{\"id\":\(id),\"message\":\"deleted\"}")
+	        //try response.outputJson("{\"id\":\(id),\"message\":\"deleted\"}")
 	    }catch{
-	        response.setStatus (500, message: "Could not delete TodoItem \(id) data")
+	        //response.setStatus (500, message: "Could not delete TodoItem \(id) data")
 	    }
 	    next()
 	 }
@@ -108,5 +106,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 27.37 minutes to type the 2737+ characters in this file.
+approximately 26.44 minutes to type the 2644+ characters in this file.
  */

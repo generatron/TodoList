@@ -32,8 +32,8 @@ class PersistenceManagerMemory : PersistenceManager {
 	    init() {
     }
     
-    @Override
-    func connect() throws {
+    
+    override func connect() throws {
     	do {
 			
 			//Variables for TodoItem
@@ -49,14 +49,12 @@ class PersistenceManagerMemory : PersistenceManager {
     	
     }
     
-    
-    @Override
-    func disconnect() throws {
+    override func disconnect() throws {
     }
 }
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.86 minutes to type the 586+ characters in this file.
+approximately 5.74 minutes to type the 574+ characters in this file.
  */

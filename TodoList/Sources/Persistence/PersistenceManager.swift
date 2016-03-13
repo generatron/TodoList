@@ -30,11 +30,10 @@ protocol PersistenceManager  {
 	
 	func disconnect() throws
 	
-	@Optional
-	func createStorage() throws ->  Int     
+	optional func createStorage() throws ->  Int     
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 1.47 minutes to type the 147+ characters in this file.
+approximately 1.44 minutes to type the 144+ characters in this file.
  */
