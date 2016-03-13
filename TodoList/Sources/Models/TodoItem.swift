@@ -35,8 +35,8 @@ class TodoItem  {
     var url : String!
     
     
-    func serialize() -> JSONDictionary {
-		var dict =  JSONDictionary()
+    func serialize() -> Dictionary {
+		var dict =  Dictionary()
 		if(completed != nil){
 			dict["completed"] = completed
 		}
@@ -120,5 +120,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.43 minutes to type the 2043+ characters in this file.
+approximately 20.35 minutes to type the 2035+ characters in this file.
  */
