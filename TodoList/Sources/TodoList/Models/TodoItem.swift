@@ -107,12 +107,17 @@ class TodoItem  {
         return json 
     }
     
-    static func encodeList(elements : Array<TodoItem>) throws -> JSON! {
-          return JSON(elements)
+    static func encodeList(elements : Array<TodoItem>) throws -> JSON {
+          var list = [JSON]();
+          for element in elements {
+              let json = element.serialize()
+              list.append(json)
+          }
+          return JSON(list)
     }
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.38 minutes to type the 1938+ characters in this file.
+approximately 20.94 minutes to type the 2094+ characters in this file.
  */
