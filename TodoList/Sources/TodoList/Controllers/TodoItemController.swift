@@ -34,17 +34,19 @@ import LoggerAPI
 
 import Foundation
 
-class TodoItemController  { 
-	init(){
+class TodoItemController  {
+	var pm : PersistenceManager!
+	 
+	init(persistenceManager : PersistenceManager){
+	self.pm = persistenceManager;
 	 TodoListRouter.sharedInstance.get("/api/todoItem"){ request, response, next in
 	    do{
-	        let todoItems : [TodoItem]  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.list()
-	        let json = try TodoItem.encodeList(todoItems );
-	        
+	        let todoItems : [TodoItem]  = try pm.todoItemRepository.list()
+	        let json = try TodoItem.encodeList(todoItems);
+	        response.status(HttpStatusCode.OK).sendJson(json)
 	  	}catch{
-	  	 response.status (500, message: "Could not list TodoItem data")
+	  	 response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	  	}
-	    
 	    next()
 	  }
 	
@@ -53,24 +55,23 @@ class TodoItemController  {
 	     let todoItem = TodoItem() 
 	     do {
 	    	try todoItem.deserialize(request.body);
-	    	let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.insert(todoItem)
+	    	let result = try pm.todoItemRepository.insert(todoItem)
 	    	let json = try todoItem.encode()
-	    	//try response.outputJson(json)
+	    	response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        //response.appendBodyString("Error accessing data:  \(error)")
+	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
 	
-	
 	 TodoListRouter.sharedInstance.get("/api/todoItem/:id"){ request, response, next in
 	   let id = Int(request.params["id"]!)
 	    do{
-	        let todoItem : TodoItem  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.retrieve(id!)!
+	        let todoItem : TodoItem  = try pm.todoItemRepository.retrieve(id!)!
 	        let json = try todoItem.encode()
-	        //try response.outputJson(json)
+	        response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        //response.setStatus (500, message: "Could not retrieve TodoItem \(id) data")
+	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
@@ -79,11 +80,11 @@ class TodoItemController  {
 	    do {
 	     	let todoItem = TodoItem() 
 	    	try todoItem.decode(request.postBodyString);
-	    	let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.update(todoItem)
+	    	let result = try pm.todoItemRepository.update(todoItem)
 	    	let json = try todoItem.encode()
-	    	//try response.outputJson(json)
+	    	response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        //response.appendBodyString("Error accessing data:  \(error)")
+	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
@@ -92,11 +93,11 @@ class TodoItemController  {
 	 TodoListRouter.sharedInstance.delete("/api/todoItem/:id"){ request, response, next in
 	    let id = Int(request.params["id"]!)
 	    do{
-	        let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.delete(id!)
-	        //let json = try todoItem.encode()
-	        //try response.outputJson("{\"id\":\(id),\"message\":\"deleted\"}")
+	        let result = try pm.todoItemRepository.delete(id!)
+	        let json = try todoItem.encode()
+	        response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        //response.setStatus (500, message: "Could not delete TodoItem \(id) data")
+	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
@@ -105,5 +106,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 24.69 minutes to type the 2469+ characters in this file.
+approximately 24.23 minutes to type the 2423+ characters in this file.
  */

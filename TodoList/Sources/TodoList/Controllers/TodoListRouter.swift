@@ -36,7 +36,8 @@ import Mustache
 */
 class TodoListRouter  : Router{
     static let sharedInstance = TodoListRouter()
-    var todoItem : TodoItemController!
+    var persistenceManager : PersistenceManager!;
+    var todoItemController : TodoItemController!
     
    func setupRoutes() { 
     self.use("/*", middleware: BodyParser())
@@ -93,12 +94,13 @@ self.all { request, response, next in
     next()
 }
 
+persistenceManager = PersistenceManagerMemory();
 
-      todoItem = TodoItemController()
+      todoItemController = TodoItemController(persistenceManager)
     }
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.67 minutes to type the 2067+ characters in this file.
+approximately 22.06 minutes to type the 2206+ characters in this file.
  */
