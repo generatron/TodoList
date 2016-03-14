@@ -105,10 +105,10 @@ class TodoItemController  {
 	    let id = Int(request.params["id"]!)
 	    do{
 	        let todoItem = try self.pm.todoItemRepository.delete(id!)
-	        let json = try todoItem.encode()
-	        response.status(HttpStatusCode.OK).sendJson(json)
+	        //response.status(HttpStatusCode.OK).sendJson(json)
+	        response.status(HttpStatusCode.OK).end()
 	    }catch{
-	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
+	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end()
 	    }
 	    next()
 	 }
@@ -117,5 +117,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.65 minutes to type the 2865+ characters in this file.
+approximately 28.74 minutes to type the 2874+ characters in this file.
  */
