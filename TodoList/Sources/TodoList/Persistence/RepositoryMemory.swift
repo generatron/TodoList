@@ -37,7 +37,7 @@ enum RepositoryError : ErrorType {
 }
 
 class RepositoryMemory : Repository{
-    init() {
+    override init() {
     	super.init()
     }
     
@@ -46,5 +46,5 @@ class RepositoryMemory : Repository{
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.12 minutes to type the 312+ characters in this file.
+approximately 3.21 minutes to type the 321+ characters in this file.
  */

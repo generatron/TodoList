@@ -96,11 +96,11 @@ self.all { request, response, next in
 
 persistenceManager = PersistenceManagerMemory();
 
-      todoItemController = TodoItemController(persistenceManager)
+      todoItemController = TodoItemController(persistenceManager : persistenceManager)
     }
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.06 minutes to type the 2206+ characters in this file.
+approximately 22.27 minutes to type the 2227+ characters in this file.
  */
