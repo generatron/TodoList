@@ -34,7 +34,7 @@ protocol TodoItemRepository  {
 	    
 	func update(entity: TodoItem) throws -> Int 
 	    
-	func delete(entity: TodoItem) throws -> Int 
+	func delete(id: Int) throws -> Int 
 	    
 	func retrieve(id: Int) throws -> TodoItem?
 	    
@@ -43,5 +43,5 @@ protocol TodoItemRepository  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.32 minutes to type the 332+ characters in this file.
+approximately 3.23 minutes to type the 323+ characters in this file.
  */

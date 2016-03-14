@@ -41,9 +41,9 @@ class TodoItemController  {
 	self.pm = persistenceManager;
 	 TodoListRouter.sharedInstance.get("/api/todoItem"){ request, response, next in
 	    do{
-	        let todoItems : [TodoItem]  = try pm.todoItemRepository.list()
+	        let todoItems : [TodoItem]  = try self.pm.todoItemRepository.list()
 	        let json = try TodoItem.encodeList(todoItems);
-	        try response.status(HttpStatusCode.OK).sendJson(json)
+	        response.status(HttpStatusCode.OK).sendJson(json)
 	  	}catch{
 	  	    try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	  	}
@@ -55,11 +55,11 @@ class TodoItemController  {
 	     let todoItem = TodoItem() 
 	     do {
 	    	try todoItem.deserialize(request.body);
-	    	let result = try pm.todoItemRepository.insert(todoItem)
+	    	let result = try self.pm.todoItemRepository.insert(todoItem)
 	    	let json = try todoItem.encode()
-	    	try response.status(HttpStatusCode.OK).sendJson(json)
+	    	response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
+	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
@@ -67,9 +67,9 @@ class TodoItemController  {
 	 TodoListRouter.sharedInstance.get("/api/todoItem/:id"){ request, response, next in
 	   let id = Int(request.params["id"]!)
 	    do{
-	        let todoItem : TodoItem  = try pm.todoItemRepository.retrieve(id!)!
+	        let todoItem : TodoItem  = try self.pm.todoItemRepository.retrieve(id!)!
 	        let json = try todoItem.encode()
-	        try response.status(HttpStatusCode.OK).sendJson(json)
+	        response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
 	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
@@ -79,10 +79,10 @@ class TodoItemController  {
 	 TodoListRouter.sharedInstance.put("/api/todoItem"){ request, response, next in
 	    do {
 	     	let todoItem = TodoItem() 
-	    	try todoItem.decode(request.postBodyString);
-	    	let result = try pm.todoItemRepository.update(todoItem)
+	    	try todoItem.deserialize(request.body);
+	    	let result = try self.pm.todoItemRepository.update(todoItem)
 	    	let json = try todoItem.encode()
-	    	try response.status(HttpStatusCode.OK).sendJson(json)
+	    	response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
 	       try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
@@ -93,9 +93,9 @@ class TodoItemController  {
 	 TodoListRouter.sharedInstance.delete("/api/todoItem/:id"){ request, response, next in
 	    let id = Int(request.params["id"]!)
 	    do{
-	        let todoItem = try pm.todoItemRepository.delete(id!)
+	        let todoItem = try self.pm.todoItemRepository.delete(id!)
 	        let json = try todoItem.encode()
-	        try response.status(HttpStatusCode.OK).sendJson(json)
+	        response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
 	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
@@ -106,5 +106,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 24.67 minutes to type the 2467+ characters in this file.
+approximately 24.72 minutes to type the 2472+ characters in this file.
  */
