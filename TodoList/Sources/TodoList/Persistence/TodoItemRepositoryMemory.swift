@@ -75,7 +75,7 @@ func insert(entity: TodoItem) throws -> Int {
  writingQueue.queueSync() {
 
             self.idCounter+=1
-
+			entity.id = self.idCounter 
             self._collection[original] = entity
 
         }
@@ -104,5 +104,5 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.95 minutes to type the 1395+ characters in this file.
+approximately 14.25 minutes to type the 1425+ characters in this file.
  */
