@@ -86,16 +86,11 @@ class TodoItem  {
     }
     
     static func encodeList(elements : Array<TodoItem>) throws -> JSON! {
-        do {
           return JSON(elements)
-        }catch{
-            print(error)
-        }
-        
     }
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 16.1 minutes to type the 1610+ characters in this file.
+approximately 15.32 minutes to type the 1532+ characters in this file.
  */

@@ -50,10 +50,10 @@ TodoListRouter.sharedInstance.setupRoutes();
 #endif
 
 let server = HttpServer.listen(Config.sharedInstance.serverPort,delegate: TodoListRouter.sharedInstance)
-
+print("Server up and running on http://localhost:\(Config.sharedInstance.serverPort)/api/")
 Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 4.99 minutes to type the 499+ characters in this file.
+approximately 5.9 minutes to type the 590+ characters in this file.
  */
