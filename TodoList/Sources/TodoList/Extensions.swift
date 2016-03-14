@@ -27,23 +27,6 @@ Template: /Kitura/server/Extensions.swift.vmg
 
 import Foundation
 
-    func outputJson(data: String) throws {
-        addHeader("content-type", value: "application/json")
-        addHeader("Access-Control-Allow-Origin", value:"*")
-        appendBodyString(data)
-    }
-    
-
-
-extension WebRequest {
-    var action: String {
-        return urlVariables["action"] ?? "index"
-    }
-    var acceptJson: Bool {
-        return httpAccept().contains("application/json")
-    }
-}
-
 extension String {
  
     func SQLStringDate() -> NSDate {
@@ -52,8 +35,6 @@ extension String {
         return dateFormat.dateFromString(self)!
     }
 }
-
-
 
 extension NSDate {
     var SQLDateString : String {
@@ -69,5 +50,5 @@ extension NSDate {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 8.29 minutes to type the 829+ characters in this file.
+approximately 4.23 minutes to type the 423+ characters in this file.
  */

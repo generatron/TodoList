@@ -49,11 +49,11 @@ TodoListRouter.sharedInstance.setupRoutes();
 
 #endif
 
-let server = HttpServer.listen(Config.sharedInstance.port,delegate: TodoListRouter.sharedInstance)
+let server = HttpServer.listen(Config.sharedInstance.serverPort,delegate: TodoListRouter.sharedInstance)
 
 Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 4.93 minutes to type the 493+ characters in this file.
+approximately 4.99 minutes to type the 499+ characters in this file.
  */

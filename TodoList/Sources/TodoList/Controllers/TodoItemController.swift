@@ -38,14 +38,13 @@ class TodoItemController  {
 	init(){
 	 TodoListRouter.sharedInstance.get("/api/todoItem"){ request, response, next in
 	    do{
-	        //let todoItems : [TodoItem]  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.list()
-	        //print (NSJSONSerialization.isValidJSONObject (todoItems ))
-	        //let json = try TodoItem.encodeList(todoItems );
+	        let todoItems : [TodoItem]  = try PersistenceManagerMemory.sharedInstance.todoItemRepository.list()
+	        let json = try TodoItem.encodeList(todoItems );
 	        
 	  	}catch{
-	  	  //response.setStatus (500, message: "Could not list TodoItem data")
+	  	 response.status (500, message: "Could not list TodoItem data")
 	  	}
-	    ////response.appendBodyString("Index handler: You accessed path \(request.requestURI())")
+	    
 	    next()
 	  }
 	
@@ -53,7 +52,7 @@ class TodoItemController  {
 	  TodoListRouter.sharedInstance.post("/api/todoItem"){ request, response, next in
 	     let todoItem = TodoItem() 
 	     do {
-	    	try todoItem.decode(request.postBodyString);
+	    	try todoItem.deserialize(request.body);
 	    	let result = try PersistenceManagerMemory.sharedInstance.todoItemRepository.insert(todoItem)
 	    	let json = try todoItem.encode()
 	    	//try response.outputJson(json)
@@ -106,5 +105,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.44 minutes to type the 2644+ characters in this file.
+approximately 24.69 minutes to type the 2469+ characters in this file.
  */
