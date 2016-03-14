@@ -54,10 +54,16 @@ class TodoItemController  {
 	  TodoListRouter.sharedInstance.post("/api/todoItem"){ request, response, next in
 	     let todoItem = TodoItem() 
 	     do {
-	    	try todoItem.deserialize(request.body);
-	    	let result = try self.pm.todoItemRepository.insert(todoItem)
-	    	let json = try todoItem.encode()
-	    	response.status(HttpStatusCode.OK).sendJson(json)
+	     	if let body = request.body {
+            	if let json = body.asJson() {
+	                try todoItem.deserialize(json);
+		    		let result = try self.pm.todoItemRepository.insert(todoItem)
+		    		let json = try todoItem.encode()
+		    		response.status(HttpStatusCode.OK).sendJson(json)
+            	}
+	        } else {
+	            response.status(HttpStatusCode.BAD_REQUEST)
+	        }
 	    }catch{
 	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
@@ -78,18 +84,23 @@ class TodoItemController  {
 	
 	 TodoListRouter.sharedInstance.put("/api/todoItem"){ request, response, next in
 	    do {
-	     	let todoItem = TodoItem() 
-	    	try todoItem.deserialize(request.body);
-	    	let result = try self.pm.todoItemRepository.update(todoItem)
-	    	let json = try todoItem.encode()
-	    	response.status(HttpStatusCode.OK).sendJson(json)
+	     	if let body = request.body {
+            	if let json = body.asJson() {
+            		let todoItem = TodoItem()
+	                try todoItem.deserialize(json);
+		    		let result = try self.pm.todoItemRepository.update(todoItem)
+		    		let json = try todoItem.encode()
+		    		response.status(HttpStatusCode.OK).sendJson(json)
+            	}
+	        } else {
+	            response.status(HttpStatusCode.BAD_REQUEST)
+	        }
 	    }catch{
-	       try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
+	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
-	
-	
+
 	 TodoListRouter.sharedInstance.delete("/api/todoItem/:id"){ request, response, next in
 	    let id = Int(request.params["id"]!)
 	    do{
@@ -106,5 +117,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 24.72 minutes to type the 2472+ characters in this file.
+approximately 28.65 minutes to type the 2865+ characters in this file.
  */
