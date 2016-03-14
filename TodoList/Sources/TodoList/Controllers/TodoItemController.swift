@@ -41,6 +41,7 @@ class TodoItemController  {
 	self.pm = persistenceManager;
 	 TodoListRouter.sharedInstance.get("/api/todoItem"){ request, response, next in
 	    do{
+	    	print("Adding route: /api/todoItem ")
 	        let todoItems : [TodoItem]  = try self.pm.todoItemRepository.list()
 	        let json = try TodoItem.encodeList(todoItems);
 	        response.status(HttpStatusCode.OK).sendJson(json)
@@ -117,5 +118,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.37 minutes to type the 2837+ characters in this file.
+approximately 28.82 minutes to type the 2882+ characters in this file.
  */
