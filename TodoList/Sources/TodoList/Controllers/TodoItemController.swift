@@ -57,7 +57,7 @@ class TodoItemController  {
 	     	if let body = request.body {
             	if let json = body.asJson() {
 	                try todoItem.deserialize(json);
-		    		let result = try self.pm.todoItemRepository.insert(todoItem)
+		    		try self.pm.todoItemRepository.insert(todoItem)
 		    		let json = try todoItem.encode()
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
@@ -88,7 +88,7 @@ class TodoItemController  {
             	if let json = body.asJson() {
             		let todoItem = TodoItem()
 	                try todoItem.deserialize(json);
-		    		let result = try self.pm.todoItemRepository.update(todoItem)
+		    		try self.pm.todoItemRepository.update(todoItem)
 		    		let json = try todoItem.encode()
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
@@ -104,9 +104,9 @@ class TodoItemController  {
 	 TodoListRouter.sharedInstance.delete("/api/todoItem/:id"){ request, response, next in
 	    let id = Int(request.params["id"]!)
 	    do{
-	        let todoItem = try self.pm.todoItemRepository.delete(id!)
+	        try self.pm.todoItemRepository.delete(id!)
 	        //response.status(HttpStatusCode.OK).sendJson(json)
-	        response.status(HttpStatusCode.OK).end()
+	        try response.status(HttpStatusCode.OK).end()
 	    }catch{
 	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end()
 	    }
@@ -117,5 +117,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.74 minutes to type the 2874+ characters in this file.
+approximately 28.37 minutes to type the 2837+ characters in this file.
  */

@@ -28,7 +28,7 @@ Template: /Kitura/server/PersistenceManagerMemory.swift.vmg
 class PersistenceManagerMemory : PersistenceManager {
 	static let sharedInstance = PersistenceManagerMemory()
     
-        var todoItemRepository =  TodoItemRepositoryMemory()
+        var todoItemRepository :  TodoItemRepository
 	    
     
  func connect() throws {
@@ -51,5 +51,5 @@ class PersistenceManagerMemory : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.24 minutes to type the 524+ characters in this file.
+approximately 5.16 minutes to type the 516+ characters in this file.
  */

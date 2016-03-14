@@ -44,7 +44,7 @@ class TodoListRouter  : Router{
     self.use("/*", middleware: AllRemoteOriginMiddleware())
     
 self.use("/static/*", middleware: StaticFileServer())
-setTemplateEngine(MustacheTemplateEngine())
+//setTemplateEngine(MustacheTemplateEngine())
 
 self.get("/") { _, response, next in
     defer {
@@ -102,5 +102,5 @@ persistenceManager = PersistenceManagerMemory();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.27 minutes to type the 2227+ characters in this file.
+approximately 22.29 minutes to type the 2229+ characters in this file.
  */
