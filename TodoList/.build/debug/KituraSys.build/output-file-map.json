@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/master.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Sys-0.4.0/Sources/KituraSys/Queue.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Queue.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Queue.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Queue~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Queue.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Sys-0.4.0/Sources/KituraSys/Server.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Server.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Server.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Server~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/Server.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Sys-0.4.0/Sources/KituraSys/StringUtils.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/StringUtils.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/StringUtils.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/StringUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/StringUtils.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Sys-0.4.0/Sources/KituraSys/SysUtils.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/SysUtils.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/SysUtils.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/SysUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.build/SysUtils.swiftdeps"
+  }
+}

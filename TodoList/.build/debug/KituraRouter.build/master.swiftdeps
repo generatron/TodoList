@@ -1,0 +1,12 @@
+version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
+options: "bcb994de2dc1afba7a1d69f49a8e5cc5"
+build_time: [511240224, 410669000]
+inputs:
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/Router.swift": [511240220, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/RouterElement.swift": [511240177, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/RouterMiddleware.swift": [511238668, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/RouterRequest.swift": [511238668, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/RouterResponse.swift": [511238668, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/bodyParser/BodyParser.swift": [511238668, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/contentType/ContentType.swift": [511238668, 0]
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-Router-0.4.0/Sources/KituraRouter/staticFileServer/StaticFileServer.swift": [511238668, 0]

@@ -1,0 +1,185 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["SS", ""]
+- ["CSo6NSDate", ""]
+- ["SS", "SQLStringDate"]
+- ["CSo6NSDate", "SQLDateString"]
+provides-dynamic-lookup:
+- "SQLDateString"
+depends-top-level:
+- !private "NSDateFormatter"
+- "String"
+- !private "StringLiteralType"
+- "NSDate"
+depends-member:
+- !private ["Ps9AnyObject", "NSDateFormatter"]
+- ["Ps9AnyObject", "SQLDateString"]
+- !private ["Ps9AnyObject", "dateFormat"]
+- !private ["Ps9AnyObject", "dateFromString"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "stringFromDate"]
+- !private ["Ps11CVarArgType", "NSDateFormatter"]
+- ["Ps11CVarArgType", "SQLDateString"]
+- !private ["Ps11CVarArgType", "dateFormat"]
+- !private ["Ps11CVarArgType", "dateFromString"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "stringFromDate"]
+- !private ["Ps10Comparable", "NSDateFormatter"]
+- !private ["Ps28CustomDebugStringConvertible", "NSDateFormatter"]
+- ["Ps28CustomDebugStringConvertible", "SQLDateString"]
+- !private ["Ps28CustomDebugStringConvertible", "dateFormat"]
+- !private ["Ps28CustomDebugStringConvertible", "dateFromString"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "stringFromDate"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "NSDateFormatter"]
+- !private ["Ps17CustomReflectable", "NSDateFormatter"]
+- !private ["Ps23CustomStringConvertible", "NSDateFormatter"]
+- ["Ps23CustomStringConvertible", "SQLDateString"]
+- !private ["Ps23CustomStringConvertible", "dateFormat"]
+- !private ["Ps23CustomStringConvertible", "dateFromString"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "stringFromDate"]
+- !private ["Ps9Equatable", "NSDateFormatter"]
+- ["Ps9Equatable", "SQLDateString"]
+- !private ["Ps9Equatable", "dateFormat"]
+- !private ["Ps9Equatable", "dateFromString"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "stringFromDate"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "NSDateFormatter"]
+- !private ["Ps8Hashable", "NSDateFormatter"]
+- ["Ps8Hashable", "SQLDateString"]
+- !private ["Ps8Hashable", "dateFormat"]
+- !private ["Ps8Hashable", "dateFromString"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "stringFromDate"]
+- !private ["SQ", "deinit"]
+- !private ["P10SwiftyJSON17JSONSubscriptType", "NSDateFormatter"]
+- !private ["Ps14MirrorPathType", "NSDateFormatter"]
+- !private ["P8Mustache15MustacheBoxable", "NSDateFormatter"]
+- ["P8Mustache15MustacheBoxable", "SQLDateString"]
+- !private ["P8Mustache15MustacheBoxable", "dateFormat"]
+- !private ["P8Mustache15MustacheBoxable", "dateFromString"]
+- !private ["P8Mustache15MustacheBoxable", "init"]
+- !private ["P8Mustache15MustacheBoxable", "stringFromDate"]
+- !private ["PSo8NSCoding", "NSDateFormatter"]
+- !private ["PSo8NSCoding", "dateFormat"]
+- !private ["PSo8NSCoding", "dateFromString"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "stringFromDate"]
+- !private ["PSo9NSCopying", "NSDateFormatter"]
+- !private ["PSo9NSCopying", "dateFormat"]
+- !private ["PSo9NSCopying", "dateFromString"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "stringFromDate"]
+- !private ["CSo6NSDate", "NSDateFormatter"]
+- ["CSo6NSDate", "SQLDateString"]
+- ["CSo6NSDate", "String"]
+- !private ["CSo15NSDateFormatter", "dateFormat"]
+- !private ["CSo15NSDateFormatter", "dateFromString"]
+- !private ["CSo15NSDateFormatter", "init"]
+- !private ["CSo15NSDateFormatter", "stringFromDate"]
+- !private ["CSo11NSFormatter", "dateFormat"]
+- !private ["CSo11NSFormatter", "dateFromString"]
+- !private ["CSo11NSFormatter", "init"]
+- !private ["CSo11NSFormatter", "stringFromDate"]
+- !private ["CSo8NSObject", "NSDateFormatter"]
+- ["CSo8NSObject", "SQLDateString"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "dateFormat"]
+- !private ["CSo8NSObject", "dateFromString"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "stringFromDate"]
+- !private ["PSo16NSObjectProtocol", "NSDateFormatter"]
+- ["PSo16NSObjectProtocol", "SQLDateString"]
+- !private ["PSo16NSObjectProtocol", "dateFormat"]
+- !private ["PSo16NSObjectProtocol", "dateFromString"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "stringFromDate"]
+- !private ["PSo14NSSecureCoding", "NSDateFormatter"]
+- !private ["Ps16OutputStreamType", "NSDateFormatter"]
+- !private ["Ps10Streamable", "NSDateFormatter"]
+- ["SS", "NSDate"]
+- !private ["SS", "NSDateFormatter"]
+- ["SS", "SQLStringDate"]
+- !private ["Ps30StringInterpolationConvertible", "NSDateFormatter"]
+- !private ["Ps24StringLiteralConvertible", "NSDateFormatter"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "NSDateFormatter"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "NSDateFormatter"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "NSDateFormatter"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "NSDateFormatter"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "NSDateFormatter"]
+- !private ["Ps21_ObjectiveCBridgeable", "NSDateFormatter"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps8Hashable"
+- !private "SQ"
+- !private "P10SwiftyJSON17JSONSubscriptType"
+- !private "Ps14MirrorPathType"
+- "P8Mustache15MustacheBoxable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo6NSDate"
+- !private "CSo15NSDateFormatter"
+- !private "CSo11NSFormatter"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "Ps16OutputStreamType"
+- !private "Ps10Streamable"
+- "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/shims/module.map"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraRouter.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraNet.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-CurlHelpers-0.4.0/CurlHelpers.h"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-HttpParserHelper-0.4.0/module.modulemap"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-CurlHelpers-0.4.0/module.modulemap"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraSys.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/LoggerAPI.swiftmodule"
+- "/usr/local/include/http_parser.h"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/Kitura-HttpParserHelper-0.4.0/utils.h"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/KituraTemplateEngine.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/SwiftyJSON.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/HeliumLogger.swiftmodule"
+- "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/Mustache.swiftmodule"
+interface-hash: "0161fb4f694685e89d3b63724f123caf"

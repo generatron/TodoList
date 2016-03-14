@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/master.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/BlueSocket-0.1.4/Sources/BlueSocket.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocket.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocket.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocket~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocket.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/BlueSocket-0.1.4/Sources/BlueSocketProtocols.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketProtocols.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketProtocols.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketProtocols~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketProtocols.swiftdeps"
+  },
+  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/BlueSocket-0.1.4/Sources/BlueSocketUtils.swift": {
+    "dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketUtils.d",
+    "object": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketUtils.swift.o",
+    "swiftmodule": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/.build/debug/BlueSocket.build/BlueSocketUtils.swiftdeps"
+  }
+}
