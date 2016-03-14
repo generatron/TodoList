@@ -38,14 +38,11 @@ enum RepositoryError : ErrorType {
 
 class RepositoryMemory {
     
-    init() {
-        
-    }
     
 }
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 2.97 minutes to type the 297+ characters in this file.
+approximately 2.66 minutes to type the 266+ characters in this file.
  */

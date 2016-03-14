@@ -43,9 +43,9 @@ class TodoItemController  {
 	    do{
 	        let todoItems : [TodoItem]  = try pm.todoItemRepository.list()
 	        let json = try TodoItem.encodeList(todoItems);
-	        response.status(HttpStatusCode.OK).sendJson(json)
+	        try response.status(HttpStatusCode.OK).sendJson(json)
 	  	}catch{
-	  	 response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
+	  	    try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	  	}
 	    next()
 	  }
@@ -57,7 +57,7 @@ class TodoItemController  {
 	    	try todoItem.deserialize(request.body);
 	    	let result = try pm.todoItemRepository.insert(todoItem)
 	    	let json = try todoItem.encode()
-	    	response.status(HttpStatusCode.OK).sendJson(json)
+	    	try response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
 	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
@@ -69,9 +69,9 @@ class TodoItemController  {
 	    do{
 	        let todoItem : TodoItem  = try pm.todoItemRepository.retrieve(id!)!
 	        let json = try todoItem.encode()
-	        response.status(HttpStatusCode.OK).sendJson(json)
+	        try response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
+	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
@@ -82,9 +82,9 @@ class TodoItemController  {
 	    	try todoItem.decode(request.postBodyString);
 	    	let result = try pm.todoItemRepository.update(todoItem)
 	    	let json = try todoItem.encode()
-	    	response.status(HttpStatusCode.OK).sendJson(json)
+	    	try response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
+	       try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
@@ -93,11 +93,11 @@ class TodoItemController  {
 	 TodoListRouter.sharedInstance.delete("/api/todoItem/:id"){ request, response, next in
 	    let id = Int(request.params["id"]!)
 	    do{
-	        let result = try pm.todoItemRepository.delete(id!)
+	        let todoItem = try pm.todoItemRepository.delete(id!)
 	        let json = try todoItem.encode()
-	        response.status(HttpStatusCode.OK).sendJson(json)
+	        try response.status(HttpStatusCode.OK).sendJson(json)
 	    }catch{
-	        response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
+	        try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
 	    }
 	    next()
 	 }
@@ -106,5 +106,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 24.23 minutes to type the 2423+ characters in this file.
+approximately 24.67 minutes to type the 2467+ characters in this file.
  */

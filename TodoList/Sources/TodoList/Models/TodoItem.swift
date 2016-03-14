@@ -62,14 +62,14 @@ class TodoItem  {
 		}
     }
     
-	func encode() throws -> String! {
+	func encode() throws -> JSON! {
         let json = serialize()
-        return json.string 
+        return json 
     }
     
-    static func encodeList(elements : Array<TodoItem>) throws -> String! {
+    static func encodeList(elements : Array<TodoItem>) throws -> JSON! {
         do {
-          return JSON(elements).string
+          return JSON(elements)
         }catch{
             print(error)
         }
@@ -79,5 +79,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 12.07 minutes to type the 1207+ characters in this file.
+approximately 11.89 minutes to type the 1189+ characters in this file.
  */
