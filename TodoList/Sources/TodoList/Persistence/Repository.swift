@@ -19,32 +19,17 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     RepositoryMemory.swift
-Description:  Repository Memory class
+Filename:     Repository.swift
+Description:  Base Repository class
 Project:      TodoList
-Template: /Kitura/server/RepositoryMemory.swift.vmg
+Template: /Kitura/server/Repository.swift.vmg
  */
-
-
-enum RepositoryError : ErrorType {
-    case Select(UInt32)
-    case Insert(UInt32)
-    case Update(UInt32)
-    case Delete(UInt32)
-    case CreateTable(UInt32)
-    case List(UInt32)
-    case Retrieve(UInt32)
-}
-
-class RepositoryMemory : Repository{
-    init() {
-    	super.init()
-    }
-    
+class Repository {
+ 
 }
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.12 minutes to type the 312+ characters in this file.
+approximately 0.26 minutes to type the 26+ characters in this file.
  */
