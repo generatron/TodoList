@@ -29,18 +29,40 @@ import SwiftyJSON
 import Foundation
 
 class TodoItem  {
+
     var completed : Bool!
     var id : String!
     var order : Int!
     var title : String!
     var url : String!
     
+    
+  func toDictionary() -> Dictionary<String, AnyObject> {
+		var dict =  Dictionary<String, AnyObject>()
+		if(completed != nil){
+			dict["completed"] = completed
+		}
+		if(id != nil){
+			dict["id"] = id
+		}
+		if(order != nil){
+			dict["order"] = order
+		}
+		if(title != nil){
+			dict["title"] = title
+		}
+		if(url != nil){
+			dict["url"] = url
+		}
+		return dict        
+	}
+	
 	func serialize() -> JSON {
-		let json =  JSON(self)
+		let json =  JSON(toDictionary())
 		return json        
 	}
-    
-     func deserialize(json : JSON) throws -> Void {
+	
+    func deserialize(json : JSON) throws -> Void {
       
 		if(json["completed"] != nil){
      		completed =  json["completed"].bool
@@ -92,5 +114,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.32 minutes to type the 1532+ characters in this file.
+approximately 19.38 minutes to type the 1938+ characters in this file.
  */

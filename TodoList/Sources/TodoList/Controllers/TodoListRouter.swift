@@ -79,20 +79,6 @@ self.error { request, response, next in
   next()
 }
 
-// A custom Not found handler
-self.all { request, response, next in
-    if  response.getStatusCode() == .NOT_FOUND  {
-        // Remove this wrapping if statement, if you want to handle requests to / as well
-        if  request.originalUrl != "/"  &&  request.originalUrl != ""  {
-            do {
-                try response.send("Route not found in Sample application!").end()
-            }
-            catch {}
-        }
-    }
-
-    next()
-}
 
 persistenceManager = PersistenceManagerMemory();
 
@@ -103,5 +89,5 @@ persistenceManager = PersistenceManagerMemory();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.56 minutes to type the 2256+ characters in this file.
+approximately 17.97 minutes to type the 1797+ characters in this file.
  */
