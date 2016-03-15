@@ -31,7 +31,7 @@ import Foundation
 class TodoItem  {
 
     var completed : Bool!
-    var id : String!
+    var id : Int!
     var order : Int!
     var title : String!
     var url : String!
@@ -68,7 +68,7 @@ class TodoItem  {
      		completed =  json["completed"].bool
 		}
 		if(json["id"] != nil){
-     		id =  json["id"].string
+     		id =  json["id"].int
 		}
 		if(json["order"] != nil){
      		order =  json["order"].int
@@ -88,7 +88,7 @@ class TodoItem  {
      		completed =  json["completed"].bool
 		}
 		if(json["id"] != nil){
-     		id =  json["id"].string
+     		id =  json["id"].int
 		}
 		if(json["order"] != nil){
      		order =  json["order"].int
@@ -119,5 +119,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.94 minutes to type the 2094+ characters in this file.
+approximately 20.85 minutes to type the 2085+ characters in this file.
  */
