@@ -81,7 +81,35 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 	}
     
     func update(entity: TodoItem) throws -> Int {
-        self._collection.updateValue(entity, forKey: String(entity.id))
+    	let oldValue = self._collection[String(entity.id)]
+        
+        if let oldValue = oldValue {
+            
+            // use nil coalescing operator
+            
+            let newValue = TodoItem()
+			if(entity.completed != nil){
+				newValue.completed = entity.completed
+			}
+			if(entity.id != nil){
+				newValue.id = entity.id
+			}
+			if(entity.order != nil){
+				newValue.order = entity.order
+			}
+			if(entity.title != nil){
+				newValue.title = entity.title
+			}
+			if(entity.url != nil){
+				newValue.url = entity.url
+			}
+            _collection.updateValue(newValue, forKey: id)
+            return 0
+            
+        } else {
+            Log.warning("Could not find item in database with ID: \(entity.id)")
+        }
+
 		return 0
     }
     
@@ -101,5 +129,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.56 minutes to type the 1556+ characters in this file.
+approximately 22.54 minutes to type the 2254+ characters in this file.
  */
