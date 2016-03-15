@@ -7,12 +7,12 @@ provides-member:
 - ["C8TodoList6Config", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "FloatLiteralType"
 - "IntegerLiteralType"
-- "String"
-- "Dictionary"
-- "GeneratronDataSource"
+- "FloatLiteralType"
 - "Config"
+- "GeneratronDataSource"
+- "Dictionary"
+- "String"
 depends-member:
 - ["Ps9AnyObject", "Config"]
 - ["Ps9AnyObject", "Dictionary"]

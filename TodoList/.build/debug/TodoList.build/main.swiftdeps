@@ -7,14 +7,14 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "server"
-- "print"
+- "PersistenceManagerMemory"
 - "HttpServer"
+- "StringLiteralType"
 - "Server"
+- "print"
+- "Config"
 - "persistenceManager"
 - "TodoListRouter"
-- "StringLiteralType"
-- "PersistenceManagerMemory"
-- "Config"
 depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "listen"]

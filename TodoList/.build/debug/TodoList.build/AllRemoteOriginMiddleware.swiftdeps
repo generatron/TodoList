@@ -7,16 +7,16 @@ provides-member:
 - ["C8TodoList25AllRemoteOriginMiddleware", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "Log"
+- "AllRemoteOriginMiddleware"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "RouterMiddleware"
-- !private "StringLiteralType"
 - "Void"
+- !private "StringLiteralType"
 - "RouterResponse"
 - "RouterRequest"
 - !private "UnicodeScalarType"
-- !private "IntegerLiteralType"
-- !private "FloatLiteralType"
-- "AllRemoteOriginMiddleware"
+- !private "Log"
 depends-member:
 - !private ["C8TodoList25AllRemoteOriginMiddleware", "Log"]
 - ["C8TodoList25AllRemoteOriginMiddleware", "RouterRequest"]

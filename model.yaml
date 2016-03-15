@@ -6,7 +6,7 @@ model:
   - name : TodoItem
     attributes:
      - name : id
-       type : String
+       type : Integer
        primaryKey : true
      - name : order
        type : Integer

@@ -7,12 +7,12 @@ provides-member:
 - ["C8TodoList24PersistenceManagerMemory", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "print"
+- "PersistenceManager"
 - !private "StringLiteralType"
 - "TodoItemRepositoryMemory"
-- "PersistenceManager"
-- "PersistenceManagerMemory"
 - "TodoItemRepository"
-- !private "print"
+- "PersistenceManagerMemory"
 depends-member:
 - ["Ps9AnyObject", "PersistenceManagerMemory"]
 - ["Ps9AnyObject", "TodoItemRepositoryMemory"]

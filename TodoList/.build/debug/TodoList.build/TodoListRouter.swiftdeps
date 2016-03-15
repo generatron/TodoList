@@ -7,24 +7,24 @@ provides-member:
 - ["C8TodoList14TodoListRouter", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSDate"
-- "Router"
-- "TodoListRouter"
-- "PersistenceManager"
-- "BooleanLiteralType"
-- !private "UnicodeScalarType"
-- !private "PersistenceManagerMemory"
-- !private "AllRemoteOriginMiddleware"
-- !private "Any"
-- !private "*"
-- "Dictionary"
-- !private "String"
-- !private "NSDateFormatter"
-- !private "StringLiteralType"
-- !private "Log"
-- "TodoItemController"
 - !private "StaticFileServer"
+- !private "PersistenceManagerMemory"
+- "TodoItemController"
+- !private "String"
+- "Dictionary"
 - !private "BodyParser"
+- !private "NSDate"
+- "BooleanLiteralType"
+- "Router"
+- "PersistenceManager"
+- !private "AllRemoteOriginMiddleware"
+- !private "*"
+- !private "StringLiteralType"
+- !private "NSDateFormatter"
+- !private "Any"
+- !private "Log"
+- !private "UnicodeScalarType"
+- "TodoListRouter"
 depends-member:
 - !private ["C8TodoList25AllRemoteOriginMiddleware", "deinit"]
 - !private ["C8TodoList25AllRemoteOriginMiddleware", "init"]
@@ -45,6 +45,7 @@ depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "localizedDescription"]
 - ["Ps9AnyObject", "persistenceManager"]
+- !private ["Ps9AnyObject", "printRoutes"]
 - !private ["Ps9AnyObject", "render"]
 - !private ["Ps9AnyObject", "send"]
 - !private ["Ps9AnyObject", "setHeader"]
@@ -123,6 +124,7 @@ depends-member:
 - !private ["P9KituraNet18HttpServerDelegate", "get"]
 - ["P9KituraNet18HttpServerDelegate", "init"]
 - ["P9KituraNet18HttpServerDelegate", "persistenceManager"]
+- !private ["P9KituraNet18HttpServerDelegate", "printRoutes"]
 - ["P9KituraNet18HttpServerDelegate", "setupRoutes"]
 - ["P9KituraNet18HttpServerDelegate", "sharedInstance"]
 - ["P9KituraNet18HttpServerDelegate", "todoItemController"]
@@ -199,6 +201,7 @@ depends-member:
 - !private ["C12KituraRouter6Router", "get"]
 - ["C12KituraRouter6Router", "init"]
 - ["C12KituraRouter6Router", "persistenceManager"]
+- !private ["C12KituraRouter6Router", "printRoutes"]
 - ["C12KituraRouter6Router", "setupRoutes"]
 - ["C12KituraRouter6Router", "sharedInstance"]
 - ["C12KituraRouter6Router", "todoItemController"]
@@ -245,6 +248,7 @@ depends-member:
 - !private ["C8TodoList14TodoListRouter", "get"]
 - ["C8TodoList14TodoListRouter", "init"]
 - ["C8TodoList14TodoListRouter", "persistenceManager"]
+- !private ["C8TodoList14TodoListRouter", "printRoutes"]
 - ["C8TodoList14TodoListRouter", "setupRoutes"]
 - ["C8TodoList14TodoListRouter", "sharedInstance"]
 - ["C8TodoList14TodoListRouter", "todoItemController"]

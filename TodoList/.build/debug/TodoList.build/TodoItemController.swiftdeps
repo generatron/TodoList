@@ -7,14 +7,14 @@ provides-member:
 - ["C8TodoList18TodoItemController", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "StringLiteralType"
+- "PersistenceManager"
 - !private "HttpStatusCode"
 - !private "TodoListRouter"
-- "PersistenceManager"
-- !private "StringLiteralType"
 - !private "print"
 - !private "Int"
-- "TodoItemController"
 - !private "TodoItem"
+- "TodoItemController"
 depends-member:
 - !private ["Ps9AnyObject", "HttpStatusCode"]
 - !private ["Ps9AnyObject", "Int"]

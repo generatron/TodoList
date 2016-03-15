@@ -7,9 +7,9 @@ provides-member:
 - ["C8TodoList20GeneratronDataSource", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Int"
 - "String"
 - "GeneratronDataSource"
+- "Int"
 depends-member:
 - ["Ps9AnyObject", ""]
 - ["C8TodoList20GeneratronDataSource", "Int"]

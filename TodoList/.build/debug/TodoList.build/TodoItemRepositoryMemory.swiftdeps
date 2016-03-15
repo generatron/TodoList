@@ -7,16 +7,16 @@ provides-member:
 - ["C8TodoList24TodoItemRepositoryMemory", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "StringLiteralType"
-- "Int"
 - "Queue"
-- "IntegerLiteralType"
-- "TodoItemRepository"
+- "StringLiteralType"
 - "TodoItem"
+- "TodoItemRepository"
+- "IntegerLiteralType"
+- "String"
+- "FloatLiteralType"
+- "Int"
 - "TodoItemRepositoryMemory"
 - !private "+="
-- "FloatLiteralType"
-- "String"
 depends-member:
 - ["Ps9AnyObject", "Queue"]
 - ["Ps9AnyObject", "String"]
@@ -24,6 +24,7 @@ depends-member:
 - !private ["Ps9AnyObject", "_collection"]
 - ["Ps9AnyObject", "createStorage"]
 - ["Ps9AnyObject", "delete"]
+- !private ["Ps9AnyObject", "id"]
 - !private ["Ps9AnyObject", "idCounter"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "insert"]
@@ -232,6 +233,7 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["C8TodoList8TodoItem", "id"]
 - !private ["C8TodoList8TodoItem", "init"]
 - ["P8TodoList18TodoItemRepository", "Queue"]
 - ["P8TodoList18TodoItemRepository", "String"]

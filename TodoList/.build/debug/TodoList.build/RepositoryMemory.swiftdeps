@@ -10,11 +10,11 @@ provides-member:
 - ["C8TodoList16RepositoryMemory", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "IntegerLiteralType"
-- "ErrorType"
-- !private "FloatLiteralType"
 - "UInt32"
 - "RepositoryMemory"
+- "ErrorType"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "RepositoryError"
 - "Repository"
 depends-member:
