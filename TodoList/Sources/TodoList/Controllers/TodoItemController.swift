@@ -86,9 +86,12 @@ class TodoItemController  {
 	 TodoListRouter.sharedInstance.put("/api/todoItem"){ request, response, next in
 	    do {
 	     	if let body = request.body {
+	     		print("body")
             	if let json = body.asJson() {
+            	print(json)
             		let todoItem = TodoItem()
 	                try todoItem.deserialize(json);
+	                print("before update")
 		    		try self.pm.todoItemRepository.update(todoItem)
 		    		let json = try todoItem.encode()
 		    		response.status(HttpStatusCode.OK).sendJson(json)
