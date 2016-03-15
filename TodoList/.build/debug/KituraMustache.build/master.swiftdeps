@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0-dev (LLVM b361b0fc05, Clang 11493b0f62, Swift 24a0c3de75)"
-options: "b24a22ea391195ea5f2e55737be919c8"
-build_time: [511238709, 801971000]
-inputs:
-  "/Users/evolmark/workspaces/Swift/KituraProjects/TodoListKituraModel/TodoList/Packages/KituraMustache-0.0.5/Sources/KituraMustacheTemplateEngine.swift": [511238690, 0]
