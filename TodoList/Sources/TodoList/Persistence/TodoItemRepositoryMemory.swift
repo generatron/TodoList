@@ -49,15 +49,12 @@ class TodoItemRepositoryMemory : TodoItemRepository {
     /// Internal storage of TodoItem as a Dictionary
     ///
     private var _collection = [String: TodoItem]()
-    
- 
-    
+   
     var count: Int {
         return _collection.keys.count
     }
 
     func clear() {
-
         writingQueue.queueSync() {
             self._collection.removeAll()
         }
@@ -65,36 +62,38 @@ class TodoItemRepositoryMemory : TodoItemRepository {
     }
     
     
-func createStorage() throws ->  Int {
+	func createStorage() throws ->  Int {
       return 0;
-}
-func insert(entity: TodoItem) throws -> Int {
- var original: String
- original = String(self.idCounter) 
+	}
+	
+	func insert(entity: TodoItem) throws -> Int {
+ 		var original: String
+ 		original = String(self.idCounter) 
  
- writingQueue.queueSync() {
-
+ 		writingQueue.queueSync() {
             self.idCounter+=1
 			entity.id = self.idCounter 
             self._collection[original] = entity
 
         }
      
- return self.idCounter
-}
+ 		return self.idCounter
+	}
     
     func update(entity: TodoItem) throws -> Int {
-
+    	writingQueue.queueSync() { 
+            self._collection[String(entity.id)] = entity
+        }
 		return 0
     }
     
 	func delete(id: Int) throws -> Int {
+		self._collectionremoveValueForKey(String(entity.id))
 		return 0
 	}
     
     func retrieve(id: Int) throws -> TodoItem? {
-        
-	    return TodoItem();
+	    return self._collection[String(id) ] 
     }
     
     func list() throws -> [TodoItem] {
@@ -104,5 +103,5 @@ func insert(entity: TodoItem) throws -> Int {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.25 minutes to type the 1425+ characters in this file.
+approximately 15.919999 minutes to type the 1592+ characters in this file.
  */
