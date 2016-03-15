@@ -103,7 +103,7 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 			if(entity.url != nil){
 				newValue.url = entity.url
 			}
-            _collection.updateValue(newValue, forKey: id)
+            _collection.updateValue(newValue, forKey: String(entity.id))
             return 0
             
         } else {
@@ -129,5 +129,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.54 minutes to type the 2254+ characters in this file.
+approximately 22.69 minutes to type the 2269+ characters in this file.
  */
