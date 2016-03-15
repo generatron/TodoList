@@ -81,9 +81,7 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 	}
     
     func update(entity: TodoItem) throws -> Int {
-    	writingQueue.queueSync() { 
-            self._collection[String(entity.id)] = entity
-        }
+        self._collection.updateValue(entity, forKey: String(entity.id))
 		return 0
     }
     
@@ -103,5 +101,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.860001 minutes to type the 1586+ characters in this file.
+approximately 15.56 minutes to type the 1556+ characters in this file.
  */
