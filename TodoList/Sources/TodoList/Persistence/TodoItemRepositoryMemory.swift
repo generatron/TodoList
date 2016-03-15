@@ -82,7 +82,7 @@ class TodoItemRepositoryMemory : TodoItemRepository {
     func update(entity: TodoItem) throws -> Int {
     	let oldValue = self._collection[String(entity.id)]
         
-        if let oldValue != nil {
+        if oldValue != nil {
             
             // use nil coalescing operator
             
@@ -128,5 +128,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.71 minutes to type the 2271+ characters in this file.
+approximately 22.67 minutes to type the 2267+ characters in this file.
  */
