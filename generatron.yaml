@@ -3,5 +3,5 @@ git:
    gitUrl : "git@github.com:generatron/TodoListKituraModel.git"
    branch : "Backend"
  - bundleName : "ionic(.)*"
-   gitUrl : "git@github.com:generatron/TodoListKituraIonic.git"
+   gitUrl : "git@github.com:generatron/TodoListKituraModel.git"
    branch : "Frontend"
