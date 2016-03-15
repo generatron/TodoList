@@ -67,11 +67,10 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 	}
 	
 	func insert(entity: TodoItem) throws -> Int {
- 		var original: String
- 		original = String(self.idCounter) 
- 
  		writingQueue.queueSync() {
             self.idCounter+=1
+            var original: String
+ 			original = String(self.idCounter)
 			entity.id = self.idCounter 
             self._collection[original] = entity
 
@@ -129,5 +128,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.69 minutes to type the 2269+ characters in this file.
+approximately 22.75 minutes to type the 2275+ characters in this file.
  */
