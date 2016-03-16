@@ -83,10 +83,11 @@ class TodoItemController  {
 	    next()
 	 }
 	
-	 TodoListRouter.sharedInstance.put("/api/todoItem"){ request, response, next in
+	 TodoListRouter.sharedInstance.put("/api/todoItem/:id"){ request, response, next in
 	    do {
 	     	if let body = request.body {
             	if let json = body.asJson() {
+            		let id = Int(request.params["id"]!)
             		let todoItem = TodoItem()
 	                try todoItem.deserialize(json);
 		    		try self.pm.todoItemRepository.update(todoItem)
@@ -118,5 +119,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.82 minutes to type the 2882+ characters in this file.
+approximately 29.37 minutes to type the 2937+ characters in this file.
  */
