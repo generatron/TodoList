@@ -74,14 +74,14 @@ angular.module('TodoList.services')
             update: function(cb, cberror, params) {
                 var id = 0
                 if (BACKEND == GRAILSBACKEND) {
-                    params.id = params.model.id;
+                    params.id = params.id;
                 }
                 var url = config.baseurl + "todoItem/" + params.id;
                 $http.put(url, params).success(cb).error(cberror);
             },
             delete: function(cb, cberror, params) {
                 if (BACKEND == GRAILSBACKEND) {
-                    params.id = params.model.id;
+                    params.id = params.id;
                 }
                 var url = config.baseurl + "todoItem/" + params.id;
                 $http.delete(url, params).success(cb).error(cberror);
@@ -96,5 +96,5 @@ angular.module('TodoList.services')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.86 minutes to type the 1886+ characters in this file.
+approximately 18.74 minutes to type the 1874+ characters in this file.
  */
