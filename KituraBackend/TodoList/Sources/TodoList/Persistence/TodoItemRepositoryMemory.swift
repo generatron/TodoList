@@ -71,7 +71,8 @@ class TodoItemRepositoryMemory : TodoItemRepository {
             self.idCounter+=1
             var original: String
  			original = String(self.idCounter)
-			entity.id = self.idCounter 
+			entity.id = self.idCounter
+			print(entity) 
             self._collection[original] = entity
 
         }
@@ -128,5 +129,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.67 minutes to type the 2267+ characters in this file.
+approximately 22.85 minutes to type the 2285+ characters in this file.
  */
