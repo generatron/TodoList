@@ -34,11 +34,6 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
                     <!-- Text input for completed Type: Bool  Native Type: Bool-->
                     <ion-checkbox ng-model="todoItem.completed">Completed</ion-checkbox>
                     <!-- Text input for id Type: Integer  Native Type: Integer-->
-                    <label class="item item-input" name="id">
-                        <span class="input-label">Id</span>
-                        <input id="id" name="id" type="number" placeholder="Id" ng-model="todoItem.id">
-                        <div id="idError" class="error"></div>
-                    </label>
                     <!-- Text input for order Type: Integer  Native Type: Integer-->
                     <label class="item item-input" name="order">
                         <span class="input-label">Order</span>
@@ -46,17 +41,21 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
                         <div id="orderError" class="error"></div>
                     </label>
                     <!-- Text input for title Type: String  Native Type: String-->
+
                     <label class="item item-input" name="title">
                         <span class="input-label">Title</span>
                         <input id="title" name="title" type="text" placeholder="Title" ng-model="todoItem.title">
                         <div id="titleError" class="error"></div>
                     </label>
+
                     <!-- Text input for url Type: String  Native Type: String-->
+
                     <label class="item item-input" name="url">
                         <span class="input-label">Url</span>
                         <input id="url" name="url" type="text" placeholder="Url" ng-model="todoItem.url">
                         <div id="urlError" class="error"></div>
                     </label>
+
                     <div class="button-bar">
                         <button class="button button-stable button-block  icon ion-checkmark-circled" ng-click="save()"></button>
                         <button id="cancel" name="cancel" class="button button-stable button-block icon ion-android-cancel" ng-click="cancel()"></button>
@@ -71,5 +70,5 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
 <!-- 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.63 minutes to type the 2263+ characters in this file.
+approximately 20.15 minutes to type the 2015+ characters in this file.
  -->
