@@ -53,11 +53,11 @@ angular.module('TodoList.controllers')
             TodoItemWS.delete($scope.updatesuccesscb, $scope.errorcb, $scope.todoItem);
         }
         $scope.cancel = function() {
-            document.location.href = "#/todoItems"
+            document.location.href = "#/app/todoItems"
         }
 
         $scope.updatesuccesscb = function(data, status, headers, config) {
-            document.location.href = "#/todoItems"
+            document.location.href = "#/app/todoItems"
         }
         $scope.successcb = function(data, status, headers, config) {
             $scope.todoItem = data;
@@ -95,5 +95,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.14 minutes to type the 1814+ characters in this file.
+approximately 18.22 minutes to type the 1822+ characters in this file.
  */
