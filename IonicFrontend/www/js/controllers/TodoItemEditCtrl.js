@@ -44,19 +44,13 @@ angular.module('TodoList.controllers')
 
         $scope.edit = true;
         $scope.save = function() {
-            var data = {};
-            data = $scope.todoItem;
-            TodoItemWS.update($scope.updatesuccesscb, $scope.errorcb, data);
+            TodoItemWS.update($scope.updatesuccesscb, $scope.errorcb, $scope.todoItem);
         }
 
         $scope.delete = function() {
             var data = {};
-            if (BACKEND == GRAILSBACKEND) {
-                data.model = $scope.todoItem;
-            } else {
-                data = $scope.todoItem;
-            }
-            TodoItemWS.delete($scope.updatesuccesscb, $scope.errorcb, data);
+
+            TodoItemWS.delete($scope.updatesuccesscb, $scope.errorcb, $scope.todoItem);
         }
         $scope.cancel = function() {
             document.location.href = "#/todoItems"
@@ -101,5 +95,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.36 minutes to type the 1936+ characters in this file.
+approximately 18.14 minutes to type the 1814+ characters in this file.
  */
