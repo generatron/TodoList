@@ -33,17 +33,15 @@ import SwiftyJSON
 /// Custom middleware that allows Cross Origin HTTP requests
 class AllRemoteOriginMiddleware: RouterMiddleware {
     func handle(request: RouterRequest, response: RouterResponse, next: () -> Void) {
-        
         Log.info("Added cross origin header")
         response.status(200);
         response.setHeader("Access-Control-Allow-Origin", value: "*")
-        //response.setHeader("Access-Control-Allow-Headers", value: "Origin, X-Requested-With, Content-Type, Accept")
-        
+        response.setHeader("Access-Control-Allow-Headers", value: "Origin, X-Requested-With, Content-Type, Accept")
         next()
     }
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.94 minutes to type the 594+ characters in this file.
+approximately 5.72 minutes to type the 572+ characters in this file.
  */
