@@ -1,7 +1,7 @@
 git:
  - bundleName : "Kitura(.)*"
    gitUrl : "git@github.com:generatron/TodoListKituraModel.git"
-   branch : "Backend"
+   subdir : "Backend"
  - bundleName : "ionic(.)*"
    gitUrl : "git@github.com:generatron/TodoListKituraModel.git"
-   branch : "Frontend"
+   subdir : "Frontend"
