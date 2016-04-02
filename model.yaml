@@ -1,7 +1,7 @@
 name: TodoList
 description: A Todo List
 model:
- packageName : com.generatron.kitura.todolist
+ packageName : com.generatron.todolist
  entities :
   - name : TodoItem
     attributes:
@@ -12,7 +12,33 @@ model:
        type : Integer
      - name : title
        type : String
+     - name : dueDate
+       type : String
      - name : completed
        type : Bool
      - name : url
+       type : String
+     - name : task
+       type : Collection
+       generic : Task
+       via : Todo
+     - name : status
+       type : Status
+  - name : Task
+    attributes:
+     - name : id
+       type : Integer
+       primaryKey : true
+     - name : todo
+       type : TodoItem
+     - name : title
+       type : String
+     - name : description
+       type : Text
+  - name : Status
+    attributes:
+     - name : id
+       type : Integer
+       primaryKey : true
+     - name : name
        type : String
