@@ -24,13 +24,15 @@ Description:  Class that holds the data for Status
 Project:      TodoList
 Template: /Kitura-REST/server/Entity.swift.vm
  */
-//Data class for Status
+
 import SwiftyJSON
 import Foundation
 
 class Status  {
 
+// Integer  yaml Int
     var id : Int!
+// String  yaml String
     var name : String!
     
     
@@ -89,5 +91,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.01 minutes to type the 1401+ characters in this file.
+approximately 14.24 minutes to type the 1424+ characters in this file.
  */

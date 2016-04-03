@@ -24,15 +24,19 @@ Description:  Class that holds the data for Task
 Project:      TodoList
 Template: /Kitura-REST/server/Entity.swift.vm
  */
-//Data class for Task
+
 import SwiftyJSON
 import Foundation
 
 class Task  {
 
+// Text  yaml Text
     var description : Text!
+// Integer  yaml Int
     var id : Int!
+// String  yaml String
     var title : String!
+// TodoItem  yaml TodoItem
     var todo : TodoItem!
     
     
@@ -109,5 +113,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.05 minutes to type the 1905+ characters in this file.
+approximately 19.78 minutes to type the 1978+ characters in this file.
  */
