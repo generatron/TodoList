@@ -30,13 +30,9 @@ import Foundation
 
 class Task  {
 
-// Text  yaml Text
-    var description : Text!
-// Integer  yaml Int
+    var description : String!
     var id : Int!
-// String  yaml String
     var title : String!
-// TodoItem  yaml TodoItem
     var todo : TodoItem!
     
     
@@ -65,7 +61,7 @@ class Task  {
     func deserialize(json : JSON) throws -> Void {
       
 		if(json["description"] != nil){
-//description =  json["description"].deserialize()
+     		description =  json["description"].string
 		}
 		if(json["id"] != nil){
      		id =  json["id"].int
@@ -82,7 +78,7 @@ class Task  {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
 		if(json["description"] != nil){
-//description =  json["description"].deserialize()
+     		description =  json["description"].string
 		}
 		if(json["id"] != nil){
      		id =  json["id"].int
@@ -113,5 +109,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.78 minutes to type the 1978+ characters in this file.
+approximately 18.82 minutes to type the 1882+ characters in this file.
  */

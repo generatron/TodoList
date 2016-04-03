@@ -30,9 +30,7 @@ import Foundation
 
 class Status  {
 
-// Integer  yaml Int
     var id : Int!
-// String  yaml String
     var name : String!
     
     
@@ -91,5 +89,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.24 minutes to type the 1424+ characters in this file.
+approximately 13.78 minutes to type the 1378+ characters in this file.
  */
