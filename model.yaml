@@ -34,7 +34,7 @@ model:
      - name : title
        type : String
      - name : description
-       type : Text
+       type : String
   - name : Status
     attributes:
      - name : id
