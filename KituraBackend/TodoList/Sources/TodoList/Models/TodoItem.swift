@@ -35,7 +35,7 @@ class TodoItem  {
     var id : Int!
     var order : Int!
     var status : Status!
-    var task : [Task]!
+    var tasks : [Task]!
     var title : String!
     var url : String!
     
@@ -57,8 +57,8 @@ class TodoItem  {
 		if(status != nil){
 			dict["status"] = status
 		}
-		if(task != nil){
-			dict["task"] = task
+		if(tasks != nil){
+			dict["tasks"] = tasks
 		}
 		if(title != nil){
 			dict["title"] = title
@@ -91,8 +91,8 @@ class TodoItem  {
 		if(json["status"] != nil){
 //status =  json["status"].deserialize()
 		}
-		if(json["task"] != nil){
-     		task = json["task"].arrayValue
+		if(json["tasks"] != nil){
+     		tasks = json["tasks"].arrayValue
 		}
 		if(json["title"] != nil){
      		title =  json["title"].string
@@ -120,8 +120,8 @@ class TodoItem  {
 		if(json["status"] != nil){
 //status =  json["status"].deserialize()
 		}
-		if(json["task"] != nil){
-     		task = json["task"].arrayValue
+		if(json["tasks"] != nil){
+     		tasks = json["tasks"].arrayValue
 		}
 		if(json["title"] != nil){
      		title =  json["title"].string
@@ -149,5 +149,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 27.53 minutes to type the 2753+ characters in this file.
+approximately 27.63 minutes to type the 2763+ characters in this file.
  */

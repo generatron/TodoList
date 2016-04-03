@@ -103,8 +103,8 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 			if(entity.status != nil){
 				newValue.status = entity.status
 			}
-			if(entity.task != nil){
-				newValue.task = entity.task
+			if(entity.tasks != nil){
+				newValue.tasks = entity.tasks
 			}
 			if(entity.title != nil){
 				newValue.title = entity.title
@@ -138,5 +138,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 25.01 minutes to type the 2501+ characters in this file.
+approximately 25.04 minutes to type the 2504+ characters in this file.
  */
