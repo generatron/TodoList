@@ -30,21 +30,13 @@ import Foundation
 
 class TodoItem  {
 
-// Bool  yaml Bool
     var completed : Bool!
-// String  yaml String
     var dueDate : String!
-// Integer  yaml Int
     var id : Int!
-// Integer  yaml Int
     var order : Int!
-// Status  yaml Status
     var status : Status!
-// Collection  yaml Array
     var task : [Task]!
-// String  yaml String
     var title : String!
-// String  yaml String
     var url : String!
     
     
@@ -157,5 +149,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 29.4 minutes to type the 2940+ characters in this file.
+approximately 27.53 minutes to type the 2753+ characters in this file.
  */

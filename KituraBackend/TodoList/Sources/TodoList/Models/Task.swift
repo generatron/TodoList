@@ -30,13 +30,9 @@ import Foundation
 
 class Task  {
 
-// String  yaml String
     var description : String!
-// Integer  yaml Int
     var id : Int!
-// String  yaml String
     var title : String!
-// TodoItem  yaml TodoItem
     var todo : TodoItem!
     
     
@@ -113,5 +109,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.8 minutes to type the 1980+ characters in this file.
+approximately 18.82 minutes to type the 1882+ characters in this file.
  */

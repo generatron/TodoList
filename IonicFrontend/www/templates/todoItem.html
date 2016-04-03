@@ -1,0 +1,99 @@
+<!-- 
+Copyright (c) 2016 NgeosOne LLC
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+   
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
+ to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+ and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+Engineered using http://www.generatron.com/
+
+[GENERATRON]
+Generator :   System Templates
+Filename:     todoItem.html
+Description:  Ionic Form
+Project:      TodoList
+Template: /ionic-1.7.14/forms/form.partial2.vm
+ -->
+<ion-view title="TodoItem">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">TodoItem</div>
+            <div class="item item-body">
+                <!-- dkddkk  -->
+                <form class="list">
+                    <!-- Text input for completed Type: Bool  Native Type: Bool-->
+                    <ion-checkbox ng-model="todoItem.completed">Completed</ion-checkbox>
+                    <!-- Text input for dueDate Type: String  Native Type: String-->
+
+                    <label class="item item-input" name="dueDate">
+                        <span class="input-label">DueDate</span>
+                        <input id="dueDate" name="dueDate" type="text" placeholder="DueDate" ng-model="todoItem.dueDate">
+                        <div id="dueDateError" class="error"></div>
+                    </label>
+
+                    <!-- Text input for id Type: Integer  Native Type: Integer-->
+                    <!-- Text input for order Type: Integer  Native Type: Integer-->
+                    <label class="item item-input" name="order">
+                        <span class="input-label">Order</span>
+                        <input id="order" name="order" type="number" placeholder="Order" ng-model="todoItem.order">
+                        <div id="orderError" class="error"></div>
+                    </label>
+                    <!-- Text input for status Type: Status  Native Type: Status-->
+                    <!-- Select Basic -->
+                    <label class="control-label" for="status">
+                        <span class="input-label">Status</span>
+
+                        <select ng-options="status.id as status.name for status in statuss " ng-model="todoItem.status.id">
+                            <option value="">--None--</option>
+                        </select>
+                        <div id="statusError" class="error"></div>
+
+                    </label>
+                    <!-- Text input for task Type: Collection  Native Type: Collection-->
+                    <!-- Collections  -->
+                    <label class="item item-input" name="task">
+                        <span class="input-label">Task</span>
+                        <ng-include src="tasks.html"></ng-include>
+                    </label>
+                    <!-- Text input for title Type: String  Native Type: String-->
+
+                    <label class="item item-input" name="title">
+                        <span class="input-label">Title</span>
+                        <input id="title" name="title" type="text" placeholder="Title" ng-model="todoItem.title">
+                        <div id="titleError" class="error"></div>
+                    </label>
+
+                    <!-- Text input for url Type: String  Native Type: String-->
+
+                    <label class="item item-input" name="url">
+                        <span class="input-label">Url</span>
+                        <input id="url" name="url" type="text" placeholder="Url" ng-model="todoItem.url">
+                        <div id="urlError" class="error"></div>
+                    </label>
+
+                    <div class="button-bar">
+                        <button class="button button-stable button-block  icon ion-checkmark-circled" ng-click="save()"></button>
+                        <button id="cancel" name="cancel" class="button button-stable button-block icon ion-android-cancel" ng-click="cancel()"></button>
+                        <button ng-if="edit == true" id="delete" name="delete" class="button button-danger button-block  icon ion-android-delete" ng-click="delete()"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+<!-- 
+[STATS]
+It would take a person typing  @ 100.0 cpm, 
+approximately 30.74 minutes to type the 3074+ characters in this file.
+ -->
