@@ -63,6 +63,6 @@ fastlane/report.xml
 fastlane/screenshots
 
 .DS_Store
-TodoList/.build
-TodoList/Packages
+**/.build
+**/Packages
 

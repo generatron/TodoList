@@ -18,7 +18,7 @@ model:
        type : Bool
      - name : url
        type : String
-     - name : task
+     - name : tasks
        type : Collection
        generic : Task
        via : Todo
