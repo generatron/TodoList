@@ -35,16 +35,16 @@ let package = Package(
         )
     ],
     dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura-router.git", versions: Version(0,4,0)..<Version(0,5,0)),
-    	.Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", versions: Version(0,0,0)..<Version(0,1,0)),
+        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 0, minor: 6),
+        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 4),
         .Package(url: "https://github.com/IBM-Swift/LoggerAPI.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/Kitura-MustacheTemplateEngine.git",
-            majorVersion: 0, minor: 0),
+        .Package(url: "https://github.com/IBM-Swift/Swift-cfenv.git", majorVersion: 0),
+        .Package(url: "https://github.com/IBM-Swift/Kitura-MustacheTemplateEngine.git",majorVersion: 0, minor: 0)
     ],
     exclude: ["Makefile", "Kitura-CI"])
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 7.16 minutes to type the 716+ characters in this file.
+approximately 7.54 minutes to type the 754+ characters in this file.
  */
