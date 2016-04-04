@@ -36,15 +36,15 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
                     <!-- Text input for dueDate Type: date  Native Type: date-->
                     <label class="item item-input" name="dueDate">
                         <span class="input-label">DueDate</span>
-                        <input id="dueDate" name="dueDate" placeholder="DueDate" ng-model="todoItem.dueDate" class="input-xlarge">
-                        <span class="input-group-btn">
+                        <input id="dueDate" name="dueDate" type="date" ng-model="todoItem.dueDate" class="input-xlarge">
+                        <!--<span class="input-group-btn">
 			<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-			<div id="dueDateError" class="error"></div>
-			</label>    		
-			<!-- Text input for id Type: Integer  Native Type: Integer-->	
-<!-- Text input for order Type: Integer  Native Type: Integer-->	
-															<label class="item item-input" name="order">
-					<span class="input-label">Order</span>
+			<div id="dueDateError" class="error"></div>-->
+                    </label>
+                    <!-- Text input for id Type: Integer  Native Type: Integer-->
+                    <!-- Text input for order Type: Integer  Native Type: Integer-->
+                    <label class="item item-input" name="order">
+                        <span class="input-label">Order</span>
                         <input id="order" name="order" type="number" placeholder="Order" ng-model="todoItem.order">
                         <div id="orderError" class="error"></div>
                     </label>
@@ -95,5 +95,5 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
 <!-- 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 32.13 minutes to type the 3213+ characters in this file.
+approximately 32.1 minutes to type the 3210+ characters in this file.
  -->
