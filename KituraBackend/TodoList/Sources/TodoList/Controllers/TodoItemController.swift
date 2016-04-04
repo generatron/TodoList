@@ -25,7 +25,7 @@ Project:      TodoList
 Template: /Kitura-REST/server/EntityRouterClass.swift.vm
  */
 
-import KituraRouter
+import Kitura
 import KituraNet
 import KituraSys
 
@@ -123,5 +123,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 30.370003 minutes to type the 3037+ characters in this file.
+approximately 30.31 minutes to type the 3031+ characters in this file.
  */

@@ -24,7 +24,7 @@ Description:  Router Configuration
 Project:      TodoList
 Template: /Kitura-REST/server/Router.swift.vmg
  */
-import KituraRouter
+import Kitura
 import KituraNet
 import LoggerAPI
 import SwiftyJSON
@@ -89,5 +89,5 @@ class TodoListRouter  : Router{
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.89 minutes to type the 2089+ characters in this file.
+approximately 20.83 minutes to type the 2083+ characters in this file.
  */
