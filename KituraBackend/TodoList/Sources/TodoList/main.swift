@@ -26,7 +26,7 @@ Template: /Kitura-REST/server/main.swift.vmg
  */
 import KituraSys
 import KituraNet
-import KituraRouter
+import Kitura
 
 import LoggerAPI
 import HeliumLogger
@@ -55,5 +55,5 @@ Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.9 minutes to type the 590+ characters in this file.
+approximately 5.84 minutes to type the 584+ characters in this file.
  */

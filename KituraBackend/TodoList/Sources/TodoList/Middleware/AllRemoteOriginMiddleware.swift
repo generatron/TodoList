@@ -24,7 +24,7 @@ Description:  Swift Server
 Project:      TodoList
 Template: /Kitura-REST/server/AllRemoteOriginMiddleware.swift.vmg
  */
-import KituraRouter
+import Kitura
 import KituraNet
 
 import LoggerAPI
@@ -44,5 +44,5 @@ class AllRemoteOriginMiddleware: RouterMiddleware {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.76 minutes to type the 676+ characters in this file.
+approximately 6.7 minutes to type the 670+ characters in this file.
  */

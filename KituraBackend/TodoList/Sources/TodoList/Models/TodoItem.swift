@@ -31,7 +31,7 @@ import Foundation
 class TodoItem  {
 
     var completed : Bool!
-    var dueDate : String!
+    var dueDate : NSDate!
     var id : Int!
     var order : Int!
     var status : Status!
@@ -88,7 +88,7 @@ class TodoItem  {
      		completed =  json["completed"].bool
 		}
 		if(json["dueDate"] != nil){
-     		dueDate =  json["dueDate"].string
+     		dueDate =  json["dueDate"].date
 		}
 		if(json["id"] != nil){
      		id =  json["id"].int
@@ -117,7 +117,7 @@ status =  json["status"].deserialize()
      		completed =  json["completed"].bool
 		}
 		if(json["dueDate"] != nil){
-     		dueDate =  json["dueDate"].string
+     		dueDate =  json["dueDate"].date
 		}
 		if(json["id"] != nil){
      		id =  json["id"].int
@@ -157,5 +157,5 @@ status =  json["status"].deserialize()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.08 minutes to type the 2808+ characters in this file.
+approximately 28.04 minutes to type the 2804+ characters in this file.
  */
