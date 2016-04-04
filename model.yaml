@@ -13,7 +13,7 @@ model:
      - name : title
        type : String
      - name : dueDate
-       type : String
+       type : date
      - name : completed
        type : Bool
      - name : url
