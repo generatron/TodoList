@@ -33,18 +33,18 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
                 <form class="list">
                     <!-- Text input for completed Type: Bool  Native Type: Bool-->
                     <ion-checkbox ng-model="todoItem.completed">Completed</ion-checkbox>
-                    <!-- Text input for dueDate Type: String  Native Type: String-->
-
+                    <!-- Text input for dueDate Type: date  Native Type: date-->
                     <label class="item item-input" name="dueDate">
                         <span class="input-label">DueDate</span>
-                        <input id="dueDate" name="dueDate" type="text" placeholder="DueDate" ng-model="todoItem.dueDate">
-                        <div id="dueDateError" class="error"></div>
-                    </label>
-
-                    <!-- Text input for id Type: Integer  Native Type: Integer-->
-                    <!-- Text input for order Type: Integer  Native Type: Integer-->
-                    <label class="item item-input" name="order">
-                        <span class="input-label">Order</span>
+                        <input id="dueDate" name="dueDate" placeholder="DueDate" ng-model="todoItem.dueDate" class="input-xlarge">
+                        <span class="input-group-btn">
+			<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+			<div id="dueDateError" class="error"></div>
+			</label>    		
+			<!-- Text input for id Type: Integer  Native Type: Integer-->	
+<!-- Text input for order Type: Integer  Native Type: Integer-->	
+															<label class="item item-input" name="order">
+					<span class="input-label">Order</span>
                         <input id="order" name="order" type="number" placeholder="Order" ng-model="todoItem.order">
                         <div id="orderError" class="error"></div>
                     </label>
@@ -59,10 +59,10 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
                         <div id="statusError" class="error"></div>
 
                     </label>
-                    <!-- Text input for task Type: Collection  Native Type: Collection-->
+                    <!-- Text input for tasks Type: Collection  Native Type: Collection-->
                     <!-- Collections  -->
-                    <label class="item item-input" name="task">
-                        <span class="input-label">Task</span>
+                    <label class="item item-input" name="tasks">
+                        <span class="input-label">Tasks</span>
                         <ng-include src="tasks.html"></ng-include>
                     </label>
                     <!-- Text input for title Type: String  Native Type: String-->
@@ -95,5 +95,5 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
 <!-- 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 30.74 minutes to type the 3074+ characters in this file.
+approximately 32.13 minutes to type the 3213+ characters in this file.
  -->

@@ -36,7 +36,7 @@ Template: /ionic-1.7.14/controllers/add.controller.vm
  * Controller of the TodoList
  */
 angular.module('TodoList.controllers')
-    .controller('TaskAddCtrl', function($scope, TextWS, TodoItemWS, TaskWS) {
+    .controller('TaskAddCtrl', function($scope, TodoItemWS, TaskWS) {
 
         $scope.task = {};
 
@@ -64,9 +64,6 @@ angular.module('TodoList.controllers')
         }
 
         $scope.loadReferences = function() {
-            TextWS.list(function(data) {
-                $scope.descriptions = data;
-            }, $scope.errorcb)
             TodoItemWS.list(function(data) {
                 $scope.todos = data;
             }, $scope.errorcb)
@@ -92,5 +89,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 16.77 minutes to type the 1677+ characters in this file.
+approximately 15.600001 minutes to type the 1560+ characters in this file.
  */

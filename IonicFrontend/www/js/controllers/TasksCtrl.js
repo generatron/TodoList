@@ -36,7 +36,7 @@ Template: /ionic-1.7.14/controllers/grid.controller.vm
  * 
  */
 angular.module('TodoList.controllers')
-    .controller('TasksCtrl', function($scope, $rootScope, $timeout, $ionicFilterBar, TextWS, TodoItemWS, TaskWS) {
+    .controller('TasksCtrl', function($scope, $rootScope, $timeout, $ionicFilterBar, TodoItemWS, TaskWS) {
 
         var filterBarInstance;
 
@@ -95,5 +95,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 16.85 minutes to type the 1685+ characters in this file.
+approximately 16.78 minutes to type the 1678+ characters in this file.
  */

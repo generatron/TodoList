@@ -36,7 +36,7 @@ Template: /ionic-1.7.14/controllers/edit.controller.js.vm
  * 
  */
 angular.module('TodoList.controllers')
-    .controller('TaskEditCtrl', function($scope, $stateParams, $rootScope, TextWS, TodoItemWS, TaskWS) {
+    .controller('TaskEditCtrl', function($scope, $stateParams, $rootScope, TodoItemWS, TaskWS) {
         $scope.task = {};
 
 
@@ -70,13 +70,10 @@ angular.module('TodoList.controllers')
         }
         $scope.loadReferences = function() {
 
-            // false Text String description
-            TextWS.list(function(data) {
-                    $scope.descriptions = data;
-                }, $scope.errorcb)
-                // false Integer String id
-                // false String String title
-                // false TodoItem String todo
+            // false String String description
+            // false Integer String id
+            // false String String title
+            // false TodoItem String todo
             TodoItemWS.list(function(data) {
                 $scope.todos = data;
             }, $scope.errorcb)
@@ -100,5 +97,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.4 minutes to type the 1940+ characters in this file.
+approximately 18.25 minutes to type the 1825+ characters in this file.
  */

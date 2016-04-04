@@ -68,7 +68,7 @@ angular.module('TodoList.controllers')
                 $scope.statuss = data;
             }, $scope.errorcb)
             TaskWS.list(function(data) {
-                $scope.tasks = data;
+                $scope.taskss = data;
             }, $scope.errorcb)
 
         }
@@ -92,5 +92,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.16 minutes to type the 1816+ characters in this file.
+approximately 18.17 minutes to type the 1817+ characters in this file.
  */

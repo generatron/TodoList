@@ -71,16 +71,16 @@ angular.module('TodoList.controllers')
         $scope.loadReferences = function() {
 
             // false Bool String completed
-            // false String String dueDate
+            // false date String dueDate
             // false Integer String id
             // false Integer String order
             // false Status String status
             StatusWS.list(function(data) {
                     $scope.statuss = data;
                 }, $scope.errorcb)
-                // true Collection Task task
+                // true Collection Task tasks
             TaskWS.list(function(data) {
-                    $scope.tasks = data;
+                    $scope.taskss = data;
                 }, $scope.errorcb)
                 // false String String title
                 // false String String url

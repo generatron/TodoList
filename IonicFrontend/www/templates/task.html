@@ -31,17 +31,14 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
             <div class="item item-body">
                 <!-- dkddkk  -->
                 <form class="list">
-                    <!-- Text input for description Type: Text  Native Type: Text-->
-                    <!-- Select Basic -->
-                    <label class="control-label" for="description">
+                    <!-- Text input for description Type: String  Native Type: String-->
+
+                    <label class="item item-input" name="description">
                         <span class="input-label">Description</span>
-
-                        <select ng-options="description.id as description.title for description in descriptions " ng-model="task.description.id">
-                            <option value="">--None--</option>
-                        </select>
+                        <input id="description" name="description" type="text" placeholder="Description" ng-model="task.description">
                         <div id="descriptionError" class="error"></div>
-
                     </label>
+
                     <!-- Text input for id Type: Integer  Native Type: Integer-->
                     <!-- Text input for title Type: String  Native Type: String-->
 
@@ -76,5 +73,5 @@ Template: /ionic-1.7.14/forms/form.partial2.vm
 <!-- 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 21.19 minutes to type the 2119+ characters in this file.
+approximately 20.15 minutes to type the 2015+ characters in this file.
  -->
