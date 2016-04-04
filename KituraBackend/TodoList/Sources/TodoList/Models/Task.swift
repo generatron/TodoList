@@ -39,16 +39,20 @@ class Task  {
   func toDictionary() -> Dictionary<String, AnyObject> {
 		var dict =  Dictionary<String, AnyObject>()
 		if(description != nil){
-			dict["description"] = description
+		   dict["description"] = description
+
 		}
 		if(id != nil){
-			dict["id"] = id
+		   dict["id"] = id
+
 		}
 		if(title != nil){
-			dict["title"] = title
+		   dict["title"] = title
+
 		}
 		if(todo != nil){
-			dict["todo"] = todo
+	       dict["todo"] = todo.toDictionary();
+
 		}
 		return dict        
 	}
@@ -109,5 +113,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.82 minutes to type the 1882+ characters in this file.
+approximately 19.17 minutes to type the 1917+ characters in this file.
  */

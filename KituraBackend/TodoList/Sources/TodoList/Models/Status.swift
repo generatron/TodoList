@@ -37,10 +37,12 @@ class Status  {
   func toDictionary() -> Dictionary<String, AnyObject> {
 		var dict =  Dictionary<String, AnyObject>()
 		if(id != nil){
-			dict["id"] = id
+		   dict["id"] = id
+
 		}
 		if(name != nil){
-			dict["name"] = name
+		   dict["name"] = name
+
 		}
 		return dict        
 	}
@@ -89,5 +91,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.78 minutes to type the 1378+ characters in this file.
+approximately 13.86 minutes to type the 1386+ characters in this file.
  */

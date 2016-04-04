@@ -43,28 +43,36 @@ class TodoItem  {
   func toDictionary() -> Dictionary<String, AnyObject> {
 		var dict =  Dictionary<String, AnyObject>()
 		if(completed != nil){
-			dict["completed"] = completed
+		   dict["completed"] = completed
+
 		}
 		if(dueDate != nil){
-			dict["dueDate"] = dueDate
+		   dict["dueDate"] = dueDate
+
 		}
 		if(id != nil){
-			dict["id"] = id
+		   dict["id"] = id
+
 		}
 		if(order != nil){
-			dict["order"] = order
+		   dict["order"] = order
+
 		}
 		if(status != nil){
-			dict["status"] = status
+	       dict["status"] = status.toDictionary();
+
 		}
 		if(tasks != nil){
 			dict["tasks"] = tasks
+
 		}
 		if(title != nil){
-			dict["title"] = title
+		   dict["title"] = title
+
 		}
 		if(url != nil){
-			dict["url"] = url
+		   dict["url"] = url
+
 		}
 		return dict        
 	}
@@ -149,5 +157,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 27.63 minutes to type the 2763+ characters in this file.
+approximately 28.12 minutes to type the 2812+ characters in this file.
  */
