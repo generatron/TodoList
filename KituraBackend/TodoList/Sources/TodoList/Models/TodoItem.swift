@@ -108,11 +108,12 @@ class TodoItem  {
     }  
     
      
-    static func deserialize(jsonString : String) -> TodoItem {
+    static func deserialize(jsonString : String) throws -> TodoItem {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
     		return TodoItem.deserialize(json)
 		}
+		throw TodoListErrors.NoDataForJSON;
     }
     
     static func serialize(entity : TodoItem) -> JSON {
@@ -137,5 +138,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 24.94 minutes to type the 2494+ characters in this file.
+approximately 25.4 minutes to type the 2540+ characters in this file.
  */

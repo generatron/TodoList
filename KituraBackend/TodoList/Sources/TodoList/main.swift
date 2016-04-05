@@ -41,6 +41,10 @@ import Foundation
     import Mustache
 #endif
 
+enum TodoListErrors: ErrorType {
+    case NoDataForJSON
+}
+
 let persistenceManager = PersistenceManagerMemory();
 
 TodoListRouter.sharedInstance.setupRoutes();
@@ -55,5 +59,5 @@ Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.84 minutes to type the 584+ characters in this file.
+approximately 6.47 minutes to type the 647+ characters in this file.
  */
