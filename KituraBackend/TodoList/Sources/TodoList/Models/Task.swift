@@ -65,13 +65,13 @@ class Task  {
     func deserialize(json : JSON) throws -> Void {
       
 		if(json["description"] != nil){
-     		description =  json["description"].string
+				description =  json["description"].string 
 		}
 		if(json["id"] != nil){
-     		id =  json["id"].int
+				id =  json["id"].int 
 		}
 		if(json["title"] != nil){
-     		title =  json["title"].string
+				title =  json["title"].string 
 		}
 		if(json["todo"] != nil){
  //todo =  json["todo"].deserialize()
@@ -113,5 +113,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.08 minutes to type the 1908+ characters in this file.
+approximately 19.02 minutes to type the 1902+ characters in this file.
  */

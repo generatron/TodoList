@@ -85,16 +85,16 @@ class TodoItem  {
     func deserialize(json : JSON) throws -> Void {
       
 		if(json["completed"] != nil){
-     		completed =  json["completed"].bool
+				completed =  json["completed"].bool 
 		}
 		if(json["dueDate"] != nil){
-     		dueDate =  json["dueDate"].date
+				dueDate =  json["dueDate"].date 
 		}
 		if(json["id"] != nil){
-     		id =  json["id"].int
+				id =  json["id"].int 
 		}
 		if(json["order"] != nil){
-     		order =  json["order"].int
+				order =  json["order"].int 
 		}
 		if(json["status"] != nil){
  //status =  json["status"].deserialize()
@@ -103,10 +103,10 @@ class TodoItem  {
      		tasks = json["tasks"].arrayValue
 		}
 		if(json["title"] != nil){
-     		title =  json["title"].string
+				title =  json["title"].string 
 		}
 		if(json["url"] != nil){
-     		url =  json["url"].string
+				url =  json["url"].string 
 		}
 		
     }   
@@ -157,5 +157,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.02 minutes to type the 2802+ characters in this file.
+approximately 27.9 minutes to type the 2790+ characters in this file.
  */
