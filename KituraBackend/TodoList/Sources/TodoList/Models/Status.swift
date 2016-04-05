@@ -47,42 +47,39 @@ class Status  {
 		return dict        
 	}
 	
-	func serialize() -> JSON {
-		let json =  JSON(toDictionary())
-		return json        
-	}
 	
-    func deserialize(json : JSON) throws -> Void {
-      
+   static func deserialize(json : JSON) throws -> Status {
 		if(json["id"] != nil){
-				id =  json["id"].int 
+			id =  json["id"].int 
 		}
 		if(json["name"] != nil){
-				name =  json["name"].string 
+			name =  json["name"].string 
 		}
 		
-    }   
-    func deserialize(jsonString : String) throws -> Void {
+    }  
+    
+     
+    static func deserialize(jsonString : String) throws -> Status {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
-			if(json["id"] != nil){
-				id =  json["id"].int 
-			}
-			if(json["name"] != nil){
-				name =  json["name"].string 
-			}
+    		return Status.deserialize(json)
 		}
     }
     
-	func encode() throws -> JSON! {
-        let json = serialize()
+    static func serialize(entity : Status) -> JSON {
+		let json =  JSON(entity.toDictionary())
+		return json        
+	}
+	
+	static func encode(entity : Status) throws -> JSON! {
+        let json = Status.serialize()
         return json 
     }
     
     static func encodeList(elements : Array<Status>) throws -> JSON {
           var list = [JSON]();
           for element in elements {
-              let json = element.serialize()
+              let json = Status.serialize(element)
               list.append(json)
           }
           return JSON(list)
@@ -91,5 +88,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.82 minutes to type the 1382+ characters in this file.
+approximately 13.81 minutes to type the 1381+ characters in this file.
  */

@@ -53,11 +53,10 @@ class StatusController  {
 	
 	
 	  TodoListRouter.sharedInstance.post("/api/status"){ request, response, next in
-	     let status = Status() 
 	     do {
 	     	if let body = request.body {
             	if let json = body.asJson() {
-	                try status.deserialize(json);
+	                let status = try Status.deserialize(json);
 		    		try self.pm.statusRepository.insert(status)
 		    		let json = try status.encode()
 		    		response.status(HttpStatusCode.OK).sendJson(json)
@@ -77,7 +76,7 @@ class StatusController  {
 	        let status : Status?  = try self.pm.statusRepository.retrieve(id!)
 	        
 	        if(status != nil){
-	        	let json = try status!.encode()
+	        	let json = try Status.encode(status)
 	        	response.status(HttpStatusCode.OK).sendJson(json)
 	        }else{
 	        	try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
@@ -92,8 +91,7 @@ class StatusController  {
 	    do {
 	     	if let body = request.body {
             	if let json = body.asJson() {
-            		let status = Status()
-	                try status.deserialize(json);
+	                let status = try Status.deserialize(json);
 		    		try self.pm.statusRepository.update(status)
 		    		let json = try status.encode()
 		    		response.status(HttpStatusCode.OK).sendJson(json)
@@ -123,5 +121,5 @@ class StatusController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 29.71 minutes to type the 2971+ characters in this file.
+approximately 29.35 minutes to type the 2935+ characters in this file.
  */

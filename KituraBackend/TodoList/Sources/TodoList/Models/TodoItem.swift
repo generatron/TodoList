@@ -77,78 +77,57 @@ class TodoItem  {
 		return dict        
 	}
 	
-	func serialize() -> JSON {
-		let json =  JSON(toDictionary())
-		return json        
-	}
 	
-    func deserialize(json : JSON) throws -> Void {
-      
+   static func deserialize(json : JSON) throws -> TodoItem {
 		if(json["completed"] != nil){
-				completed =  json["completed"].bool 
+			completed =  json["completed"].bool 
 		}
 		if(json["dueDate"] != nil){
-     			dueDate =  json["dueDate"].string.SQLStringDate()
+     		dueDate =  json["dueDate"].string!.SQLStringDate()
 		}
 		if(json["id"] != nil){
-				id =  json["id"].int 
+			id =  json["id"].int 
 		}
 		if(json["order"] != nil){
-				order =  json["order"].int 
+			order =  json["order"].int 
 		}
 		if(json["status"] != nil){
- //status =  json["status"].deserialize()
+ 			//status =  json["status"].deserialize()
 		}
 		if(json["tasks"] != nil){
      		tasks = json["tasks"].arrayValue
 		}
 		if(json["title"] != nil){
-				title =  json["title"].string 
+			title =  json["title"].string 
 		}
 		if(json["url"] != nil){
-				url =  json["url"].string 
+			url =  json["url"].string 
 		}
 		
-    }   
-    func deserialize(jsonString : String) throws -> Void {
+    }  
+    
+     
+    static func deserialize(jsonString : String) throws -> TodoItem {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
-			if(json["completed"] != nil){
-				completed =  json["completed"].bool 
-			}
-			if(json["dueDate"] != nil){
-     			dueDate =  json["dueDate"].string.SQLStringDate()
-			}
-			if(json["id"] != nil){
-				id =  json["id"].int 
-			}
-			if(json["order"] != nil){
-				order =  json["order"].int 
-			}
-			if(json["status"] != nil){
-				status =  json["status"]
-			}
-			if(json["tasks"] != nil){
-     			tasks = json["tasks"].arrayValue
-			}
-			if(json["title"] != nil){
-				title =  json["title"].string 
-			}
-			if(json["url"] != nil){
-				url =  json["url"].string 
-			}
+    		return TodoItem.deserialize(json)
 		}
     }
     
-	func encode() throws -> JSON! {
-        let json = serialize()
+    static func serialize(entity : TodoItem) -> JSON {
+		let json =  JSON(entity.toDictionary())
+		return json        
+	}
+	
+	static func encode(entity : TodoItem) throws -> JSON! {
+        let json = TodoItem.serialize()
         return json 
     }
     
     static func encodeList(elements : Array<TodoItem>) throws -> JSON {
           var list = [JSON]();
           for element in elements {
-              let json = element.serialize()
+              let json = TodoItem.serialize(element)
               list.append(json)
           }
           return JSON(list)
@@ -157,5 +136,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.32 minutes to type the 2832+ characters in this file.
+approximately 23.83 minutes to type the 2383+ characters in this file.
  */

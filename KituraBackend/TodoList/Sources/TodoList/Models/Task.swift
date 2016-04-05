@@ -57,54 +57,45 @@ class Task  {
 		return dict        
 	}
 	
-	func serialize() -> JSON {
-		let json =  JSON(toDictionary())
-		return json        
-	}
 	
-    func deserialize(json : JSON) throws -> Void {
-      
+   static func deserialize(json : JSON) throws -> Task {
 		if(json["description"] != nil){
-				description =  json["description"].string 
+			description =  json["description"].string 
 		}
 		if(json["id"] != nil){
-				id =  json["id"].int 
+			id =  json["id"].int 
 		}
 		if(json["title"] != nil){
-				title =  json["title"].string 
+			title =  json["title"].string 
 		}
 		if(json["todo"] != nil){
- //todo =  json["todo"].deserialize()
+ 			//todo =  json["todo"].deserialize()
 		}
 		
-    }   
-    func deserialize(jsonString : String) throws -> Void {
+    }  
+    
+     
+    static func deserialize(jsonString : String) throws -> Task {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
-			if(json["description"] != nil){
-				description =  json["description"].string 
-			}
-			if(json["id"] != nil){
-				id =  json["id"].int 
-			}
-			if(json["title"] != nil){
-				title =  json["title"].string 
-			}
-			if(json["todo"] != nil){
-				todo =  json["todo"]
-			}
+    		return Task.deserialize(json)
 		}
     }
     
-	func encode() throws -> JSON! {
-        let json = serialize()
+    static func serialize(entity : Task) -> JSON {
+		let json =  JSON(entity.toDictionary())
+		return json        
+	}
+	
+	static func encode(entity : Task) throws -> JSON! {
+        let json = Task.serialize()
         return json 
     }
     
     static func encodeList(elements : Array<Task>) throws -> JSON {
           var list = [JSON]();
           for element in elements {
-              let json = element.serialize()
+              let json = Task.serialize(element)
               list.append(json)
           }
           return JSON(list)
@@ -113,5 +104,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.02 minutes to type the 1902+ characters in this file.
+approximately 17.35 minutes to type the 1735+ characters in this file.
  */

@@ -53,11 +53,10 @@ class TodoItemController  {
 	
 	
 	  TodoListRouter.sharedInstance.post("/api/todoItem"){ request, response, next in
-	     let todoItem = TodoItem() 
 	     do {
 	     	if let body = request.body {
             	if let json = body.asJson() {
-	                try todoItem.deserialize(json);
+	                let todoItem = try TodoItem.deserialize(json);
 		    		try self.pm.todoItemRepository.insert(todoItem)
 		    		let json = try todoItem.encode()
 		    		response.status(HttpStatusCode.OK).sendJson(json)
@@ -77,7 +76,7 @@ class TodoItemController  {
 	        let todoItem : TodoItem?  = try self.pm.todoItemRepository.retrieve(id!)
 	        
 	        if(todoItem != nil){
-	        	let json = try todoItem!.encode()
+	        	let json = try TodoItem.encode(todoItem)
 	        	response.status(HttpStatusCode.OK).sendJson(json)
 	        }else{
 	        	try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
@@ -92,8 +91,7 @@ class TodoItemController  {
 	    do {
 	     	if let body = request.body {
             	if let json = body.asJson() {
-            		let todoItem = TodoItem()
-	                try todoItem.deserialize(json);
+	                let todoItem = try TodoItem.deserialize(json);
 		    		try self.pm.todoItemRepository.update(todoItem)
 		    		let json = try todoItem.encode()
 		    		response.status(HttpStatusCode.OK).sendJson(json)
@@ -123,5 +121,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 30.31 minutes to type the 3031+ characters in this file.
+approximately 29.93 minutes to type the 2993+ characters in this file.
  */
