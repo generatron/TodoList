@@ -58,7 +58,7 @@ class TodoItemController  {
             	if let json = body.asJson() {
 	                let todoItem = try TodoItem.deserialize(json);
 		    		try self.pm.todoItemRepository.insert(todoItem)
-		    		let json =  TodoItem.encode(todoItem)
+		    		let json =  try TodoItem.encode(todoItem)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -121,5 +121,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 30.04 minutes to type the 3004+ characters in this file.
+approximately 30.080002 minutes to type the 3008+ characters in this file.
  */

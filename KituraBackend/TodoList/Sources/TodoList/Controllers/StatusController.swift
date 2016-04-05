@@ -58,7 +58,7 @@ class StatusController  {
             	if let json = body.asJson() {
 	                let status = try Status.deserialize(json);
 		    		try self.pm.statusRepository.insert(status)
-		    		let json =  Status.encode(status)
+		    		let json =  try Status.encode(status)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -121,5 +121,5 @@ class StatusController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 29.42 minutes to type the 2942+ characters in this file.
+approximately 29.46 minutes to type the 2946+ characters in this file.
  */
