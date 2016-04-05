@@ -96,7 +96,10 @@ class TodoItem  {
  			//todoItem.status =  json["status"].deserialize()
 		}
 		if(json["tasks"] != nil){
-     		todoItem.tasks = json["tasks"].arrayValue
+     		todoItem.tasks = [Task]()
+            for e  in json["tasks"].arrayValue {
+                todoItem.tasks.append(Task.deserialize(e))
+            }
 		}
 		if(json["title"] != nil){
 			todoItem.title =  json["title"].string 
@@ -138,5 +141,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 25.4 minutes to type the 2540+ characters in this file.
+approximately 26.49 minutes to type the 2649+ characters in this file.
  */
