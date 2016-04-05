@@ -54,9 +54,11 @@ class Status  {
 	
     func deserialize(json : JSON) throws -> Void {
       
+// Integer  yaml Int
 		if(json["id"] != nil){
 				id =  json["id"].int 
 		}
+// String  yaml String
 		if(json["name"] != nil){
 				name =  json["name"].string 
 		}
@@ -91,5 +93,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.82 minutes to type the 1382+ characters in this file.
+approximately 14.28 minutes to type the 1428+ characters in this file.
  */
