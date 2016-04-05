@@ -79,31 +79,32 @@ class TodoItem  {
 	
 	
    static func deserialize(json : JSON) throws -> TodoItem {
+   let todoItem = TodoItem()
 		if(json["completed"] != nil){
-			completed =  json["completed"].bool 
+			todoItem.completed =  json["completed"].bool 
 		}
 		if(json["dueDate"] != nil){
-     		dueDate =  json["dueDate"].string!.SQLStringDate()
+     		todoItem.dueDate =  json["dueDate"].string!.SQLStringDate()
 		}
 		if(json["id"] != nil){
-			id =  json["id"].int 
+			todoItem.id =  json["id"].int 
 		}
 		if(json["order"] != nil){
-			order =  json["order"].int 
+			todoItem.order =  json["order"].int 
 		}
 		if(json["status"] != nil){
- 			//status =  json["status"].deserialize()
+ 			//todoItem.status =  json["status"].deserialize()
 		}
 		if(json["tasks"] != nil){
-     		tasks = json["tasks"].arrayValue
+     		todoItem.tasks = json["tasks"].arrayValue
 		}
 		if(json["title"] != nil){
-			title =  json["title"].string 
+			todoItem.title =  json["title"].string 
 		}
 		if(json["url"] != nil){
-			url =  json["url"].string 
+			todoItem.url =  json["url"].string 
 		}
-		
+	return todoItem	
     }  
     
      
@@ -136,5 +137,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 23.83 minutes to type the 2383+ characters in this file.
+approximately 25.0 minutes to type the 2500+ characters in this file.
  */

@@ -49,13 +49,14 @@ class Status  {
 	
 	
    static func deserialize(json : JSON) throws -> Status {
+   let status = Status()
 		if(json["id"] != nil){
-			id =  json["id"].int 
+			status.id =  json["id"].int 
 		}
 		if(json["name"] != nil){
-			name =  json["name"].string 
+			status.name =  json["name"].string 
 		}
-		
+	return status	
     }  
     
      
@@ -88,5 +89,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.81 minutes to type the 1381+ characters in this file.
+approximately 14.34 minutes to type the 1434+ characters in this file.
  */
