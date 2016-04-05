@@ -48,7 +48,7 @@ class Status  {
 	}
 	
 	
-   static func deserialize(json : JSON) throws -> Status {
+   static func deserialize(json : JSON) -> Status {
    let status = Status()
 		if(json["id"] != nil){
 			status.id =  json["id"].int 
@@ -56,11 +56,11 @@ class Status  {
 		if(json["name"] != nil){
 			status.name =  json["name"].string 
 		}
-	return status	
+			return status	
     }  
     
      
-    static func deserialize(jsonString : String) throws -> Status {
+    static func deserialize(jsonString : String) -> Status {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
     		return Status.deserialize(json)
@@ -73,7 +73,7 @@ class Status  {
 	}
 	
 	static func encode(entity : Status) throws -> JSON! {
-        let json = Status.serialize()
+        let json = Status.serialize(entity)
         return json 
     }
     
@@ -89,5 +89,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.34 minutes to type the 1434+ characters in this file.
+approximately 14.28 minutes to type the 1428+ characters in this file.
  */

@@ -78,7 +78,7 @@ class TodoItem  {
 	}
 	
 	
-   static func deserialize(json : JSON) throws -> TodoItem {
+   static func deserialize(json : JSON) -> TodoItem {
    let todoItem = TodoItem()
 		if(json["completed"] != nil){
 			todoItem.completed =  json["completed"].bool 
@@ -104,11 +104,11 @@ class TodoItem  {
 		if(json["url"] != nil){
 			todoItem.url =  json["url"].string 
 		}
-	return todoItem	
+			return todoItem	
     }  
     
      
-    static func deserialize(jsonString : String) throws -> TodoItem {
+    static func deserialize(jsonString : String) -> TodoItem {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
     		return TodoItem.deserialize(json)
@@ -121,7 +121,7 @@ class TodoItem  {
 	}
 	
 	static func encode(entity : TodoItem) throws -> JSON! {
-        let json = TodoItem.serialize()
+        let json = TodoItem.serialize(entity)
         return json 
     }
     
@@ -137,5 +137,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 25.0 minutes to type the 2500+ characters in this file.
+approximately 24.94 minutes to type the 2494+ characters in this file.
  */

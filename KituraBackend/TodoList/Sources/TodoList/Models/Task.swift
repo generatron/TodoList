@@ -58,7 +58,7 @@ class Task  {
 	}
 	
 	
-   static func deserialize(json : JSON) throws -> Task {
+   static func deserialize(json : JSON) -> Task {
    let task = Task()
 		if(json["description"] != nil){
 			task.description =  json["description"].string 
@@ -72,11 +72,11 @@ class Task  {
 		if(json["todo"] != nil){
  			//task.todo =  json["todo"].deserialize()
 		}
-	return task	
+			return task	
     }  
     
      
-    static func deserialize(jsonString : String) throws -> Task {
+    static func deserialize(jsonString : String) -> Task {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
     		return Task.deserialize(json)
@@ -89,7 +89,7 @@ class Task  {
 	}
 	
 	static func encode(entity : Task) throws -> JSON! {
-        let json = Task.serialize()
+        let json = Task.serialize(entity)
         return json 
     }
     
@@ -105,5 +105,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 17.88 minutes to type the 1788+ characters in this file.
+approximately 17.82 minutes to type the 1782+ characters in this file.
  */

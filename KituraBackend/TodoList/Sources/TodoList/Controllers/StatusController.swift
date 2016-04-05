@@ -58,7 +58,7 @@ class StatusController  {
             	if let json = body.asJson() {
 	                let status = try Status.deserialize(json);
 		    		try self.pm.statusRepository.insert(status)
-		    		let json = try status.encode()
+		    		let json = try Status.encode(status!)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -76,7 +76,7 @@ class StatusController  {
 	        let status : Status?  = try self.pm.statusRepository.retrieve(id!)
 	        
 	        if(status != nil){
-	        	let json = try Status.encode(status)
+	        	let json = try Status.encode(status!)
 	        	response.status(HttpStatusCode.OK).sendJson(json)
 	        }else{
 	        	try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
@@ -93,7 +93,7 @@ class StatusController  {
             	if let json = body.asJson() {
 	                let status = try Status.deserialize(json);
 		    		try self.pm.statusRepository.update(status)
-		    		let json = try status.encode()
+		    		let json = try Status.encode(status!)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -121,5 +121,5 @@ class StatusController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 29.35 minutes to type the 2935+ characters in this file.
+approximately 29.5 minutes to type the 2950+ characters in this file.
  */

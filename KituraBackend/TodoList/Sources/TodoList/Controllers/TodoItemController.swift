@@ -58,7 +58,7 @@ class TodoItemController  {
             	if let json = body.asJson() {
 	                let todoItem = try TodoItem.deserialize(json);
 		    		try self.pm.todoItemRepository.insert(todoItem)
-		    		let json = try todoItem.encode()
+		    		let json = try TodoItem.encode(todoItem!)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -76,7 +76,7 @@ class TodoItemController  {
 	        let todoItem : TodoItem?  = try self.pm.todoItemRepository.retrieve(id!)
 	        
 	        if(todoItem != nil){
-	        	let json = try TodoItem.encode(todoItem)
+	        	let json = try TodoItem.encode(todoItem!)
 	        	response.status(HttpStatusCode.OK).sendJson(json)
 	        }else{
 	        	try! response.status(HttpStatusCode.INTERNAL_SERVER_ERROR).end();
@@ -93,7 +93,7 @@ class TodoItemController  {
             	if let json = body.asJson() {
 	                let todoItem = try TodoItem.deserialize(json);
 		    		try self.pm.todoItemRepository.update(todoItem)
-		    		let json = try todoItem.encode()
+		    		let json = try TodoItem.encode(todoItem!)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -121,5 +121,5 @@ class TodoItemController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 29.93 minutes to type the 2993+ characters in this file.
+approximately 30.120003 minutes to type the 3012+ characters in this file.
  */
