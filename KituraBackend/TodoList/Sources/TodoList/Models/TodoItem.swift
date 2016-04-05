@@ -113,30 +113,30 @@ class TodoItem  {
     func deserialize(jsonString : String) throws -> Void {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
-		if(json["completed"] != nil){
-     		completed =  json["completed"].bool
-		}
-		if(json["dueDate"] != nil){
-     		dueDate =  json["dueDate"].date
-		}
-		if(json["id"] != nil){
-     		id =  json["id"].int
-		}
-		if(json["order"] != nil){
-     		order =  json["order"].int
-		}
-		if(json["status"] != nil){
-//status =  json["status"].deserialize()
-		}
-		if(json["tasks"] != nil){
-     		tasks = json["tasks"].arrayValue
-		}
-		if(json["title"] != nil){
-     		title =  json["title"].string
-		}
-		if(json["url"] != nil){
-     		url =  json["url"].string
-		}
+			if(json["completed"] != nil){
+				completed =  json["completed"].bool 
+			}
+			if(json["dueDate"] != nil){
+				dueDate =  json["dueDate"].date 
+			}
+			if(json["id"] != nil){
+				id =  json["id"].int 
+			}
+			if(json["order"] != nil){
+				order =  json["order"].int 
+			}
+			if(json["status"] != nil){
+				status =  json["status"]
+			}
+			if(json["tasks"] != nil){
+     			tasks = json["tasks"].arrayValue
+			}
+			if(json["title"] != nil){
+				title =  json["title"].string 
+			}
+			if(json["url"] != nil){
+				url =  json["url"].string 
+			}
 		}
     }
     
@@ -157,5 +157,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.09 minutes to type the 2809+ characters in this file.
+approximately 28.02 minutes to type the 2802+ characters in this file.
  */

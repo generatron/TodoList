@@ -65,12 +65,12 @@ class Status  {
     func deserialize(jsonString : String) throws -> Void {
         if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
-		if(json["id"] != nil){
-     		id =  json["id"].int
-		}
-		if(json["name"] != nil){
-     		name =  json["name"].string
-		}
+			if(json["id"] != nil){
+				id =  json["id"].int 
+			}
+			if(json["name"] != nil){
+				name =  json["name"].string 
+			}
 		}
     }
     
