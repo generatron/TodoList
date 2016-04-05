@@ -58,7 +58,7 @@ class TaskController  {
             	if let json = body.asJson() {
 	                let task = try Task.deserialize(json);
 		    		try self.pm.taskRepository.insert(task)
-		    		let json =  try Task.encode(task)
+		    		let json = try Task.encode(task)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -93,7 +93,7 @@ class TaskController  {
             	if let json = body.asJson() {
 	                let task = try Task.deserialize(json);
 		    		try self.pm.taskRepository.update(task)
-		    		let json =  Task.encode(task)
+		    		let json = try Task.encode(task)
 		    		response.status(HttpStatusCode.OK).sendJson(json)
             	}
 	        } else {
@@ -121,5 +121,5 @@ class TaskController  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 28.84 minutes to type the 2884+ characters in this file.
+approximately 28.86 minutes to type the 2886+ characters in this file.
  */
