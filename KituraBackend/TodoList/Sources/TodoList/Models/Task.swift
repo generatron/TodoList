@@ -74,7 +74,7 @@ class Task  {
      		title =  json["title"].string
 		}
 		if(json["todo"] != nil){
-todo =  json["todo"].deserialize()
+ //todo =  json["todo"].deserialize()
 		}
 		
     }   
@@ -91,7 +91,7 @@ todo =  json["todo"].deserialize()
      		title =  json["title"].string
 		}
 		if(json["todo"] != nil){
-todo =  json["todo"].deserialize()
+//todo =  json["todo"].deserialize()
 		}
 		}
     }
@@ -113,5 +113,5 @@ todo =  json["todo"].deserialize()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 19.13 minutes to type the 1913+ characters in this file.
+approximately 19.18 minutes to type the 1918+ characters in this file.
  */
