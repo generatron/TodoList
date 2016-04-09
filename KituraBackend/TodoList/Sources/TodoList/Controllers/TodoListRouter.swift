@@ -42,33 +42,9 @@ class TodoListRouter  : Router{
     var todoItemController : TodoItemController!
     
     func setupRoutes() { 
-	    self.use("/*", middleware: BodyParser())
-	    self.use("/*", middleware: AllRemoteOriginMiddleware())
-		self.use("/static/*", middleware: StaticFileServer())
-		//setTemplateEngine(MustacheTemplateEngine())
-
-		self.get("/") { _, response, next in
-		    defer {
-		        next()
-		    }
-		    do {
-		        var context: [String: Any] = [
-		            "name": "Arthur",
-		            "date": NSDate(),
-		            "realDate": NSDate().dateByAddingTimeInterval(60*60*24*3),
-		            "late": true
-		        ]
-		
-		        // Let template format dates with `{{format(...)}}`
-		        let dateFormatter = NSDateFormatter()
-		        dateFormatter.dateStyle = .MediumStyle
-		        context["format"] = dateFormatter
-		
-		        try response.render("index", context: context).end()
-		    } catch {
-		        Log.error("Failed to render template \(error)")
-		    }
-		}
+	    self.all("/*", middleware: BodyParser())
+	    self.all("/*", middleware: AllRemoteOriginMiddleware())
+		self.all("/static/*", middleware: StaticFileServer())
 
 		// Handles any errors that get set
 		self.error { request, response, next in
@@ -89,5 +65,5 @@ class TodoListRouter  : Router{
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.68 minutes to type the 2068+ characters in this file.
+approximately 13.31 minutes to type the 1331+ characters in this file.
  */
