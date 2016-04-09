@@ -26,7 +26,7 @@ Template: /Kitura-REST/server/RepositoryMemory.swift.vmg
  */
 
 
-enum RepositoryError : ErrorType {
+enum RepositoryError : ErrorProtocol {
     case Select(UInt32)
     case Insert(UInt32)
     case Update(UInt32)
@@ -46,5 +46,5 @@ class RepositoryMemory : Repository{
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.21 minutes to type the 321+ characters in this file.
+approximately 3.25 minutes to type the 325+ characters in this file.
  */

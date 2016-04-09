@@ -37,7 +37,7 @@ import HeliumLogger
 
 import Foundation
 
-enum TodoListErrors: ErrorType {
+enum TodoListErrors: ErrorProtocol {
     case NoDataForJSON
 }
 
@@ -55,5 +55,5 @@ Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.03 minutes to type the 603+ characters in this file.
+approximately 6.07 minutes to type the 607+ characters in this file.
  */

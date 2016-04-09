@@ -77,7 +77,7 @@ class Task  {
     
      
     static func deserialize(jsonString : String) throws -> Task {
-        if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+        if let dataFromString = jsonString.data(usingEncoding: NSUTF8StringEncoding, allowLossyConversion: false) {
     		let json = JSON(data: dataFromString)
     		return Task.deserialize(json)
 		}
@@ -106,5 +106,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.28 minutes to type the 1828+ characters in this file.
+approximately 18.3 minutes to type the 1830+ characters in this file.
  */
