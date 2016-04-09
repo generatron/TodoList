@@ -26,6 +26,8 @@ Engineered with [Kitura-REST](https://www.generatron.com//#/generatron/Kitura-RE
 
    [http://localhost:9000](http://localhost:9000)
 
+4. Generate a project file for  TodoList application
+swift build --generate-xcodeproj .
 
 ## Tests
 
