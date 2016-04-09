@@ -111,7 +111,7 @@ class TaskRepositoryMemory : TaskRepository {
     }
     
 	func delete(id: Int) throws -> Int {
-		self._collection.removeValueForKey(String(id))
+		self._collection.removeValue(String(id))
 		return 0
 	}
     
@@ -126,5 +126,5 @@ class TaskRepositoryMemory : TaskRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 21.84 minutes to type the 2184+ characters in this file.
+approximately 21.78 minutes to type the 2178+ characters in this file.
  */
