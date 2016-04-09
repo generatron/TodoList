@@ -123,7 +123,7 @@ class TodoItemRepositoryMemory : TodoItemRepository {
     }
     
 	func delete(id: Int) throws -> Int {
-		self._collection.removeValue(String(id))
+		self._collection.removeValue(forKey:String(id))
 		return 0
 	}
     
@@ -138,5 +138,5 @@ class TodoItemRepositoryMemory : TodoItemRepository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 24.98 minutes to type the 2498+ characters in this file.
+approximately 25.05 minutes to type the 2505+ characters in this file.
  */
