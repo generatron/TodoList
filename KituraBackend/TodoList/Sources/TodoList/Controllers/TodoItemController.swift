@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     TodoItemController.swift
 Description:  TodoItem Handlers for REST endpoints 
 Project:      TodoList
-Template: /Kitura-REST/server/EntityRouterClass.swift.vm
+Template: /Kitura-REST/server/EntityController.swift.vm
  */
 
 import Kitura

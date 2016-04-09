@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     TaskController.swift
 Description:  Task Handlers for REST endpoints 
 Project:      TodoList
-Template: /Kitura-REST/server/EntityRouterClass.swift.vm
+Template: /Kitura-REST/server/EntityController.swift.vm
  */
 
 import Kitura

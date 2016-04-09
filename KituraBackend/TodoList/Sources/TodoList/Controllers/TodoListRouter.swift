@@ -29,7 +29,7 @@ import KituraNet
 import LoggerAPI
 import SwiftyJSON
 import Foundation
-import Mustache
+
 /**
 * RouterMiddleware can be used for intercepting requests and handling custom behavior
 * such as authentication and other routing
@@ -89,5 +89,5 @@ class TodoListRouter  : Router{
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 20.83 minutes to type the 2083+ characters in this file.
+approximately 20.68 minutes to type the 2068+ characters in this file.
  */

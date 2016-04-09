@@ -29,10 +29,12 @@ import Foundation
 
 extension String {
  
-    func SQLStringDate() -> NSDate {
+    func SQLStringDate() -> NSDate? {
         let dateFormat = NSDateFormatter ()
         dateFormat.dateFormat = "YYYY-MM-dd"
-        return dateFormat.dateFromString(self)!
+        let datestr = self.substringWithRange(Range<String.Index>(start: self.startIndex, end: self.startIndex.advancedBy(10)))
+        let  date =  dateFormat.dateFromString(datestr)
+        return date;
     }
 }
 
@@ -47,8 +49,9 @@ extension NSDate {
 
 
 
+
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 4.23 minutes to type the 423+ characters in this file.
+approximately 5.82 minutes to type the 582+ characters in this file.
  */
