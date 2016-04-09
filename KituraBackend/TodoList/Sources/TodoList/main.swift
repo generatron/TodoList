@@ -37,10 +37,6 @@ import HeliumLogger
 
 import Foundation
 
-#if os(OSX)
-    import Mustache
-#endif
-
 enum TodoListErrors: ErrorType {
     case NoDataForJSON
 }
@@ -59,5 +55,5 @@ Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.47 minutes to type the 647+ characters in this file.
+approximately 6.03 minutes to type the 603+ characters in this file.
  */
