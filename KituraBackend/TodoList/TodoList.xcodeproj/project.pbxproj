@@ -185,6 +185,12 @@
         };
         ___DebugConf_KituraSys = {
             isa = XCBuildConfiguration;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"${SRCROOT}/Packages/CHttpParser-0.0.2",
+					"${SRCROOT}/Packages/CCurl-0.0.1"
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
             buildSettings = { DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = KituraSys; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
             name = Debug;
         };
@@ -451,6 +457,12 @@
         };
         ___DebugConf_KituraNet = {
             isa = XCBuildConfiguration;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"${SRCROOT}/Packages/CHttpParser-0.0.2",
+					"${SRCROOT}/Packages/CCurl-0.0.1"
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
             buildSettings = { DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = KituraNet; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
             name = Debug;
         };
@@ -1533,6 +1545,11 @@
         };
         ___DebugConf_TodoList = {
             isa = XCBuildConfiguration;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"${SRCROOT}/Packages/CHttpParser-0.0.2",
+					"${SRCROOT}/Packages/CCurl-0.0.1"
+				);
             buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = TodoList; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_FORCE_STATIC_LINK_STDLIB = NO; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = '$(TARGET_NAME)'; };
             name = Debug;
         };
