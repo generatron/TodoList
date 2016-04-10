@@ -38,6 +38,33 @@ Template: /ionic-1.7.14/controllers/add.controller.vm
 angular.module('TodoList.controllers')
     .controller('TodoItemAddCtrl', function($scope, StatusWS, TodoItemWS, TaskWS) {
 
+        var dueDateDatePickerCallBack = function(val) {
+            if (typeof(val) === 'undefined') {
+                console.log('No date selected');
+            } else {
+                console.log('Selected date is : ', val)
+            }
+        };
+
+        $scope.dueDateDatePicker = {
+            titleLabel: 'DueDate', //Optional
+            todayLabel: 'Today', //Optional
+            closeLabel: 'Close', //Optional
+            setLabel: 'Set', //Optional
+            setButtonType: 'button-assertive', //Optional
+            todayButtonType: 'button-assertive', //Optional
+            closeButtonType: 'button-assertive', //Optional
+            inputDate: new Date(), //Optional
+            mondayFirst: true, //Optional
+            templateType: 'popup', //Optional
+            showTodayButton: 'true', //Optional
+            modalHeaderColor: 'bar-positive', //Optional
+            modalFooterColor: 'bar-positive', //Optional
+            callback: function(val) { //Mandatory
+                dueDateDatePickerCallBack(val);
+            }
+        };
+
         $scope.todoItem = {};
 
         $scope.edit = false;
@@ -92,5 +119,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.17 minutes to type the 1817+ characters in this file.
+approximately 27.36 minutes to type the 2736+ characters in this file.
  */
