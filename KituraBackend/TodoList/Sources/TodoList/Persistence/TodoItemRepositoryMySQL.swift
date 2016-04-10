@@ -50,9 +50,9 @@ func insert(entity: TodoItem) throws -> Int {
 
 		if(entity.completed != nil){
 			if(entity.completed){
-				statement.bindParam(Integer(1))
+				statement.bindParam(Int(1))
 			}else{
-				statement.bindParam(Integer(0))
+				statement.bindParam(Int(0))
 			}
 		}else{
 			statement.bindParam()
@@ -289,5 +289,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 59.89 minutes to type the 5989+ characters in this file.
+approximately 59.81 minutes to type the 5981+ characters in this file.
  */
