@@ -25,7 +25,7 @@ Project:      TodoList
 Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
  */
 
-import PerfectMySQL
+import MySQL
 
 
 class TaskRepositoryMySQL : TaskRepository,RepositoryMySQL {
@@ -208,5 +208,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 44.22 minutes to type the 4422+ characters in this file.
+approximately 44.15 minutes to type the 4415+ characters in this file.
  */

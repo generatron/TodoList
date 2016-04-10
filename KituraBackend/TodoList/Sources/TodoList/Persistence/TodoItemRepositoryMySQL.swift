@@ -25,7 +25,7 @@ Project:      TodoList
 Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
  */
 
-import PerfectMySQL
+import MySQL
 
 
 class TodoItemRepositoryMySQL : TodoItemRepository,RepositoryMySQL {
@@ -280,5 +280,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 59.09 minutes to type the 5909+ characters in this file.
+approximately 59.02 minutes to type the 5902+ characters in this file.
  */

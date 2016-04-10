@@ -25,7 +25,7 @@ Project:      TodoList
 Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
  */
 
-import PerfectMySQL
+import MySQL
 
 
 class StatusRepositoryMySQL : StatusRepository,RepositoryMySQL {
@@ -176,5 +176,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 38.34 minutes to type the 3834+ characters in this file.
+approximately 38.27 minutes to type the 3827+ characters in this file.
  */
