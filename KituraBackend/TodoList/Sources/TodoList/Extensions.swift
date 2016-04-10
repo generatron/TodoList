@@ -24,7 +24,6 @@ Description:  Extensions
 Project:      TodoList
 Template: /Kitura-REST/server/Extensions.swift.vmg
  */
-
 import Foundation
 
 extension String {
@@ -32,8 +31,9 @@ extension String {
     func SQLStringDate() -> NSDate? {
         let dateFormat = NSDateFormatter ()
         dateFormat.dateFormat = "YYYY-MM-dd"
-        let datestr = self.substringWithRange(Range<String.Index>(start: self.startIndex, end: self.startIndex.advancedBy(10)))
-        let  date =  dateFormat.dateFromString(datestr)
+        let range =  self.startIndex ..< self.startIndex.advanced(by: 10)
+        let datestr = self.substring(with:range)
+        let  date =  dateFormat.date(from:datestr)
         return date;
     }
 }
@@ -42,16 +42,12 @@ extension NSDate {
     var SQLDateString : String {
         let dateFormat = NSDateFormatter()
         dateFormat.dateFormat = "YYYY-MM-dd"
-        return dateFormat.stringFromDate(self);
+        return dateFormat.string(from:self);
     }
 }
-
-
-
-
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 5.82 minutes to type the 582+ characters in this file.
+approximately 5.64 minutes to type the 564+ characters in this file.
  */
