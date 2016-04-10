@@ -49,7 +49,7 @@ class TodoItem  {
 
 		}
 		if(dueDate != nil){
-	       dict["dueDate"] = dueDate.SQLDateString();
+	       dict["dueDate"] = dueDate.SQLDateString;
 	
 
 
@@ -155,5 +155,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 27.05 minutes to type the 2705+ characters in this file.
+approximately 27.03 minutes to type the 2703+ characters in this file.
  */
