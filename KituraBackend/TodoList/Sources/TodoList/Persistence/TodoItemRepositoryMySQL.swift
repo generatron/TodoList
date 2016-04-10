@@ -100,7 +100,6 @@ if(entity.status != nil){
 		}
 
 		
-
 			let execRes = statement.execute()
 			if(execRes){
 				entity.id = Int(statement.insertId()) ;
@@ -134,10 +133,15 @@ let statement = MySQLStmt(db)
 		if(prepRes){		
 
 		if(entity.completed != nil){
-			statement.bindParam(entity.completed)
+			if(entity.completed){
+				statement.bindParam(Int(1))
+			}else{
+				statement.bindParam(Int(0))
+			}
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.dueDate != nil){
@@ -145,6 +149,7 @@ let statement = MySQLStmt(db)
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.order != nil){
@@ -152,6 +157,7 @@ let statement = MySQLStmt(db)
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 if(entity.status != nil){
@@ -168,6 +174,7 @@ if(entity.status != nil){
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.url != nil){
@@ -175,6 +182,7 @@ if(entity.status != nil){
 		}else{
 			statement.bindParam()
 		}
+
 		
 			statement.bindParam(entity.id)
 			let execRes = statement.execute()
@@ -289,5 +297,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 59.81 minutes to type the 5981+ characters in this file.
+approximately 60.56 minutes to type the 6056+ characters in this file.
  */

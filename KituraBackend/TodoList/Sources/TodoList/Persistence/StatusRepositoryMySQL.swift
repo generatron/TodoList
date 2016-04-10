@@ -55,7 +55,6 @@ func insert(entity: Status) throws -> Int {
 		}
 
 		
-
 			let execRes = statement.execute()
 			if(execRes){
 				entity.id = Int(statement.insertId()) ;
@@ -93,6 +92,7 @@ let statement = MySQLStmt(db)
 		}else{
 			statement.bindParam()
 		}
+
 		
 			statement.bindParam(entity.id)
 			let execRes = statement.execute()

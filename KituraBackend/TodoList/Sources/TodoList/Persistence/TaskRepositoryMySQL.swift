@@ -70,7 +70,6 @@ if(entity.todo != nil){
 			statement.bindParam()
 }
 		
-
 			let execRes = statement.execute()
 			if(execRes){
 				entity.id = Int(statement.insertId()) ;
@@ -108,6 +107,7 @@ let statement = MySQLStmt(db)
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.title != nil){
@@ -115,6 +115,7 @@ let statement = MySQLStmt(db)
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 if(entity.todo != nil){
@@ -210,5 +211,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 44.21 minutes to type the 4421+ characters in this file.
+approximately 44.23 minutes to type the 4423+ characters in this file.
  */
