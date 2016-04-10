@@ -55,7 +55,7 @@ class TodoListRouter  : Router{
 		    catch {}
 		  next()
 		}
-		persistenceManager = PersistenceManagerMemory();
+		persistenceManager = PersistenceManagerMySQL();
 
         statusController = StatusController(persistenceManager : persistenceManager)
         taskController = TaskController(persistenceManager : persistenceManager)
@@ -65,5 +65,5 @@ class TodoListRouter  : Router{
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.31 minutes to type the 1331+ characters in this file.
+approximately 13.3 minutes to type the 1330+ characters in this file.
  */

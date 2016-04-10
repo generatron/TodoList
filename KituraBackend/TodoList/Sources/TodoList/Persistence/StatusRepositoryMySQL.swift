@@ -28,7 +28,7 @@ Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
 import MySQL
 
 
-class StatusRepositoryMySQL : StatusRepository,RepositoryMySQL {
+class StatusRepositoryMySQL : RepositoryMySQL,StatusRepository, {
 
 func createStorage() throws ->  Int {
    let rs = try db.query("CREATE TABLE IF NOT EXISTS Status (id INT(10) NOT NULL AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY (id))")
@@ -176,5 +176,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 38.27 minutes to type the 3827+ characters in this file.
+approximately 38.28 minutes to type the 3828+ characters in this file.
  */
