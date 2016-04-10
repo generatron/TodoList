@@ -89,5 +89,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.600001 minutes to type the 1560+ characters in this file.
+approximately 15.359999 minutes to type the 1536+ characters in this file.
  */

@@ -70,10 +70,6 @@ angular.module('TodoList.controllers')
         }
         $scope.loadReferences = function() {
 
-            // false String String description
-            // false Integer String id
-            // false String String title
-            // false TodoItem String todo
             TodoItemWS.list(function(data) {
                 $scope.todos = data;
             }, $scope.errorcb)
@@ -97,5 +93,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.25 minutes to type the 1825+ characters in this file.
+approximately 17.04 minutes to type the 1704+ characters in this file.
  */
