@@ -44,49 +44,27 @@ class TodoItem  {
 		var dict =  Dictionary<String, AnyObject>()
 		if(completed != nil){
 		   dict["completed"] = completed
-	
-
-
 		}
 		if(dueDate != nil){
 	       dict["dueDate"] = dueDate.SQLDateString;
-	
-
-
 		}
 		if(id != nil){
 		   dict["id"] = id
-	
-
-
 		}
 		if(order != nil){
 		   dict["order"] = order
-	
-
-
 		}
 		if(status != nil){
 	       dict["status"] = status.toDictionary();
-
-
 		}
 		if(tasks != nil){
 			dict["tasks"] = tasks
-
-
 		}
 		if(title != nil){
 		   dict["title"] = title
-	
-
-
 		}
 		if(url != nil){
 		   dict["url"] = url
-	
-
-
 		}
 		return dict        
 	}
@@ -155,5 +133,5 @@ class TodoItem  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 27.03 minutes to type the 2703+ characters in this file.
+approximately 26.53 minutes to type the 2653+ characters in this file.
  */

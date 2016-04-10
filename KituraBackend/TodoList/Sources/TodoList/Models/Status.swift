@@ -38,15 +38,9 @@ class Status  {
 		var dict =  Dictionary<String, AnyObject>()
 		if(id != nil){
 		   dict["id"] = id
-	
-
-
 		}
 		if(name != nil){
 		   dict["name"] = name
-	
-
-
 		}
 		return dict        
 	}
@@ -94,5 +88,5 @@ class Status  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.86 minutes to type the 1486+ characters in this file.
+approximately 14.72 minutes to type the 1472+ characters in this file.
  */

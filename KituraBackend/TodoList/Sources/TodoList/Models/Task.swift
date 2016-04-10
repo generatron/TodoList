@@ -40,26 +40,15 @@ class Task  {
 		var dict =  Dictionary<String, AnyObject>()
 		if(description != nil){
 		   dict["description"] = description
-	
-
-
 		}
 		if(id != nil){
 		   dict["id"] = id
-	
-
-
 		}
 		if(title != nil){
 		   dict["title"] = title
-	
-
-
 		}
 		if(todo != nil){
 	       dict["todo"] = todo.toDictionary();
-
-
 		}
 		return dict        
 	}
@@ -113,5 +102,5 @@ class Task  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 18.47 minutes to type the 1847+ characters in this file.
+approximately 18.22 minutes to type the 1822+ characters in this file.
  */

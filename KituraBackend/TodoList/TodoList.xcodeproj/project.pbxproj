@@ -17,7 +17,7 @@
             productRefGroup = ____Products_;
             projectDirPath = '';
             projectRoot = '';
-            targets = (______Target_LoggerAPI, ______Target_KituraSys, ______Target_Socket, ______Target_KituraNet, ______Target_SwiftyJSON, ______Target_KituraTemplateEngine, ______Target_Kitura, ______Target_KituraTestSuite, ______Target_netTestSuite, ______Target_HeliumLogger, ______Target_CFEnvironment, ______Target_CFEnvironmentTestSuite, ______Target_TodoList, ______Target_TodoListTestSuite);
+            targets = (______Target_LoggerAPI, ______Target_KituraSys, ______Target_Socket, ______Target_KituraNet, ______Target_SwiftyJSON, ______Target_KituraTemplateEngine, ______Target_Kitura, ______Target_KituraTestSuite, ______Target_netTestSuite, ______Target_HeliumLogger, ______Target_CFEnvironment, ______Target_CFEnvironmentTestSuite, ______Target_MySQL, ______Target_TodoList, ______Target_TodoListTestSuite);
         };
         '__PBXFileRef_Package.swift' = {
             isa = PBXFileReference;
@@ -451,12 +451,12 @@
         };
         ___DebugConf_KituraNet = {
             isa = XCBuildConfiguration;
-            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib; DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = KituraNet; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
+            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib; DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = KituraNet; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
             name = Debug;
         };
         _ReleaseConf_KituraNet = {
             isa = XCBuildConfiguration;
-            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib; DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = KituraNet; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
+            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib; DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = KituraNet; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
             name = Release;
         };
         __Dependency_KituraNet = {
@@ -755,12 +755,12 @@
         };
         ___DebugConf_Kitura = {
             isa = XCBuildConfiguration;
-            buildSettings = { HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = Kitura; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
+            buildSettings = { HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = Kitura; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
             name = Debug;
         };
         _ReleaseConf_Kitura = {
             isa = XCBuildConfiguration;
-            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib;HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib; DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = Kitura; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
+            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");LIBRARY_SEARCH_PATHS = /usr/local/lib; DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = Kitura; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
             name = Release;
         };
         __Dependency_Kitura = {
@@ -1257,12 +1257,80 @@
             isa = PBXTargetDependency;
             target = ______Target_CFEnvironmentTestSuite;
         };
+        _______Group_MySQL = {
+            isa = PBXGroup;
+            name = MySQL;
+            path = 'Packages/MySQL-0.1.2/Sources/MySQL';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/MySQL-0.1.2/Sources/MySQL/MySQL.swift');
+        };
+        '__PBXFileRef_Packages/MySQL-0.1.2/Sources/MySQL/MySQL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'MySQL.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_MySQL = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_MySQL;
+            buildPhases = (CompilePhase_MySQL, ___LinkPhase_MySQL);
+            buildRules = ();
+            dependencies = (__Dependency_mysqlclient);
+            name = MySQL;
+            productName = MySQL;
+            productReference = _____Product_MySQL;
+            productType = 'com.apple.product-type.library.dynamic';
+        };
+        _____Product_MySQL = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.dylib';
+            path = 'MySQL.dylib';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_MySQL = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/MySQL-0.1.2/Sources/MySQL/MySQL.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        ___LinkPhase_MySQL = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_mysqlclient);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/MySQL-0.1.2/Sources/MySQL/MySQL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/MySQL-0.1.2/Sources/MySQL/MySQL.swift';
+        };
+        _LinkFileRef_MySQL = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_MySQL;
+        };
+        _______Confs_MySQL = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_MySQL, _ReleaseConf_MySQL);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_MySQL = {
+            isa = XCBuildConfiguration;
+            buildSettings = { DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = MySQL; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
+            name = Debug;
+        };
+        _ReleaseConf_MySQL = {
+            isa = XCBuildConfiguration;
+            buildSettings = { DYLIB_INSTALL_NAME_BASE = '$(CONFIGURATION_BUILD_DIR)'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = MySQL; ENABLE_TESTABILITY = YES; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; PRODUCT_NAME = 'lib$(TARGET_NAME)'; };
+            name = Release;
+        };
+        __Dependency_MySQL = {
+            isa = PBXTargetDependency;
+            target = ______Target_MySQL;
+        };
         _______Group_TodoList = {
             isa = PBXGroup;
             name = TodoList;
             path = 'Sources/TodoList';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Sources/TodoList/Config.swift', '__PBXFileRef_Sources/TodoList/Extensions.swift', '__PBXFileRef_Sources/TodoList/main.swift', '__PBXFileRef_Sources/TodoList/Controllers/StatusController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TaskController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoItemController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoListRouter.swift', '__PBXFileRef_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__PBXFileRef_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__PBXFileRef_Sources/TodoList/Models/Status.swift', '__PBXFileRef_Sources/TodoList/Models/Task.swift', '__PBXFileRef_Sources/TodoList/Models/TodoItem.swift', '__PBXFileRef_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManager.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/Repository.swift', '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift');
+            children = ('__PBXFileRef_Sources/TodoList/Config.swift', '__PBXFileRef_Sources/TodoList/Extensions.swift', '__PBXFileRef_Sources/TodoList/main.swift', '__PBXFileRef_Sources/TodoList/Controllers/StatusController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TaskController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoItemController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoListRouter.swift', '__PBXFileRef_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__PBXFileRef_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__PBXFileRef_Sources/TodoList/Models/Status.swift', '__PBXFileRef_Sources/TodoList/Models/Task.swift', '__PBXFileRef_Sources/TodoList/Models/TodoItem.swift', '__PBXFileRef_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManager.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/Repository.swift', '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift');
         };
         '__PBXFileRef_Sources/TodoList/Config.swift' = {
             isa = PBXFileReference;
@@ -1354,6 +1422,12 @@
             name = 'Persistence/PersistenceManagerMemory.swift';
             sourceTree = '<group>';
         };
+        '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Persistence/PersistenceManagerMySQL.swift';
+            sourceTree = '<group>';
+        };
         '__PBXFileRef_Sources/TodoList/Persistence/Repository.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
@@ -1364,6 +1438,12 @@
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Persistence/RepositoryMemory.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMySQL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Persistence/RepositoryMySQL.swift';
             sourceTree = '<group>';
         };
         '__PBXFileRef_Sources/TodoList/Persistence/StatusRepository.swift' = {
@@ -1378,6 +1458,12 @@
             name = 'Persistence/StatusRepositoryMemory.swift';
             sourceTree = '<group>';
         };
+        '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Persistence/StatusRepositoryMySQL.swift';
+            sourceTree = '<group>';
+        };
         '__PBXFileRef_Sources/TodoList/Persistence/TaskRepository.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
@@ -1388,6 +1474,12 @@
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Persistence/TaskRepositoryMemory.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Persistence/TaskRepositoryMySQL.swift';
             sourceTree = '<group>';
         };
         '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepository.swift' = {
@@ -1402,12 +1494,18 @@
             name = 'Persistence/TodoItemRepositoryMemory.swift';
             sourceTree = '<group>';
         };
+        '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Persistence/TodoItemRepositoryMySQL.swift';
+            sourceTree = '<group>';
+        };
         ______Target_TodoList = {
             isa = PBXNativeTarget;
             buildConfigurationList = _______Confs_TodoList;
             buildPhases = (CompilePhase_TodoList, ___LinkPhase_TodoList);
             buildRules = ();
-            dependencies = (__Dependency_CHttpParser, __Dependency_CCurl, __Dependency_Socket, __Dependency_KituraSys, __Dependency_KituraTemplateEngine, __Dependency_SwiftyJSON, __Dependency_KituraNet, __Dependency_CFEnvironment, __Dependency_LoggerAPI, __Dependency_HeliumLogger, __Dependency_Kitura);
+            dependencies = (__Dependency_CHttpParser, __Dependency_CCurl, __Dependency_Socket, __Dependency_KituraSys, __Dependency_KituraTemplateEngine, __Dependency_SwiftyJSON, __Dependency_KituraNet, __Dependency_MySQL, __Dependency_mysqlclient, __Dependency_CFEnvironment, __Dependency_LoggerAPI, __Dependency_HeliumLogger, __Dependency_Kitura);
             name = TodoList;
             productName = TodoList;
             productReference = _____Product_TodoList;
@@ -1421,12 +1519,12 @@
         };
         CompilePhase_TodoList = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Sources/TodoList/Config.swift', '__src_cc_ref_Sources/TodoList/Extensions.swift', '__src_cc_ref_Sources/TodoList/main.swift', '__src_cc_ref_Sources/TodoList/Controllers/StatusController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TaskController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoItemController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoListRouter.swift', '__src_cc_ref_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__src_cc_ref_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__src_cc_ref_Sources/TodoList/Models/Status.swift', '__src_cc_ref_Sources/TodoList/Models/Task.swift', '__src_cc_ref_Sources/TodoList/Models/TodoItem.swift', '__src_cc_ref_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManager.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/Repository.swift', '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift');
+            files = ('__src_cc_ref_Sources/TodoList/Config.swift', '__src_cc_ref_Sources/TodoList/Extensions.swift', '__src_cc_ref_Sources/TodoList/main.swift', '__src_cc_ref_Sources/TodoList/Controllers/StatusController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TaskController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoItemController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoListRouter.swift', '__src_cc_ref_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__src_cc_ref_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__src_cc_ref_Sources/TodoList/Models/Status.swift', '__src_cc_ref_Sources/TodoList/Models/Task.swift', '__src_cc_ref_Sources/TodoList/Models/TodoItem.swift', '__src_cc_ref_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManager.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/Repository.swift', '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
         ___LinkPhase_TodoList = {
             isa = PBXFrameworksBuildPhase;
-            files = (_LinkFileRef_CHttpParser, _LinkFileRef_CCurl, _LinkFileRef_Socket, _LinkFileRef_KituraSys, _LinkFileRef_KituraTemplateEngine, _LinkFileRef_SwiftyJSON, _LinkFileRef_KituraNet, _LinkFileRef_CFEnvironment, _LinkFileRef_LoggerAPI, _LinkFileRef_HeliumLogger, _LinkFileRef_Kitura);
+            files = (_LinkFileRef_CHttpParser, _LinkFileRef_CCurl, _LinkFileRef_Socket, _LinkFileRef_KituraSys, _LinkFileRef_KituraTemplateEngine, _LinkFileRef_SwiftyJSON, _LinkFileRef_KituraNet, _LinkFileRef_MySQL, _LinkFileRef_mysqlclient, _LinkFileRef_CFEnvironment, _LinkFileRef_LoggerAPI, _LinkFileRef_HeliumLogger, _LinkFileRef_Kitura);
             runOnlyForDeploymentPostprocessing = 0;
         };
         '__src_cc_ref_Sources/TodoList/Config.swift' = {
@@ -1489,6 +1587,10 @@
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMemory.swift';
         };
+        '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift';
+        };
         '__src_cc_ref_Sources/TodoList/Persistence/Repository.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/Repository.swift';
@@ -1496,6 +1598,10 @@
         '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMemory.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMemory.swift';
+        };
+        '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMySQL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMySQL.swift';
         };
         '__src_cc_ref_Sources/TodoList/Persistence/StatusRepository.swift' = {
             isa = PBXBuildFile;
@@ -1505,6 +1611,10 @@
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMemory.swift';
         };
+        '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift';
+        };
         '__src_cc_ref_Sources/TodoList/Persistence/TaskRepository.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TaskRepository.swift';
@@ -1513,6 +1623,10 @@
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMemory.swift';
         };
+        '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift';
+        };
         '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepository.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepository.swift';
@@ -1520,6 +1634,10 @@
         '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift';
+        };
+        '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift';
         };
         _LinkFileRef_TodoList = {
             isa = PBXBuildFile;
@@ -1533,12 +1651,12 @@
         };
         ___DebugConf_TodoList = {
             isa = XCBuildConfiguration;
-            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1"); LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = TodoList; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_FORCE_STATIC_LINK_STDLIB = NO; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = '$(TARGET_NAME)'; };
+            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1"); LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = TodoList; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_FORCE_STATIC_LINK_STDLIB = NO; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES; SWIFT_OPTIMIZATION_LEVEL = -Onone; PRODUCT_NAME = '$(TARGET_NAME)'; };
             name = Debug;
         };
         _ReleaseConf_TodoList = {
             isa = XCBuildConfiguration;
-            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1");HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1"); LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = TodoList; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_FORCE_STATIC_LINK_STDLIB = NO; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES; PRODUCT_NAME = '$(TARGET_NAME)'; };
+            buildSettings = {HEADER_SEARCH_PATHS = (/usr/local/include,"${SRCROOT}/Packages/CHttpParser-0.0.2","${SRCROOT}/Packages/CCurl-0.0.1"); LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = TodoList; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_FORCE_STATIC_LINK_STDLIB = NO; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES; PRODUCT_NAME = '$(TARGET_NAME)'; };
             name = Release;
         };
         __Dependency_TodoList = {
@@ -1563,7 +1681,7 @@
             buildConfigurationList = _______Confs_TodoListTestSuite;
             buildPhases = (CompilePhase_TodoListTestSuite, ___LinkPhase_TodoListTestSuite);
             buildRules = ();
-            dependencies = (__Dependency_CHttpParser, __Dependency_CCurl, __Dependency_Socket, __Dependency_KituraSys, __Dependency_KituraTemplateEngine, __Dependency_SwiftyJSON, __Dependency_KituraNet, __Dependency_CFEnvironment, __Dependency_LoggerAPI, __Dependency_HeliumLogger, __Dependency_Kitura, __Dependency_TodoList);
+            dependencies = (__Dependency_CHttpParser, __Dependency_CCurl, __Dependency_Socket, __Dependency_KituraSys, __Dependency_KituraTemplateEngine, __Dependency_SwiftyJSON, __Dependency_KituraNet, __Dependency_MySQL, __Dependency_mysqlclient, __Dependency_CFEnvironment, __Dependency_LoggerAPI, __Dependency_HeliumLogger, __Dependency_Kitura, __Dependency_TodoList);
             name = TodoList.testsuite;
             productName = TodoListTestSuite;
             productReference = _____Product_TodoListTestSuite;
@@ -1582,7 +1700,7 @@
         };
         ___LinkPhase_TodoListTestSuite = {
             isa = PBXFrameworksBuildPhase;
-            files = (_LinkFileRef_CHttpParser, _LinkFileRef_CCurl, _LinkFileRef_Socket, _LinkFileRef_KituraSys, _LinkFileRef_KituraTemplateEngine, _LinkFileRef_SwiftyJSON, _LinkFileRef_KituraNet, _LinkFileRef_CFEnvironment, _LinkFileRef_LoggerAPI, _LinkFileRef_HeliumLogger, _LinkFileRef_Kitura, _LinkFileRef_TodoList);
+            files = (_LinkFileRef_CHttpParser, _LinkFileRef_CCurl, _LinkFileRef_Socket, _LinkFileRef_KituraSys, _LinkFileRef_KituraTemplateEngine, _LinkFileRef_SwiftyJSON, _LinkFileRef_KituraNet, _LinkFileRef_MySQL, _LinkFileRef_mysqlclient, _LinkFileRef_CFEnvironment, _LinkFileRef_LoggerAPI, _LinkFileRef_HeliumLogger, _LinkFileRef_Kitura, _LinkFileRef_TodoList);
             runOnlyForDeploymentPostprocessing = 0;
         };
         '__src_cc_ref_Tests/TodoList/SimpleTest.swift' = {
@@ -1615,7 +1733,7 @@
         };
         _____Sources_ = {
             isa = PBXGroup;
-            children = (_______Group_LoggerAPI, _______Group_KituraSys, _______Group_Socket, _______Group_KituraNet, _______Group_SwiftyJSON, _______Group_KituraTemplateEngine, _______Group_Kitura, _______Group_HeliumLogger, _______Group_CFEnvironment, _______Group_TodoList);
+            children = (_______Group_LoggerAPI, _______Group_KituraSys, _______Group_Socket, _______Group_KituraNet, _______Group_SwiftyJSON, _______Group_KituraTemplateEngine, _______Group_Kitura, _______Group_HeliumLogger, _______Group_CFEnvironment, _______Group_MySQL, _______Group_TodoList);
             name = Sources;
             sourceTree = '<group>';
         };
@@ -1639,7 +1757,7 @@
         };
         ____Products_ = {
             isa = PBXGroup;
-            children = (TestProducts_, _____Product_LoggerAPI, _____Product_KituraSys, _____Product_Socket, _____Product_KituraNet, _____Product_SwiftyJSON, _____Product_KituraTemplateEngine, _____Product_Kitura, _____Product_HeliumLogger, _____Product_CFEnvironment, _____Product_TodoList);
+            children = (TestProducts_, _____Product_LoggerAPI, _____Product_KituraSys, _____Product_Socket, _____Product_KituraNet, _____Product_SwiftyJSON, _____Product_KituraTemplateEngine, _____Product_Kitura, _____Product_HeliumLogger, _____Product_CFEnvironment, _____Product_MySQL, _____Product_TodoList);
             name = Products;
             sourceTree = '<group>';
         };
