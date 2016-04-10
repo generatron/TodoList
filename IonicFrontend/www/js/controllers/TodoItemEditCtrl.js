@@ -87,7 +87,7 @@ angular.module('TodoList.controllers')
         }
         $scope.successcb = function(data, status, headers, config) {
             $scope.todoItem = data;
-            $scope.dueDate = new Date(data.dueDate);
+            $scope.todoItem.dueDate = new Date(data.dueDate);
 
         }
 
@@ -123,5 +123,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 29.08 minutes to type the 2908+ characters in this file.
+approximately 29.17 minutes to type the 2917+ characters in this file.
  */
