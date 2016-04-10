@@ -53,6 +53,7 @@ func insert(entity: Task) throws -> Int {
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.title != nil){
@@ -60,6 +61,7 @@ func insert(entity: Task) throws -> Int {
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 if(entity.todo != nil){
@@ -208,5 +210,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 44.17 minutes to type the 4417+ characters in this file.
+approximately 44.21 minutes to type the 4421+ characters in this file.
  */

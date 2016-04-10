@@ -53,6 +53,7 @@ func insert(entity: Status) throws -> Int {
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 			let execRes = statement.execute()
@@ -176,5 +177,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 38.29 minutes to type the 3829+ characters in this file.
+approximately 38.31 minutes to type the 3831+ characters in this file.
  */

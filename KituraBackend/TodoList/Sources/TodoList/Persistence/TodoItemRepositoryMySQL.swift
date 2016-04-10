@@ -49,10 +49,15 @@ func insert(entity: TodoItem) throws -> Int {
 		if(prepRes){
 
 		if(entity.completed != nil){
-			statement.bindParam(entity.completed)
+			if(entity.completed){
+				statement.bindParam(Integer(1))
+			}else{
+				statement.bindParam(Integer(0))
+			}
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.dueDate != nil){
@@ -60,6 +65,7 @@ func insert(entity: TodoItem) throws -> Int {
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.order != nil){
@@ -67,6 +73,7 @@ func insert(entity: TodoItem) throws -> Int {
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 if(entity.status != nil){
@@ -83,6 +90,7 @@ if(entity.status != nil){
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 		if(entity.url != nil){
@@ -90,6 +98,7 @@ if(entity.status != nil){
 		}else{
 			statement.bindParam()
 		}
+
 		
 
 			let execRes = statement.execute()
@@ -280,5 +289,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 59.04 minutes to type the 5904+ characters in this file.
+approximately 59.89 minutes to type the 5989+ characters in this file.
  */
