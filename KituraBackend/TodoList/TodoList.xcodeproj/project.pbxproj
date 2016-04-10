@@ -1330,7 +1330,7 @@
             name = TodoList;
             path = 'Sources/TodoList';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Sources/TodoList/Config.swift', '__PBXFileRef_Sources/TodoList/Extensions.swift', '__PBXFileRef_Sources/TodoList/main.swift', '__PBXFileRef_Sources/TodoList/Controllers/StatusController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TaskController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoItemController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoListRouter.swift', '__PBXFileRef_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__PBXFileRef_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__PBXFileRef_Sources/TodoList/Models/Status.swift', '__PBXFileRef_Sources/TodoList/Models/Task.swift', '__PBXFileRef_Sources/TodoList/Models/TodoItem.swift', '__PBXFileRef_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManager.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/Repository.swift', '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift');
+            children = ('__PBXFileRef_Sources/TodoList/Config.swift', '__PBXFileRef_Sources/TodoList/Extensions.swift', '__PBXFileRef_Sources/TodoList/main.swift', '__PBXFileRef_Sources/TodoList/Controllers/StatusController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TaskController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoItemController.swift', '__PBXFileRef_Sources/TodoList/Controllers/TodoListRouter.swift', '__PBXFileRef_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__PBXFileRef_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__PBXFileRef_Sources/TodoList/Models/Status.swift', '__PBXFileRef_Sources/TodoList/Models/Task.swift', '__PBXFileRef_Sources/TodoList/Models/TodoItem.swift', '__PBXFileRef_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManager.swift', '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/Repository.swift', '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepository.swift', '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift');
         };
         '__PBXFileRef_Sources/TodoList/Config.swift' = {
             isa = PBXFileReference;
@@ -1416,12 +1416,6 @@
             name = 'Persistence/PersistenceManager.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMemory.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            name = 'Persistence/PersistenceManagerMemory.swift';
-            sourceTree = '<group>';
-        };
         '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
@@ -1432,12 +1426,6 @@
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Persistence/Repository.swift';
-            sourceTree = '<group>';
-        };
-        '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMemory.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            name = 'Persistence/RepositoryMemory.swift';
             sourceTree = '<group>';
         };
         '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMySQL.swift' = {
@@ -1452,12 +1440,6 @@
             name = 'Persistence/StatusRepository.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMemory.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            name = 'Persistence/StatusRepositoryMemory.swift';
-            sourceTree = '<group>';
-        };
         '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
@@ -1470,12 +1452,6 @@
             name = 'Persistence/TaskRepository.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMemory.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            name = 'Persistence/TaskRepositoryMemory.swift';
-            sourceTree = '<group>';
-        };
         '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
@@ -1486,12 +1462,6 @@
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Persistence/TodoItemRepository.swift';
-            sourceTree = '<group>';
-        };
-        '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift' = {
-            isa = PBXFileReference;
-            lastKnownFileType = sourcecode.swift;
-            name = 'Persistence/TodoItemRepositoryMemory.swift';
             sourceTree = '<group>';
         };
         '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift' = {
@@ -1519,7 +1489,7 @@
         };
         CompilePhase_TodoList = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Sources/TodoList/Config.swift', '__src_cc_ref_Sources/TodoList/Extensions.swift', '__src_cc_ref_Sources/TodoList/main.swift', '__src_cc_ref_Sources/TodoList/Controllers/StatusController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TaskController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoItemController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoListRouter.swift', '__src_cc_ref_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__src_cc_ref_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__src_cc_ref_Sources/TodoList/Models/Status.swift', '__src_cc_ref_Sources/TodoList/Models/Task.swift', '__src_cc_ref_Sources/TodoList/Models/TodoItem.swift', '__src_cc_ref_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManager.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/Repository.swift', '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift');
+            files = ('__src_cc_ref_Sources/TodoList/Config.swift', '__src_cc_ref_Sources/TodoList/Extensions.swift', '__src_cc_ref_Sources/TodoList/main.swift', '__src_cc_ref_Sources/TodoList/Controllers/StatusController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TaskController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoItemController.swift', '__src_cc_ref_Sources/TodoList/Controllers/TodoListRouter.swift', '__src_cc_ref_Sources/TodoList/Middleware/AllRemoteOriginMiddleware.swift', '__src_cc_ref_Sources/TodoList/Middleware/BasicAuthMiddleware.swift', '__src_cc_ref_Sources/TodoList/Models/Status.swift', '__src_cc_ref_Sources/TodoList/Models/Task.swift', '__src_cc_ref_Sources/TodoList/Models/TodoItem.swift', '__src_cc_ref_Sources/TodoList/Persistence/GeneratronDataSource.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManager.swift', '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/Repository.swift', '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepository.swift', '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
         ___LinkPhase_TodoList = {
@@ -1583,10 +1553,6 @@
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManager.swift';
         };
-        '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMemory.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMemory.swift';
-        };
         '__src_cc_ref_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/PersistenceManagerMySQL.swift';
@@ -1594,10 +1560,6 @@
         '__src_cc_ref_Sources/TodoList/Persistence/Repository.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/Repository.swift';
-        };
-        '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMemory.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/RepositoryMemory.swift';
         };
         '__src_cc_ref_Sources/TodoList/Persistence/RepositoryMySQL.swift' = {
             isa = PBXBuildFile;
@@ -1607,10 +1569,6 @@
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/StatusRepository.swift';
         };
-        '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMemory.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMemory.swift';
-        };
         '__src_cc_ref_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/StatusRepositoryMySQL.swift';
@@ -1619,10 +1577,6 @@
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TaskRepository.swift';
         };
-        '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMemory.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMemory.swift';
-        };
         '__src_cc_ref_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TaskRepositoryMySQL.swift';
@@ -1630,10 +1584,6 @@
         '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepository.swift' = {
             isa = PBXBuildFile;
             fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepository.swift';
-        };
-        '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift' = {
-            isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Sources/TodoList/Persistence/TodoItemRepositoryMemory.swift';
         };
         '__src_cc_ref_Sources/TodoList/Persistence/TodoItemRepositoryMySQL.swift' = {
             isa = PBXBuildFile;

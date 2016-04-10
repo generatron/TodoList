@@ -77,10 +77,12 @@ class PersistenceManagerMySQL : PersistenceManager {
 		}
 		return queryResult
     }
+	 func disconnect() throws {
+	 }
 }
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 14.74 minutes to type the 1474+ characters in this file.
+approximately 15.09 minutes to type the 1509+ characters in this file.
  */

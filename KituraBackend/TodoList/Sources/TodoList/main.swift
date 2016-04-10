@@ -41,7 +41,7 @@ enum TodoListErrors: ErrorProtocol {
     case NoDataForJSON
 }
 
-let persistenceManager = PersistenceManagerMemory();
+let persistenceManager = PersistenceManagerMySQL();
 
 TodoListRouter.sharedInstance.setupRoutes();
  
@@ -55,5 +55,5 @@ Server.run()
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 6.07 minutes to type the 607+ characters in this file.
+approximately 6.06 minutes to type the 606+ characters in this file.
  */

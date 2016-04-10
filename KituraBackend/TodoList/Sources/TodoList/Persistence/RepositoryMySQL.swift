@@ -39,8 +39,7 @@ enum RepositoryError : ErrorProtocol {
 
 class RepositoryMySQL : Repository {
     let db: MySQL!
-    
-    override init(db: MySQL) {
+    init(db: MySQL) {
     	super.init()
         self.db = db
     }
@@ -50,5 +49,5 @@ class RepositoryMySQL : Repository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.96 minutes to type the 396+ characters in this file.
+approximately 3.8100002 minutes to type the 381+ characters in this file.
  */
