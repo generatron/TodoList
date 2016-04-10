@@ -40,6 +40,32 @@ angular.module('TodoList.controllers')
         $scope.todoItem = {};
 
 
+        var dueDateDatePickerCallBack = function(val) {
+            if (typeof(val) === 'undefined') {
+                console.log('No date selected');
+            } else {
+                console.log('Selected date is : ', val)
+            }
+        };
+
+        $scope.dueDateDatePicker = {
+            titleLabel: 'DueDate', //Optional
+            todayLabel: 'Today', //Optional
+            closeLabel: 'Close', //Optional
+            setLabel: 'Set', //Optional
+            setButtonType: 'button-assertive', //Optional
+            todayButtonType: 'button-assertive', //Optional
+            closeButtonType: 'button-assertive', //Optional
+            mondayFirst: true, //Optional
+            templateType: 'popup', //Optional
+            showTodayButton: 'true', //Optional
+            modalHeaderColor: 'bar-positive', //Optional
+            modalFooterColor: 'bar-positive', //Optional
+            callback: function(val) { //Mandatory
+                dueDateDatePickerCallBack(val);
+            }
+        };
+
 
 
         $scope.edit = true;
@@ -61,6 +87,7 @@ angular.module('TodoList.controllers')
         }
         $scope.successcb = function(data, status, headers, config) {
             $scope.todoItem = data;
+            $scope.dueDateDatePicker.inputDate = new Date(data.dueDate);
 
         }
 
@@ -104,5 +131,5 @@ angular.module('TodoList.controllers')
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 22.1 minutes to type the 2210+ characters in this file.
+approximately 31.61 minutes to type the 3161+ characters in this file.
  */
