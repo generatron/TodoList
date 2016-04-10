@@ -52,15 +52,15 @@ class PersistenceManagerMySQL : PersistenceManager {
 				//Variables for Status
 				statusRepository = StatusRepositoryMySQL(db:self.mysql);
 				try statusRepository.createStorage()
-Ã¥				
+				
 				//Variables for Task
 				taskRepository = TaskRepositoryMySQL(db:self.mysql);
 				try taskRepository.createStorage()
-Ã¥				
+				
 				//Variables for TodoItem
 				todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
 				try todoItemRepository.createStorage()
-Ã¥				}
+				}
 			}
 
     	} catch (let e){
@@ -85,5 +85,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.34 minutes to type the 1534+ characters in this file.
+approximately 15.28 minutes to type the 1528+ characters in this file.
  */
