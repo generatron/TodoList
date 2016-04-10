@@ -49,7 +49,7 @@ func insert(entity: TodoItem) throws -> Int {
 		if(prepRes){
 
 		if(entity.completed != nil){
-			if(entity.completed){
+			if(entity.completed == true){
 				statement.bindParam(Int(1))
 			}else{
 				statement.bindParam(Int(0))
@@ -133,7 +133,7 @@ let statement = MySQLStmt(db)
 		if(prepRes){		
 
 		if(entity.completed != nil){
-			if(entity.completed){
+			if(entity.completed == true){
 				statement.bindParam(Int(1))
 			}else{
 				statement.bindParam(Int(0))
@@ -297,5 +297,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 60.56 minutes to type the 6056+ characters in this file.
+approximately 60.719997 minutes to type the 6072+ characters in this file.
  */
