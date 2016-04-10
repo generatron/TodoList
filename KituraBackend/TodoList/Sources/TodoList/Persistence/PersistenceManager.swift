@@ -28,13 +28,9 @@ Template: /Kitura-REST/server/PersistenceManager.swift.vm
 protocol PersistenceManager  {
 	func connect() throws
 	func disconnect() throws
-	
-	    var statusRepository :  StatusRepository {get set} 
-	    var taskRepository :  TaskRepository {get set} 
-	    var todoItemRepository :  TodoItemRepository {get set} 
-	}
+}
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 2.64 minutes to type the 264+ characters in this file.
+approximately 0.86 minutes to type the 86+ characters in this file.
  */

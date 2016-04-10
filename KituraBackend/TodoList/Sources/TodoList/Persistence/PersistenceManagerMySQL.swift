@@ -31,10 +31,11 @@ class PersistenceManagerMySQL : PersistenceManager {
 	static let sharedInstance = PersistenceManagerMySQL()
     var mysql = MySQL ()
     
-        var statusRepository :  StatusRepositoryMySQL! 
-	    var taskRepository :  TaskRepositoryMySQL! 
-	    var todoItemRepository :  TodoItemRepositoryMySQL! 
-	    init() {
+    var statusRepository :  StatusRepositoryMySQL! 
+    var taskRepository :  TaskRepositoryMySQL! 
+    var todoItemRepository :  TodoItemRepositoryMySQL! 
+
+    init() {
     }
     
     func connect() {
@@ -42,25 +43,25 @@ class PersistenceManagerMySQL : PersistenceManager {
     	let datasource : GeneratronDataSource = Config.sharedInstance.datasources["mysql"]!
     	do {
         	 let connect = mysql.connect (datasource.host, user:datasource.user, password: datasource.password)
-        if (connect)
-        {
-            let selectedSchema = mysql.selectDatabase (datasource.schema)
-            if (selectedSchema)
-            {
-			
-			//Variables for Status
-			statusRepository = StatusRepositoryMySQL(db:self.mysql);
-			try statusRepository.createStorage()
-			
-			//Variables for Task
-			taskRepository = TaskRepositoryMySQL(db:self.mysql);
-			try taskRepository.createStorage()
-			
-			//Variables for TodoItem
-			todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
-			try todoItemRepository.createStorage()
-}
-}
+	        if (connect)
+	        {
+	            let selectedSchema = mysql.selectDatabase (datasource.schema)
+	            if (selectedSchema)
+	            {
+				
+				//Variables for Status
+				statusRepository = StatusRepositoryMySQL(db:self.mysql);
+				try statusRepository.createStorage()
+Ã¥				
+				//Variables for Task
+				taskRepository = TaskRepositoryMySQL(db:self.mysql);
+				try taskRepository.createStorage()
+Ã¥				
+				//Variables for TodoItem
+				todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
+				try todoItemRepository.createStorage()
+Ã¥				}
+			}
 
     	} catch (let e){
         	print("Failure connecting to MYSQL DB")
@@ -84,5 +85,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.09 minutes to type the 1509+ characters in this file.
+approximately 15.34 minutes to type the 1534+ characters in this file.
  */
