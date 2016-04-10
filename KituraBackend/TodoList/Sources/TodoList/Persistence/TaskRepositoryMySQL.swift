@@ -28,7 +28,7 @@ Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
 import MySQL
 
 
-class TaskRepositoryMySQL : RepositoryMySQL,TaskRepository, {
+class TaskRepositoryMySQL : RepositoryMySQL,TaskRepository {
 
 func createStorage() throws ->  Int {
    let rs = try db.query("CREATE TABLE IF NOT EXISTS Task (description VARCHAR(255), id INT(10) NOT NULL AUTO_INCREMENT, title VARCHAR(255), PRIMARY KEY (id))")
@@ -208,5 +208,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 44.16 minutes to type the 4416+ characters in this file.
+approximately 44.15 minutes to type the 4415+ characters in this file.
  */

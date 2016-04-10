@@ -28,7 +28,7 @@ Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
 import MySQL
 
 
-class TodoItemRepositoryMySQL : RepositoryMySQL,TodoItemRepository, {
+class TodoItemRepositoryMySQL : RepositoryMySQL,TodoItemRepository {
 
 func createStorage() throws ->  Int {
    let rs = try db.query("CREATE TABLE IF NOT EXISTS TodoItem (completed BIT, dueDate Date, id INT(10) NOT NULL AUTO_INCREMENT, order INT(10), title VARCHAR(255), url VARCHAR(255), PRIMARY KEY (id))")
@@ -280,5 +280,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 59.03 minutes to type the 5903+ characters in this file.
+approximately 59.02 minutes to type the 5902+ characters in this file.
  */
