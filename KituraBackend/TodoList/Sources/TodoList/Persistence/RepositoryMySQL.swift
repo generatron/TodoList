@@ -19,32 +19,36 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     Package.swift
-Description:  Info.plist
+Filename:     RepositoryMySQL.swift
+Description:  Repository MySQL class
 Project:      TodoList
-Template: /Kitura-REST/server/Package.swift.vmg
+Template: /Kitura-REST/server/RepositoryMySQL.swift.vmg
  */
-import PackageDescription
 
-let package = Package(
-    name: "TodoList",
-    targets: [
-        Target(
-            name: "TodoList",
-            dependencies: []
-        )
-    ],
-    dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 0, minor: 7),
-        .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/LoggerAPI.git", majorVersion: 0, minor: 4),
-        .Package(url: "https://github.com/IBM-Swift/Swift-cfenv.git", majorVersion: 0),
-        .Package(url: "https://github.com/ejohnsonw/Perfect-MySQL.git", majorVersion: 0)
-    ],
-    exclude: ["Makefile", "Kitura-CI"])
+import MySQL
+
+enum RepositoryError : ErrorProtocol {
+    case Select(UInt32)
+    case Insert(UInt32)
+    case Update(UInt32)
+    case Delete(UInt32)
+    case CreateTable(UInt32)
+    case List(UInt32)
+    case Retrieve(UInt32)
+}
+
+class RepositoryMySQL : Repository {
+    let db: MySQL!
+    
+    override init(db: MySQL) {
+    	super.init()
+        self.db = db
+    }
+    
+}
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 7.29 minutes to type the 729+ characters in this file.
+approximately 3.96 minutes to type the 396+ characters in this file.
  */
