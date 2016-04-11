@@ -39,12 +39,12 @@ let package = Package(
         .Package(url: "https://github.com/IBM-Swift/HeliumLogger.git", majorVersion: 0, minor: 4),
         .Package(url: "https://github.com/IBM-Swift/LoggerAPI.git", majorVersion: 0, minor: 4),
         .Package(url: "https://github.com/IBM-Swift/Swift-cfenv.git", majorVersion: 0),
-        .Package(url: "https://github.com/ejohnsonw/Perfect-MySQL.git", majorVersion: 0)
+        .Package(url: "https://github.com/mcorega/MySqlSwiftNative.git", majorVersion: 1)
     ],
     exclude: ["Makefile", "Kitura-CI"])
 
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 7.29 minutes to type the 729+ characters in this file.
+approximately 7.3 minutes to type the 730+ characters in this file.
  */

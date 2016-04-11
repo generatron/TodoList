@@ -29,12 +29,9 @@ protocol PersistenceManager  {
 	func connect() throws
 	func disconnect() throws
 	
-	    var statusRepository :  StatusRepository {get set} 
-	    var taskRepository :  TaskRepository {get set} 
-	    var todoItemRepository :  TodoItemRepository {get set} 
-	}
+	    	}
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 2.64 minutes to type the 264+ characters in this file.
+approximately 0.95 minutes to type the 95+ characters in this file.
  */
