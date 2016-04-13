@@ -38,7 +38,7 @@ enum RepositoryError : ErrorProtocol {
 }
 
 class RepositoryMySQL : Repository {
-    let db: MySQL!
+    var db: MySQL!
     init(db: MySQL) {
     	super.init()
         self.db = db
