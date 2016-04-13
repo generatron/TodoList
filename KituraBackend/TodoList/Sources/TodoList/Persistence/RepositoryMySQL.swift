@@ -25,7 +25,7 @@ Project:      TodoList
 Template: /Kitura-REST/server/RepositoryMySQL.swift.vmg
  */
 
-import MySqlSwiftNative
+import MySQL
 
 enum RepositoryError : ErrorProtocol {
     case Select(UInt32)
@@ -49,5 +49,5 @@ class RepositoryMySQL : Repository {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 3.92 minutes to type the 392+ characters in this file.
+approximately 3.8100002 minutes to type the 381+ characters in this file.
  */

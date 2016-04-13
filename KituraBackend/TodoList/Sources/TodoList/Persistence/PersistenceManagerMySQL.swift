@@ -25,7 +25,7 @@ Project:      TodoList
 Template: /Kitura-REST/server/PersistenceManagerMySQL.swift.vmg
  */
 
-import MySqlSwiftNative
+import MySQL
 
 class PersistenceManagerMySQL : PersistenceManager {
 	static let sharedInstance = PersistenceManagerMySQL()
@@ -85,5 +85,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.39 minutes to type the 1539+ characters in this file.
+approximately 15.28 minutes to type the 1528+ characters in this file.
  */
