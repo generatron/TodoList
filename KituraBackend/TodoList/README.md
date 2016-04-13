@@ -12,8 +12,7 @@ Engineered with [Kitura-REST](https://www.generatron.com//#/generatron/Kitura-RE
 
   1. Mac OS X: 
 	
-	`swift build -Xcc -fblocks -Xswiftc -I/usr/local/include -Xlinker -L/usr/local/lib`
-	
+	`swift build -Xcc -fblocks -Xswiftc -I/usr/local/mysql/include -Xlinker -L/usr/local/mysql/lib`
   2. Linux:
   
     `swift build -Xcc -fblocks`

@@ -31,9 +31,42 @@ class PersistenceManagerMySQL : PersistenceManager {
 	static let sharedInstance = PersistenceManagerMySQL()
     var mysql = MySQL ()
     
-    var statusRepository :  StatusRepositoryMySQL! 
-    var taskRepository :  TaskRepositoryMySQL! 
-    var todoItemRepository :  TodoItemRepositoryMySQL! 
+    var _statusRepository :  StatusRepositoryMySQL!
+    override var  statusRepository : StatusRepository {
+    	get {
+    	   return _statusRepository;
+    	}
+    	set {
+	        if newValue is StatusRepositoryMySQL {
+	            _statusRepository = newValue as StatusRepositoryMySQL
+	        } else {
+	            println("incorrect  type for PersistenceManagerMySQL->StatusRepositoryMySQL")
+	        }
+    	}
+    var _taskRepository :  TaskRepositoryMySQL!
+    override var  taskRepository : TaskRepository {
+    	get {
+    	   return _taskRepository;
+    	}
+    	set {
+	        if newValue is TaskRepositoryMySQL {
+	            _taskRepository = newValue as TaskRepositoryMySQL
+	        } else {
+	            println("incorrect  type for PersistenceManagerMySQL->TaskRepositoryMySQL")
+	        }
+    	}
+    var _todoItemRepository :  TodoItemRepositoryMySQL!
+    override var  todoItemRepository : TodoItemRepository {
+    	get {
+    	   return _todoItemRepository;
+    	}
+    	set {
+	        if newValue is TodoItemRepositoryMySQL {
+	            _todoItemRepository = newValue as TodoItemRepositoryMySQL
+	        } else {
+	            println("incorrect  type for PersistenceManagerMySQL->TodoItemRepositoryMySQL")
+	        }
+    	}
 
     init() {
     }
@@ -50,15 +83,15 @@ class PersistenceManagerMySQL : PersistenceManager {
 	            {
 				
 				//Variables for Status
-				statusRepository = StatusRepositoryMySQL(db:self.mysql);
+				_statusRepository = StatusRepositoryMySQL(db:self.mysql);
 				try statusRepository.createStorage()
 				
 				//Variables for Task
-				taskRepository = TaskRepositoryMySQL(db:self.mysql);
+				_taskRepository = TaskRepositoryMySQL(db:self.mysql);
 				try taskRepository.createStorage()
 				
 				//Variables for TodoItem
-				todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
+				_todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
 				try todoItemRepository.createStorage()
 				}
 			}
@@ -85,5 +118,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 15.28 minutes to type the 1528+ characters in this file.
+approximately 26.47 minutes to type the 2647+ characters in this file.
  */
