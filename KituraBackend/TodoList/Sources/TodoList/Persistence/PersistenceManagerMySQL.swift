@@ -32,43 +32,43 @@ class PersistenceManagerMySQL : PersistenceManager {
     var mysql = MySQL ()
     
     var _statusRepository :  StatusRepositoryMySQL!
-    var  statusRepository : StatusRepository {
+    var  statusRepository : StatusRepository! {
     	get {
     	   return _statusRepository;
     	}
     	set {
 	        if newValue is StatusRepositoryMySQL {
-	            _statusRepository = newValue as StatusRepositoryMySQL
+	            _statusRepository = newValue as! StatusRepositoryMySQL
 	        } else {
-	            println("incorrect  type for PersistenceManagerMySQL->StatusRepositoryMySQL")
+	            print("incorrect  type for PersistenceManagerMySQL->StatusRepositoryMySQL")
 	        }
     	}
     }
     
     var _taskRepository :  TaskRepositoryMySQL!
-    var  taskRepository : TaskRepository {
+    var  taskRepository : TaskRepository! {
     	get {
     	   return _taskRepository;
     	}
     	set {
 	        if newValue is TaskRepositoryMySQL {
-	            _taskRepository = newValue as TaskRepositoryMySQL
+	            _taskRepository = newValue as! TaskRepositoryMySQL
 	        } else {
-	            println("incorrect  type for PersistenceManagerMySQL->TaskRepositoryMySQL")
+	            print("incorrect  type for PersistenceManagerMySQL->TaskRepositoryMySQL")
 	        }
     	}
     }
     
     var _todoItemRepository :  TodoItemRepositoryMySQL!
-    var  todoItemRepository : TodoItemRepository {
+    var  todoItemRepository : TodoItemRepository! {
     	get {
     	   return _todoItemRepository;
     	}
     	set {
 	        if newValue is TodoItemRepositoryMySQL {
-	            _todoItemRepository = newValue as TodoItemRepositoryMySQL
+	            _todoItemRepository = newValue as! TodoItemRepositoryMySQL
 	        } else {
-	            println("incorrect  type for PersistenceManagerMySQL->TodoItemRepositoryMySQL")
+	            print("incorrect  type for PersistenceManagerMySQL->TodoItemRepositoryMySQL")
 	        }
     	}
     }
