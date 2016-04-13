@@ -32,7 +32,7 @@ class PersistenceManagerMySQL : PersistenceManager {
     var mysql = MySQL ()
     
     var _statusRepository :  StatusRepositoryMySQL!
-    override var  statusRepository : StatusRepository {
+    var  statusRepository : StatusRepository {
     	get {
     	   return _statusRepository;
     	}
@@ -46,7 +46,7 @@ class PersistenceManagerMySQL : PersistenceManager {
     }
     
     var _taskRepository :  TaskRepositoryMySQL!
-    override var  taskRepository : TaskRepository {
+    var  taskRepository : TaskRepository {
     	get {
     	   return _taskRepository;
     	}
@@ -60,7 +60,7 @@ class PersistenceManagerMySQL : PersistenceManager {
     }
     
     var _todoItemRepository :  TodoItemRepositoryMySQL!
-    override var  todoItemRepository : TodoItemRepository {
+    var  todoItemRepository : TodoItemRepository {
     	get {
     	   return _todoItemRepository;
     	}
@@ -124,5 +124,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.86 minutes to type the 2686+ characters in this file.
+approximately 26.59 minutes to type the 2659+ characters in this file.
  */
