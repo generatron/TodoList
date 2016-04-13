@@ -43,6 +43,8 @@ class PersistenceManagerMySQL : PersistenceManager {
 	            println("incorrect  type for PersistenceManagerMySQL->StatusRepositoryMySQL")
 	        }
     	}
+    }
+    
     var _taskRepository :  TaskRepositoryMySQL!
     override var  taskRepository : TaskRepository {
     	get {
@@ -55,6 +57,8 @@ class PersistenceManagerMySQL : PersistenceManager {
 	            println("incorrect  type for PersistenceManagerMySQL->TaskRepositoryMySQL")
 	        }
     	}
+    }
+    
     var _todoItemRepository :  TodoItemRepositoryMySQL!
     override var  todoItemRepository : TodoItemRepository {
     	get {
@@ -67,6 +71,8 @@ class PersistenceManagerMySQL : PersistenceManager {
 	            println("incorrect  type for PersistenceManagerMySQL->TodoItemRepositoryMySQL")
 	        }
     	}
+    }
+    
 
     init() {
     }
@@ -118,5 +124,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.47 minutes to type the 2647+ characters in this file.
+approximately 26.86 minutes to type the 2686+ characters in this file.
  */
