@@ -1,5 +1,5 @@
 
 module mysqlclient  {
-    header "/usr/local/mysql/include/mysql.h"
+    header "/usr/local/mysql/include/mysqlclient.h"
     export *
 }
