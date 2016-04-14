@@ -74,8 +74,6 @@ class PersistenceManagerMySQL : PersistenceManager {
     }
     
 
-    init() {
-    }
     
     func connect() {
     	// Connect to Database.
@@ -124,5 +122,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.59 minutes to type the 2659+ characters in this file.
+approximately 26.38 minutes to type the 2638+ characters in this file.
  */
