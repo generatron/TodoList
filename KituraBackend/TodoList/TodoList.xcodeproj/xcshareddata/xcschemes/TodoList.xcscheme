@@ -123,16 +123,6 @@
       skipped = "NO">
       <BuildableReference
         BuildableIdentifier = "primary"
-        BlueprintIdentifier = "______Target_netTestSuite"
-        BuildableName = "netTestSuite.xctest"
-        BlueprintName = "net.testsuite"
-        ReferencedContainer = "container:TodoList.xcodeproj">
-      </BuildableReference>
-    </TestableReference>
-    <TestableReference
-      skipped = "NO">
-      <BuildableReference
-        BuildableIdentifier = "primary"
         BlueprintIdentifier = "______Target_CFEnvironmentTestSuite"
         BuildableName = "CFEnvironmentTestSuite.xctest"
         BlueprintName = "CFEnvironment.testsuite"
