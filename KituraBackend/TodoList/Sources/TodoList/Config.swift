@@ -33,6 +33,20 @@ class Config {
    var datasources = Dictionary<String,GeneratronDataSource>();
     
    init() {
+    var mysql = GeneratronDataSource();
+    mysql.name = "todomyql"
+    mysql.host = "localhost"
+    mysql.user = "todouser"
+    mysql.password = "password123123"
+    mysql.schema = "TodoList"
+    datasources["mysql"] = mysql;
+    var mongodb = GeneratronDataSource();
+    mongodb.name = "todomongo"
+    mongodb.host = "localhost"
+    mongodb.user = "todouser"
+    mongodb.password = "password123"
+    mongodb.schema = "TodoList"
+    datasources["mongodb"] = mongodb;
     }
     
   
@@ -42,5 +56,5 @@ class Config {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 1.9899999 minutes to type the 199+ characters in this file.
+approximately 6.81 minutes to type the 681+ characters in this file.
  */

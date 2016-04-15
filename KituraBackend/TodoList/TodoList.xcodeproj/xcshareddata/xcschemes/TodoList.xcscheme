@@ -123,6 +123,16 @@
       skipped = "NO">
       <BuildableReference
         BuildableIdentifier = "primary"
+        BlueprintIdentifier = "______Target_HeliumLoggerTestSuite"
+        BuildableName = "HeliumLoggerTestSuite.xctest"
+        BlueprintName = "HeliumLogger.testsuite"
+        ReferencedContainer = "container:TodoList.xcodeproj">
+      </BuildableReference>
+    </TestableReference>
+    <TestableReference
+      skipped = "NO">
+      <BuildableReference
+        BuildableIdentifier = "primary"
         BlueprintIdentifier = "______Target_CFEnvironmentTestSuite"
         BuildableName = "CFEnvironmentTestSuite.xctest"
         BlueprintName = "CFEnvironment.testsuite"

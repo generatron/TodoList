@@ -17,7 +17,7 @@
             productRefGroup = ____Products_;
             projectDirPath = '';
             projectRoot = '';
-            targets = (______Target_LoggerAPI, ______Target_KituraSys, ______Target_Socket, ______Target_KituraNet, ______Target_SwiftyJSON, ______Target_KituraTemplateEngine, ______Target_Kitura, ______Target_KituraTestSuite, ______Target_HeliumLogger, ______Target_CFEnvironment, ______Target_CFEnvironmentTestSuite, ______Target_MySQL, ______Target_TodoList, ______Target_TodoListTestSuite);
+            targets = (______Target_LoggerAPI, ______Target_KituraSys, ______Target_Socket, ______Target_KituraNet, ______Target_SwiftyJSON, ______Target_KituraTemplateEngine, ______Target_Kitura, ______Target_KituraTestSuite, ______Target_HeliumLogger, ______Target_HeliumLoggerTestSuite, ______Target_CFEnvironment, ______Target_CFEnvironmentTestSuite, ______Target_MySQL, ______Target_TodoList, ______Target_TodoListTestSuite);
         };
         '__PBXFileRef_Package.swift' = {
             isa = PBXFileReference;
@@ -938,11 +938,11 @@
         _______Group_HeliumLogger = {
             isa = PBXGroup;
             name = HeliumLogger;
-            path = 'Packages/HeliumLogger-0.4.3/Sources/HeliumLogger';
+            path = 'Packages/HeliumLogger-0.5.0/Sources/HeliumLogger';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Packages/HeliumLogger-0.4.3/Sources/HeliumLogger/HeliumLogger.swift');
+            children = ('__PBXFileRef_Packages/HeliumLogger-0.5.0/Sources/HeliumLogger/HeliumLogger.swift');
         };
-        '__PBXFileRef_Packages/HeliumLogger-0.4.3/Sources/HeliumLogger/HeliumLogger.swift' = {
+        '__PBXFileRef_Packages/HeliumLogger-0.5.0/Sources/HeliumLogger/HeliumLogger.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HeliumLogger.swift';
@@ -967,7 +967,7 @@
         };
         CompilePhase_HeliumLogger = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Packages/HeliumLogger-0.4.3/Sources/HeliumLogger/HeliumLogger.swift');
+            files = ('__src_cc_ref_Packages/HeliumLogger-0.5.0/Sources/HeliumLogger/HeliumLogger.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
         ___LinkPhase_HeliumLogger = {
@@ -975,9 +975,9 @@
             files = (_LinkFileRef_LoggerAPI);
             runOnlyForDeploymentPostprocessing = 0;
         };
-        '__src_cc_ref_Packages/HeliumLogger-0.4.3/Sources/HeliumLogger/HeliumLogger.swift' = {
+        '__src_cc_ref_Packages/HeliumLogger-0.5.0/Sources/HeliumLogger/HeliumLogger.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/HeliumLogger-0.4.3/Sources/HeliumLogger/HeliumLogger.swift';
+            fileRef = '__PBXFileRef_Packages/HeliumLogger-0.5.0/Sources/HeliumLogger/HeliumLogger.swift';
         };
         _LinkFileRef_HeliumLogger = {
             isa = PBXBuildFile;
@@ -1002,6 +1002,74 @@
         __Dependency_HeliumLogger = {
             isa = PBXTargetDependency;
             target = ______Target_HeliumLogger;
+        };
+        _______Group_HeliumLoggerTestSuite = {
+            isa = PBXGroup;
+            name = HeliumLogger.testsuite;
+            path = 'Packages/HeliumLogger-0.5.0/Tests/HeliumLogger';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/HeliumLogger-0.5.0/Tests/HeliumLogger/TestLogger.swift');
+        };
+        '__PBXFileRef_Packages/HeliumLogger-0.5.0/Tests/HeliumLogger/TestLogger.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'TestLogger.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_HeliumLoggerTestSuite = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_HeliumLoggerTestSuite;
+            buildPhases = (CompilePhase_HeliumLoggerTestSuite, ___LinkPhase_HeliumLoggerTestSuite);
+            buildRules = ();
+            dependencies = (__Dependency_LoggerAPI, __Dependency_HeliumLogger);
+            name = HeliumLogger.testsuite;
+            productName = HeliumLoggerTestSuite;
+            productReference = _____Product_HeliumLoggerTestSuite;
+            productType = 'com.apple.product-type.bundle.unit-test';
+        };
+        _____Product_HeliumLoggerTestSuite = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.wrapper.cfbundle';
+            path = 'HeliumLoggerTestSuite.xctest';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_HeliumLoggerTestSuite = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/HeliumLogger-0.5.0/Tests/HeliumLogger/TestLogger.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        ___LinkPhase_HeliumLoggerTestSuite = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_LoggerAPI, _LinkFileRef_HeliumLogger);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/HeliumLogger-0.5.0/Tests/HeliumLogger/TestLogger.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/HeliumLogger-0.5.0/Tests/HeliumLogger/TestLogger.swift';
+        };
+        _LinkFileRef_HeliumLoggerTestSuite = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_HeliumLoggerTestSuite;
+        };
+        _______Confs_HeliumLoggerTestSuite = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_HeliumLoggerTestSuite, _ReleaseConf_HeliumLoggerTestSuite);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_HeliumLoggerTestSuite = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; PRODUCT_MODULE_NAME = HeliumLoggerTestSuite; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; SWIFT_OPTIMIZATION_LEVEL = -Onone; EMBEDDED_CONTENT_CONTAINS_SWIFT = YES; PRODUCT_NAME = '$(TARGET_NAME)'; };
+            name = Debug;
+        };
+        _ReleaseConf_HeliumLoggerTestSuite = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; PRODUCT_MODULE_NAME = HeliumLoggerTestSuite; OTHER_SWIFT_FLAGS = -DXcode; COMBINE_HIDPI_IMAGES = YES; MACOSX_DEPLOYMENT_TARGET = '10.10'; EMBEDDED_CONTENT_CONTAINS_SWIFT = YES; PRODUCT_NAME = '$(TARGET_NAME)'; };
+            name = Release;
+        };
+        __Dependency_HeliumLoggerTestSuite = {
+            isa = PBXTargetDependency;
+            target = ______Target_HeliumLoggerTestSuite;
         };
         _______Group_CFEnvironment = {
             isa = PBXGroup;
@@ -1641,19 +1709,19 @@
         };
         _______Tests_ = {
             isa = PBXGroup;
-            children = (_______Group_KituraTestSuite, _______Group_CFEnvironmentTestSuite, _______Group_TodoListTestSuite);
+            children = (_______Group_KituraTestSuite, _______Group_HeliumLoggerTestSuite, _______Group_CFEnvironmentTestSuite, _______Group_TodoListTestSuite);
             name = Tests;
             sourceTree = '<group>';
         };
         _______Tests_ = {
             isa = PBXGroup;
-            children = (_______Group_KituraTestSuite, _______Group_CFEnvironmentTestSuite, _______Group_TodoListTestSuite);
+            children = (_______Group_KituraTestSuite, _______Group_HeliumLoggerTestSuite, _______Group_CFEnvironmentTestSuite, _______Group_TodoListTestSuite);
             name = Tests;
             sourceTree = '<group>';
         };
        TestProducts_ = {
             isa = PBXGroup;
-            children = (_____Product_KituraTestSuite, _____Product_CFEnvironmentTestSuite, _____Product_TodoListTestSuite);
+            children = (_____Product_KituraTestSuite, _____Product_HeliumLoggerTestSuite, _____Product_CFEnvironmentTestSuite, _____Product_TodoListTestSuite);
             name = Tests;
             sourceTree = '<group>';
         };
