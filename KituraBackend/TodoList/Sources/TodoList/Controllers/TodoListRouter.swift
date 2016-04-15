@@ -50,7 +50,7 @@ class TodoListRouter  : Router{
 		self.error { request, response, next in
 		  response.setHeader("Content-Type", value: "text/plain; charset=utf-8")
 		    do {
-		        try response.send("Caught the error: \(response.error!.localizedDescription)").end()
+		        try response.send("Caught the error: \(response.error!)").end()
 		    }
 		    catch {}
 		  next()
@@ -65,5 +65,5 @@ class TodoListRouter  : Router{
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.3 minutes to type the 1330+ characters in this file.
+approximately 13.09 minutes to type the 1309+ characters in this file.
  */

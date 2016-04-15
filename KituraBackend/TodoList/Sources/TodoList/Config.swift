@@ -33,14 +33,14 @@ class Config {
    var datasources = Dictionary<String,GeneratronDataSource>();
     
    init() {
-    var mysql = GeneratronDataSource();
+    let mysql = GeneratronDataSource();
     mysql.name = "todomyql"
     mysql.host = "localhost"
     mysql.user = "todouser"
     mysql.password = "password123123"
     mysql.schema = "TodoList"
     datasources["mysql"] = mysql;
-    var mongodb = GeneratronDataSource();
+    let mongodb = GeneratronDataSource();
     mongodb.name = "todomongo"
     mongodb.host = "localhost"
     mongodb.user = "todouser"

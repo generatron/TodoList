@@ -109,7 +109,7 @@ class PersistenceManagerMySQL : PersistenceManager {
     
     func checkConnection() -> Bool {
     	let sql = "SELECT 1"
-		let queryResult = db.query(sql)
+		let queryResult = mysql.query(sql)
 		if(!queryResult){
 			connect()
 		}
@@ -122,5 +122,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.38 minutes to type the 2638+ characters in this file.
+approximately 26.41 minutes to type the 2641+ characters in this file.
  */
