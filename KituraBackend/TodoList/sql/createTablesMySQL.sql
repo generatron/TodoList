@@ -12,8 +12,8 @@ USE TodoList;
     `id` bigint(20) NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(255) NOT NULL,
     `todo_id` bigint(20) NOT NULL,
-    KEY `FK1460925415892` (`todo_id`),
-    CONSTRAINT `FK1460925415892` FOREIGN KEY (`todo_id`) REFERENCES `TodoItem` (`id`),
+    KEY `FK1460925650691` (`todo_id`),
+    CONSTRAINT `FK1460925650691` FOREIGN KEY (`todo_id`) REFERENCES `TodoItem` (`id`),
     PRIMARY KEY (`id`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
@@ -26,8 +26,8 @@ USE TodoList;
     /* tasks one to Many */
     `title` VARCHAR(255) NOT NULL,
     `url` VARCHAR(255) NOT NULL,
-    KEY `FK1460925415937` (`status_id`),
-    CONSTRAINT `FK1460925415937` FOREIGN KEY (`status_id`) REFERENCES `Status` (`id`),
+    KEY `FK1460925650728` (`status_id`),
+    CONSTRAINT `FK1460925650728` FOREIGN KEY (`status_id`) REFERENCES `Status` (`id`),
     PRIMARY KEY (`id`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
