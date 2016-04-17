@@ -1,0 +1,90 @@
+<!-- 
+Copyright (c) 2016 NgeosOne LLC
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+   
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
+ to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+ and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+Engineered using http://www.generatron.com/
+
+[GENERATRON]
+Generator :   System Templates
+Filename:     errors.css
+Description:  WebService layer
+Project:      TodoList
+Template: ionic-1.7.14/index.html2.vmg
+ -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <style>
+        .angular-google-map-container {
+            width: 100%;
+            height: 504px;
+        }
+    </style>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/errors.css" rel="stylesheet">
+    <link href="lib/ionic-filter-bar/dist/ionic.filter.bar.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-messages.min.js"></script>
+    <script src="js/config2.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/TodoListControllersModule.js"></script>
+    <script src="js/TodoListWebServiceModule.js"></script>
+    <script src="lib/ionic-filter-bar/dist/ionic.filter.bar.js"></script>
+    <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
+    <script src="js/services/StatusWebService.js"></script>
+    <script src="js/controllers/StatussCtrl.js"></script>
+    <script src="js/controllers/StatusEditCtrl.js"></script>
+    <script src="js/controllers/StatusAddCtrl.js"></script>
+    <script src="js/services/TaskWebService.js"></script>
+    <script src="js/controllers/TasksCtrl.js"></script>
+    <script src="js/controllers/TaskEditCtrl.js"></script>
+    <script src="js/controllers/TaskAddCtrl.js"></script>
+    <script src="js/services/TodoItemWebService.js"></script>
+    <script src="js/controllers/TodoItemsCtrl.js"></script>
+    <script src="js/controllers/TodoItemEditCtrl.js"></script>
+    <script src="js/controllers/TodoItemAddCtrl.js"></script>
+
+</head>
+
+<body ng-app="TodoList" animation="slide-left-right-ios7">
+    <div>
+        <div>
+            <ion-nav-bar class="bar-stable">
+                <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+            </ion-nav-bar>
+            <ion-nav-view></ion-nav-view>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 
+[STATS]
+It would take a person typing  @ 100.0 cpm, 
+approximately 24.47 minutes to type the 2447+ characters in this file.
+ -->

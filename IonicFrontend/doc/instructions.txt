@@ -1,0 +1,18 @@
+If you haven't
+Install NodeJS and NPM
+https://nodejs.org/en/
+
+Install Ionic Framework
+http://ionicframework.com/getting-started/
+
+npm install -g cordova ionic
+cd <Project name>
+npm install
+bower install ionic-filter-bar --save
+bower install ionic-datepicker --save
+bower install
+ionic serve
+
+
+
+
