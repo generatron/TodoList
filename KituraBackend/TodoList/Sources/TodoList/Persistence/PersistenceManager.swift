@@ -25,6 +25,11 @@ Project:      TodoList
 Template: persistenceManagerSwift/PersistenceManager.swift.vm
  */
 
+
+enum PersistenceManagerError : ErrorProtocol {
+    case Connecting(String)
+}
+
 protocol PersistenceManager  {
 	func connect() throws
 	func disconnect() throws
@@ -36,5 +41,5 @@ protocol PersistenceManager  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 2.64 minutes to type the 264+ characters in this file.
+approximately 3.48 minutes to type the 348+ characters in this file.
  */

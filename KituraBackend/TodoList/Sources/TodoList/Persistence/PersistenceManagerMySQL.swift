@@ -95,6 +95,8 @@ class PersistenceManagerMySQL : PersistenceManager {
 				//Variables for TodoItem
 				_todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
 				}
+			}else{
+			    throw PersistenceManagerError("PROBLEM CONNECTING: \\(datasource.host) \\(datasource.schema) \\(datasource.user)")
 			}
 
     	} catch (let e){
@@ -119,5 +121,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 25.15 minutes to type the 2515+ characters in this file.
+approximately 26.49 minutes to type the 2649+ characters in this file.
  */
