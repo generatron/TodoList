@@ -19,6 +19,10 @@ Engineered with [Kitura-REST](https://www.generatron.com/#/generatron/Kitura-RES
   1. Mac OS X: 
 	
 	`swift build -Xcc -fblocks -Xswiftc -I/usr/local/include -Xswiftc -I/usr/local/mysql/include -Xlinker -L/usr/local/lib -Xlinker -L/usr/local/mysql/lib`
+     
+     Xcode
+     Open project and ad libmysqlclient.a to MySQL target, 'Link with Binaries'
+     
   2. Linux:
   
     `swift build -Xcc -fblocks`
