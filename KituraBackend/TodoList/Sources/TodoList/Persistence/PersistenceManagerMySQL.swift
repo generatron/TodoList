@@ -88,15 +88,12 @@ class PersistenceManagerMySQL : PersistenceManager {
 				
 				//Variables for Status
 				_statusRepository = StatusRepositoryMySQL(db:self.mysql);
-				try statusRepository.createStorage()
 				
 				//Variables for Task
 				_taskRepository = TaskRepositoryMySQL(db:self.mysql);
-				try taskRepository.createStorage()
 				
 				//Variables for TodoItem
 				_todoItemRepository = TodoItemRepositoryMySQL(db:self.mysql);
-				try todoItemRepository.createStorage()
 				}
 			}
 
@@ -122,5 +119,5 @@ class PersistenceManagerMySQL : PersistenceManager {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.41 minutes to type the 2641+ characters in this file.
+approximately 25.15 minutes to type the 2515+ characters in this file.
  */
