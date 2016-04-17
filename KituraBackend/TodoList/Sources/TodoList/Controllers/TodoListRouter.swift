@@ -56,14 +56,18 @@ class TodoListRouter  : Router{
 		  next()
 		}
 		persistenceManager = PersistenceManagerMySQL();
-		persistenceManager.connect()
+		do {
+		try persistenceManager.connect()
         statusController = StatusController(persistenceManager : persistenceManager)
         taskController = TaskController(persistenceManager : persistenceManager)
         todoItemController = TodoItemController(persistenceManager : persistenceManager)
+		}catch {
+		  
+		}   
     }
 }
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 13.39 minutes to type the 1339+ characters in this file.
+approximately 13.77 minutes to type the 1377+ characters in this file.
  */

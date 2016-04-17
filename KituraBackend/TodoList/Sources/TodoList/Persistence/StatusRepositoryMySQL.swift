@@ -31,7 +31,7 @@ import MySQL
 class StatusRepositoryMySQL : RepositoryMySQL , StatusRepository {
 
 func insert(entity: Status) throws -> Int {
-       	let sql = "INSERT INTO Status(name) VALUES ( ?)"
+       	let sql = "INSERT INTO Status(`name`) VALUES ( ?)"
        	PersistenceManagerMySQL.sharedInstance.checkConnection();
        	let statement = MySQLStmt(db)
 		defer {
@@ -69,7 +69,7 @@ func insert(entity: Status) throws -> Int {
             return 0
         }
         
-        let sql = "UPDATE Status SET name= ? WHERE id = ?"
+        let sql = "UPDATE Status SET `name`= ? WHERE id = ?"
 PersistenceManagerMySQL.sharedInstance.checkConnection();
 let statement = MySQLStmt(db)
 		defer {
@@ -110,7 +110,7 @@ let statement = MySQLStmt(db)
 	}
     
     func retrieve(id: Int) throws -> Status? {
-        let sql = "SELECT id,name FROM Status WHERE id = \(id)"
+        let sql = "SELECT `id`,`name` FROM Status WHERE id = \(id)"
         PersistenceManagerMySQL.sharedInstance.checkConnection();
 		let queryResult = db.query(sql)
 		 if(queryResult){
@@ -136,7 +136,7 @@ let statement = MySQLStmt(db)
     }
     
     func list() throws -> [Status]  {
-        let sql = "SELECT id,name FROM Status "
+        let sql = "SELECT `id`,`name` FROM Status "
         PersistenceManagerMySQL.sharedInstance.checkConnection();
         var entities = [Status]()
          let queryResult = db.query(sql)
@@ -169,5 +169,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 34.95 minutes to type the 3495+ characters in this file.
+approximately 35.07 minutes to type the 3507+ characters in this file.
  */
