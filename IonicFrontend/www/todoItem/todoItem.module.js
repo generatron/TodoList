@@ -1,4 +1,4 @@
-<!-- 
+/* 
 Copyright (c) 2016 NgeosOne LLC
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
@@ -19,41 +19,19 @@ Engineered using http://www.generatron.com/
 
 [GENERATRON]
 Generator :   System Templates
-Filename:     tabs.html
+Filename:     todoItem.module.js
 Description:  Packaging Information
 Project:      TodoList
-Template: ionic/tabs.html.vmg
- -->
+Template: ionic/entity.module.js.vm
+ */
 
-<!-- 
-  Create tabs with an icon and label, using the tabs-positive style. 
-  Each tab's child <ion-nav-view> directive will have its own 
-  navigation history that also transitions its views in and out.
--->
-<ion-tabs class="tabs-icon-top">
+/**
+ * Module
+ */
+angular.module('TodoList.todoItem', ['ionic', 'TodoList.todoItem.controllers', 'TodoList.todoItem.services', 'TodoList.todoItem.filters', 'TodoList.todoItem.directives']);
 
-
-    <!-- Pets Tab -->
-    <ion-tab title="Dashboard" icon="icon ion-home" href="#/tab/dash">
-        <ion-nav-view name="tab-dash"></ion-nav-view>
-    </ion-tab>
-
-    <!-- Status Tab -->
-    <ion-tab title="Status" icon="icon ion-gear-b" href="#/tab/statuss">
-        <ion-nav-view name="statuss"></ion-nav-view>
-    </ion-tab>
-    <!-- Task Tab -->
-    <ion-tab title="Task" icon="icon ion-gear-b" href="#/tab/tasks">
-        <ion-nav-view name="tasks"></ion-nav-view>
-    </ion-tab>
-    <!-- TodoItem Tab -->
-    <ion-tab title="TodoItem" icon="icon ion-gear-b" href="#/tab/todoItems">
-        <ion-nav-view name="todoItems"></ion-nav-view>
-    </ion-tab>
-
-</ion-tabs>
-<!-- 
+/* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 8.68 minutes to type the 868+ characters in this file.
- -->
+approximately 1.85 minutes to type the 185+ characters in this file.
+ */

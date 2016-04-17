@@ -1,0 +1,72 @@
+<!-- 
+Copyright (c) 2016 NgeosOne LLC
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+   
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
+ to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+ and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+Engineered using http://www.generatron.com/
+
+[GENERATRON]
+Generator :   System Templates
+Filename:     todoItems.html
+Description:  Packaging Information
+Project:      TodoList
+Template: ionic/list.html.vm
+ -->
+
+<ion-view title="TodoItem">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-plus" ng-click="showCreateTodoItemModal();"></button>
+    </ion-nav-buttons>
+    <ion-content>
+
+
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Name" ng-model="query">
+            </label>
+            <button class="button " ng-click="searchTodoItems(query);">
+                Search
+            </button>
+        </div>
+
+
+        <div class="list card">
+
+            <ion-item ng-repeat="todoItem in todoItems | filter:filterTodoItem(query)" class="item-text-wrap">
+                <!--<div class="item item-avatar">
+                    
+                </div>-->
+                <div class="item item-body">
+
+                    <a class="item" ng-click="editTodoItem(todoItem);">
+                        <!--<a  class="item" href="#/app/todoItem/{{todoItem.id}}">-->
+                    </a>
+                </div>
+
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>
+
+
+<!-- 
+[STATS]
+It would take a person typing  @ 100.0 cpm, 
+approximately 12.62 minutes to type the 1262+ characters in this file.
+ -->
