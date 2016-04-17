@@ -135,7 +135,7 @@ if(entity.todo != nil){
 	func delete(id: Int) throws -> Int {
 	PersistenceManagerMySQL.sharedInstance.checkConnection();
 	    let sql = "DELETE FROM task WHERE id = \(id)"
-	    let queryResult = db.query(sql)
+	    let _ = db.query(sql)
 	    return id;
 	}
     
@@ -203,5 +203,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 40.72 minutes to type the 4072+ characters in this file.
+approximately 40.62 minutes to type the 4062+ characters in this file.
  */

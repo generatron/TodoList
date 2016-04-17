@@ -105,7 +105,7 @@ let statement = MySQLStmt(db)
 	func delete(id: Int) throws -> Int {
 	PersistenceManagerMySQL.sharedInstance.checkConnection();
 	    let sql = "DELETE FROM status WHERE id = \(id)"
-	    let queryResult = db.query(sql)
+	    let _ = db.query(sql)
 	    return id;
 	}
     
@@ -169,5 +169,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 35.05 minutes to type the 3505+ characters in this file.
+approximately 34.95 minutes to type the 3495+ characters in this file.
  */

@@ -195,7 +195,7 @@ if(entity.status != nil){
 	func delete(id: Int) throws -> Int {
 	PersistenceManagerMySQL.sharedInstance.checkConnection();
 	    let sql = "DELETE FROM todoItem WHERE id = \(id)"
-	    let queryResult = db.query(sql)
+	    let _ = db.query(sql)
 	    return id;
 	}
     
@@ -289,5 +289,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 56.81 minutes to type the 5681+ characters in this file.
+approximately 56.71 minutes to type the 5671+ characters in this file.
  */

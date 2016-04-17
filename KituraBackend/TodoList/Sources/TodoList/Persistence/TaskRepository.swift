@@ -25,7 +25,7 @@ Project:      TodoList
 Template: persistenceManagerSwift/EntityRepository.swift.vm
  */
 protocol TaskRepository  {
-		func insert(entity: Task) throws -> Int 
+	func insert(entity: Task) throws -> Int 
 	    
 	func update(entity: Task) throws -> Int 
 	    
@@ -38,5 +38,5 @@ protocol TaskRepository  {
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 2.55 minutes to type the 255+ characters in this file.
+approximately 2.54 minutes to type the 254+ characters in this file.
  */
