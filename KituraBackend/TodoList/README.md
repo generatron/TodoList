@@ -1,14 +1,20 @@
 
 ![Generatron](https://www.generatron.com/logosmall.png)
 
-Engineered with [Kitura-REST](https://www.generatron.com//#/generatron/Kitura-REST)
+Engineered with [Kitura-REST](https://www.generatron.com/#/generatron/Kitura-REST)
 
 #TodoList
 
 
 ## Installing and Running
 
-1. Build TodoList application
+1. Database
+
+  1. Create a MySQL database named TodoList
+  
+  2. run script under mysql/createTablesMySQL.sql 
+
+2. Build TodoList application
 
   1. Mac OS X: 
 	
@@ -17,15 +23,15 @@ Engineered with [Kitura-REST](https://www.generatron.com//#/generatron/Kitura-RE
   
     `swift build -Xcc -fblocks`
 	
-2. Run the TodoList application:
+3. Run the TodoList application:
 
 	`./.build/debug/TodoList`
 	
-3. Open up your browser, and view: 
+4. Open up your browser, and view: 
 
    [http://localhost:9000](http://localhost:9000)
 
-4. Generate a project file for  TodoList application
+5. Generate a project file for  TodoList application
 swift build --generate-xcodeproj .
 
 ## Tests

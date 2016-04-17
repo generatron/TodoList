@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     PersistenceManager.swift
 Description:  Persistence code for for TodoItem
 Project:      TodoList
-Template: /Kitura-REST/server/PersistenceManager.swift.vm
+Template: persistenceManagerSwift/PersistenceManager.swift.vm
  */
 
 protocol PersistenceManager  {

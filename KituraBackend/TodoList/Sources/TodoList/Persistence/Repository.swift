@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     Repository.swift
 Description:  Base Repository class
 Project:      TodoList
-Template: /Kitura-REST/server/Repository.swift.vmg
+Template: persistenceManagerSwift/Repository.swift.vmg
  */
 class Repository {
  

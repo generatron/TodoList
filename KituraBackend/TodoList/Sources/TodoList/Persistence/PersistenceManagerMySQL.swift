@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     PersistenceManagerMySQL.swift
 Description:  MySQL PersistenceManager: an Adapter to deal with persistence layer
 Project:      TodoList
-Template: /Kitura-REST/server/PersistenceManagerMySQL.swift.vmg
+Template: persistenceManagerSwift/PersistenceManagerMySQL.swift.vmg
  */
 
 import MySQL

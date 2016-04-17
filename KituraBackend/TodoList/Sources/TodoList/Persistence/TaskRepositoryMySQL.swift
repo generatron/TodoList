@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     TaskRepositoryMySQL.swift
 Description:  Persistence code for for Task
 Project:      TodoList
-Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
+Template: persistenceManagerSwift/EntityRepositoryMySQL.swift.vm
  */
 
 import MySQL
@@ -30,14 +30,6 @@ import MySQL
 
 class TaskRepositoryMySQL : RepositoryMySQL , TaskRepository {
 
-func createStorage() throws ->  Int {
-   let rs = try db.query("CREATE TABLE IF NOT EXISTS Task (description VARCHAR(255), id INT(10) NOT NULL AUTO_INCREMENT, title VARCHAR(255), PRIMARY KEY (id))")
-   let errorCode = db.errorCode()
-        if errorCode > 0 {
-            throw RepositoryError.CreateTable(errorCode)
-      }
-      return 0;
-}
 func insert(entity: Task) throws -> Int {
        	let sql = "INSERT INTO Task(description,title) VALUES ( ?, ?)"
        	PersistenceManagerMySQL.sharedInstance.checkConnection();
@@ -211,5 +203,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 44.23 minutes to type the 4423+ characters in this file.
+approximately 40.72 minutes to type the 4072+ characters in this file.
  */

@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     StatusRepository.swift
 Description:  Persistence Protocol  for Status
 Project:      TodoList
-Template: /Kitura-REST/server/EntityRepository.swift.vm
+Template: persistenceManagerSwift/EntityRepository.swift.vm
  */
 protocol StatusRepository  {
 	

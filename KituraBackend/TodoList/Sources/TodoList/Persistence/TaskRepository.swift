@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     TaskRepository.swift
 Description:  Persistence Protocol  for Task
 Project:      TodoList
-Template: /Kitura-REST/server/EntityRepository.swift.vm
+Template: persistenceManagerSwift/EntityRepository.swift.vm
  */
 protocol TaskRepository  {
 	

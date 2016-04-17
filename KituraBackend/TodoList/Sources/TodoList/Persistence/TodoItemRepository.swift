@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     TodoItemRepository.swift
 Description:  Persistence Protocol  for TodoItem
 Project:      TodoList
-Template: /Kitura-REST/server/EntityRepository.swift.vm
+Template: persistenceManagerSwift/EntityRepository.swift.vm
  */
 protocol TodoItemRepository  {
 	

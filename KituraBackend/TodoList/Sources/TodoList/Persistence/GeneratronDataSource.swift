@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     GeneratronDataSource.swift
 Description:  Server Configuration
 Project:      TodoList
-Template: /Kitura-REST/server/GeneratronDataSource.swift.vmg
+Template: persistenceManagerSwift/GeneratronDataSource.swift.vmg
  */
 class GeneratronDataSource {
     var name : String!

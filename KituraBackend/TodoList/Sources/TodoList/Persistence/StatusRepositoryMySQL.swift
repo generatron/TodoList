@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     StatusRepositoryMySQL.swift
 Description:  Persistence code for for Status
 Project:      TodoList
-Template: /Kitura-REST/server/EntityRepositoryMySQL.swift.vm
+Template: persistenceManagerSwift/EntityRepositoryMySQL.swift.vm
  */
 
 import MySQL
@@ -30,14 +30,6 @@ import MySQL
 
 class StatusRepositoryMySQL : RepositoryMySQL , StatusRepository {
 
-func createStorage() throws ->  Int {
-   let rs = try db.query("CREATE TABLE IF NOT EXISTS Status (id INT(10) NOT NULL AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY (id))")
-   let errorCode = db.errorCode()
-        if errorCode > 0 {
-            throw RepositoryError.CreateTable(errorCode)
-      }
-      return 0;
-}
 func insert(entity: Status) throws -> Int {
        	let sql = "INSERT INTO Status(name) VALUES ( ?)"
        	PersistenceManagerMySQL.sharedInstance.checkConnection();
@@ -177,5 +169,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 38.31 minutes to type the 3831+ characters in this file.
+approximately 35.05 minutes to type the 3505+ characters in this file.
  */

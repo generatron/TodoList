@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     RepositoryMySQL.swift
 Description:  Repository MySQL class
 Project:      TodoList
-Template: /Kitura-REST/server/RepositoryMySQL.swift.vmg
+Template: persistenceManagerSwift/RepositoryMySQL.swift.vmg
  */
 
 import MySQL
