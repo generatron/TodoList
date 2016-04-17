@@ -22,7 +22,7 @@ Generator :   System Templates
 Filename:     config.xml
 Description:  Packaging Information
 Project:      TodoList
-Template: ionic/config.xml.vmg
+Template: ionic-1.7.14/config.xml.vmg
  -->
 <?xml version='1.0' encoding='utf-8'?>
 

@@ -22,35 +22,46 @@ Generator :   System Templates
 Filename:     menu.html
 Description:  Packaging Information
 Project:      TodoList
-Template: ionic/menu.html.vmg
+Template: ionic-1.7.14/menu.html.vmg
  -->
-<ion-side-menus>
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
 
-    <ion-pane ion-side-menu-content>
-        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
-            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
         </ion-nav-bar>
-        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
-    </ion-pane>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
 
     <ion-side-menu side="left">
-        <header class="bar bar-header bar-stable">
-            <h1 class="title">TodoList</h1>
-        </header>
-        <ion-content class="has-header">
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Left</h1>
+        </ion-header-bar>
+        <ion-content>
             <ion-list>
-
-                <ion-item nav-clear menu-close href="#/app/statuss">Statuss</ion-item>
-                <ion-item nav-clear menu-close href="#/app/tasks">Tasks</ion-item>
-                <ion-item nav-clear menu-close href="#/app/todoItems">TodoItems</ion-item>
-
+                <ion-item menu-close ng-click="login()">
+                    Login
+                </ion-item>
+                <ion-item menu-close href="#/app/statuss">
+                    Status
+                </ion-item>
+                <ion-item menu-close href="#/app/tasks">
+                    Task
+                </ion-item>
+                <ion-item menu-close href="#/app/todoItems">
+                    TodoItem
+                </ion-item>
             </ion-list>
         </ion-content>
     </ion-side-menu>
 </ion-side-menus>
-
 <!-- 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 8.7 minutes to type the 870+ characters in this file.
+approximately 10.56 minutes to type the 1056+ characters in this file.
  -->

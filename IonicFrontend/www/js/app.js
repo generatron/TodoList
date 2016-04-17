@@ -20,9 +20,9 @@ Engineered using http://www.generatron.com/
 [GENERATRON]
 Generator :   System Templates
 Filename:     app.js
-Description:  Packaging Information
+Description:  Javascript entry point to the app
 Project:      TodoList
-Template: ionic/app.js.vmg
+Template: ionic-1.7.14/app.js.vmg
  */
 
 // Ionic Starter App
@@ -30,121 +30,50 @@ Template: ionic/app.js.vmg
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
+angular.module('TodoList', ['ionic', 'TodoList.controllers', 'TodoList.services', 'jett.ionic.filter.bar', 'ionic-datepicker', 'ngMessages'])
 
-
-//
-
-var app = angular.module('TodoList', ['ionic', 'TodoList.controllers',
-    'TodoList.status',
-    'TodoList.task',
-    'TodoList.todoItem'
-])
-
-.run(function($ionicPlatform, $window) {
+.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
-        if ($window.StatusBar) {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            cordova.plugins.Keyboard.disableScroll(true);
+
+        }
+        if (window.StatusBar) {
+            // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
         }
     });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-
+.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
+
         .state('app', {
-            url: "/app",
+            url: '/app',
             abstract: true,
-            templateUrl: 'templates/menu.html'
+            templateUrl: 'templates/menu.html',
+            controller: 'AppCtrl'
         })
-
-    .state('app.dash', {
-        url: '/dash',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/app-dash.html',
-                controller: 'DashCtrl'
+        .state('app.splash', {
+            url: '/splash',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/splash.html',
+                    controller: 'AppCtrl'
+                }
             }
-        }
-    })
-
-    .state('app.statuss', {
-        url: '/statuss',
-        views: {
-            'menuContent': {
-                templateUrl: 'status/templates/statuss.html',
-                controller: 'StatussCtrl'
-            }
-        }
-    })
-
-    .state('app.status', {
-        url: '/status',
-        views: {
-            'menuContent': {
-                templateUrl: 'status/templates/edit-status.html',
-                controller: 'StatusEditCtrl'
-            }
-        }
-    })
-
-    .state('app.tasks', {
-        url: '/tasks',
-        views: {
-            'menuContent': {
-                templateUrl: 'task/templates/tasks.html',
-                controller: 'TasksCtrl'
-            }
-        }
-    })
-
-    .state('app.task', {
-        url: '/task',
-        views: {
-            'menuContent': {
-                templateUrl: 'task/templates/edit-task.html',
-                controller: 'TaskEditCtrl'
-            }
-        }
-    })
-
-    .state('app.todoItems', {
-        url: '/todoItems',
-        views: {
-            'menuContent': {
-                templateUrl: 'todoItem/templates/todoItems.html',
-                controller: 'TodoItemsCtrl'
-            }
-        }
-    })
-
-    .state('app.todoItem', {
-        url: '/todoItem',
-        views: {
-            'menuContent': {
-                templateUrl: 'todoItem/templates/edit-todoItem.html',
-                controller: 'TodoItemEditCtrl'
-            }
-        }
-    })
-
-    // default state
-    $urlRouterProvider.otherwise('/app/dash');
-
-})
-
-// check auth data
-//.run(function ($ionicPlatform, auth) {
-.run(function($ionicPlatform) {
-        $ionicPlatform.ready(function() {})
-    })
-    // configuration
-;
+        });
 
 
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/app/splash');
+});
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 26.44 minutes to type the 2644+ characters in this file.
+approximately 14.73 minutes to type the 1473+ characters in this file.
  */
