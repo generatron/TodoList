@@ -32,7 +32,7 @@ class TodoItemRepositoryMySQL : RepositoryMySQL , TodoItemRepository {
 
 func insert(entity: TodoItem) throws -> Int {
        	let sql = "INSERT INTO TodoItem(`completed`,`dueDate`,`order`,`title`,`url`) VALUES ( ?, ?, ?, ?, ?)"
-       	PersistenceManagerMySQL.sharedInstance.checkConnection();
+       	
        	let statement = MySQLStmt(db)
 		defer {
 			statement.close()
@@ -115,7 +115,7 @@ if(entity.status != nil){
         }
         
         let sql = "UPDATE TodoItem SET `completed`= ? ,`dueDate`= ? ,`order`= ? ,`title`= ? ,`url`= ? WHERE id = ?"
-PersistenceManagerMySQL.sharedInstance.checkConnection();
+
 let statement = MySQLStmt(db)
 		defer {
 			statement.close()
@@ -193,7 +193,7 @@ if(entity.status != nil){
     }
     
 	func delete(id: Int) throws -> Int {
-	PersistenceManagerMySQL.sharedInstance.checkConnection();
+	
 	    let sql = "DELETE FROM todoItem WHERE id = \(id)"
 	    let _ = db.query(sql)
 	    return id;
@@ -201,7 +201,7 @@ if(entity.status != nil){
     
     func retrieve(id: Int) throws -> TodoItem? {
         let sql = "SELECT `completed`,`dueDate`,`id`,`order`,`title`,`url` FROM TodoItem WHERE id = \(id)"
-        PersistenceManagerMySQL.sharedInstance.checkConnection();
+        
 		let queryResult = db.query(sql)
 		 if(queryResult){
         let results = db.storeResults()!
@@ -242,7 +242,7 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
     
     func list() throws -> [TodoItem]  {
         let sql = "SELECT `completed`,`dueDate`,`id`,`order`,`title`,`url` FROM TodoItem "
-        PersistenceManagerMySQL.sharedInstance.checkConnection();
+        
         var entities = [TodoItem]()
          let queryResult = db.query(sql)
         if(queryResult){
@@ -289,5 +289,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 57.15 minutes to type the 5715+ characters in this file.
+approximately 54.3 minutes to type the 5430+ characters in this file.
  */

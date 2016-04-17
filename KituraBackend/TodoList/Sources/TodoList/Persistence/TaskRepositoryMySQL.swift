@@ -32,7 +32,7 @@ class TaskRepositoryMySQL : RepositoryMySQL , TaskRepository {
 
 func insert(entity: Task) throws -> Int {
        	let sql = "INSERT INTO Task(`description`,`title`) VALUES ( ?, ?)"
-       	PersistenceManagerMySQL.sharedInstance.checkConnection();
+       	
        	let statement = MySQLStmt(db)
 		defer {
 			statement.close()
@@ -85,7 +85,7 @@ if(entity.todo != nil){
         }
         
         let sql = "UPDATE Task SET `description`= ? ,`title`= ? WHERE id = ?"
-PersistenceManagerMySQL.sharedInstance.checkConnection();
+
 let statement = MySQLStmt(db)
 		defer {
 			statement.close()
@@ -133,7 +133,7 @@ if(entity.todo != nil){
     }
     
 	func delete(id: Int) throws -> Int {
-	PersistenceManagerMySQL.sharedInstance.checkConnection();
+	
 	    let sql = "DELETE FROM task WHERE id = \(id)"
 	    let _ = db.query(sql)
 	    return id;
@@ -141,7 +141,7 @@ if(entity.todo != nil){
     
     func retrieve(id: Int) throws -> Task? {
         let sql = "SELECT `description`,`id`,`title` FROM Task WHERE id = \(id)"
-        PersistenceManagerMySQL.sharedInstance.checkConnection();
+        
 		let queryResult = db.query(sql)
 		 if(queryResult){
         let results = db.storeResults()!
@@ -169,7 +169,7 @@ if(entity.todo != nil){
     
     func list() throws -> [Task]  {
         let sql = "SELECT `description`,`id`,`title` FROM Task "
-        PersistenceManagerMySQL.sharedInstance.checkConnection();
+        
         var entities = [Task]()
          let queryResult = db.query(sql)
         if(queryResult){
@@ -203,5 +203,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 40.82 minutes to type the 4082+ characters in this file.
+approximately 37.97 minutes to type the 3797+ characters in this file.
  */

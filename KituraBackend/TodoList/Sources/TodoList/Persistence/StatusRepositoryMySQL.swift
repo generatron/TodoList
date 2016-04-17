@@ -32,7 +32,7 @@ class StatusRepositoryMySQL : RepositoryMySQL , StatusRepository {
 
 func insert(entity: Status) throws -> Int {
        	let sql = "INSERT INTO Status(`name`) VALUES ( ?)"
-       	PersistenceManagerMySQL.sharedInstance.checkConnection();
+       	
        	let statement = MySQLStmt(db)
 		defer {
 			statement.close()
@@ -70,7 +70,7 @@ func insert(entity: Status) throws -> Int {
         }
         
         let sql = "UPDATE Status SET `name`= ? WHERE id = ?"
-PersistenceManagerMySQL.sharedInstance.checkConnection();
+
 let statement = MySQLStmt(db)
 		defer {
 			statement.close()
@@ -103,7 +103,7 @@ let statement = MySQLStmt(db)
     }
     
 	func delete(id: Int) throws -> Int {
-	PersistenceManagerMySQL.sharedInstance.checkConnection();
+	
 	    let sql = "DELETE FROM status WHERE id = \(id)"
 	    let _ = db.query(sql)
 	    return id;
@@ -111,7 +111,7 @@ let statement = MySQLStmt(db)
     
     func retrieve(id: Int) throws -> Status? {
         let sql = "SELECT `id`,`name` FROM Status WHERE id = \(id)"
-        PersistenceManagerMySQL.sharedInstance.checkConnection();
+        
 		let queryResult = db.query(sql)
 		 if(queryResult){
         let results = db.storeResults()!
@@ -137,7 +137,7 @@ let statement = MySQLStmt(db)
     
     func list() throws -> [Status]  {
         let sql = "SELECT `id`,`name` FROM Status "
-        PersistenceManagerMySQL.sharedInstance.checkConnection();
+        
         var entities = [Status]()
          let queryResult = db.query(sql)
         if(queryResult){
@@ -169,5 +169,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 35.07 minutes to type the 3507+ characters in this file.
+approximately 32.22 minutes to type the 3222+ characters in this file.
  */
