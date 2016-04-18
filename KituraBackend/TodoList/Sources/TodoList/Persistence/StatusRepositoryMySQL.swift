@@ -69,7 +69,7 @@ func insert(entity: Status) throws -> Int {
             return 0
         }
         
-        let sql = "UPDATE Status SET `name`= ? WHERE id = ?"
+        let sql = "UPDATE Status SET `name` = ? WHERE id = ?"
 
 let statement = MySQLStmt(db)
 		defer {
@@ -169,5 +169,5 @@ let statement = MySQLStmt(db)
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 32.22 minutes to type the 3222+ characters in this file.
+approximately 32.23 minutes to type the 3223+ characters in this file.
  */

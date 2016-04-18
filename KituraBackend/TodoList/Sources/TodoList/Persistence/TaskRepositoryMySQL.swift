@@ -31,7 +31,7 @@ import MySQL
 class TaskRepositoryMySQL : RepositoryMySQL , TaskRepository {
 
 func insert(entity: Task) throws -> Int {
-       	let sql = "INSERT INTO Task(`description`,`title`,`todo`) VALUES ( ?, ?)"
+       	let sql = "INSERT INTO Task(`description`,`title`,`todo_id`) VALUES ( ?, ?, ?)"
        	
        	let statement = MySQLStmt(db)
 		defer {
@@ -84,7 +84,7 @@ if(entity.todo != nil){
             return 0
         }
         
-        let sql = "UPDATE Task SET `description`= ? ,`title`= ? ,`todo`= ? WHERE id = ?"
+        let sql = "UPDATE Task SET `description` = ? ,`title` = ? ,`todo_id` = ? WHERE id = ?"
 
 let statement = MySQLStmt(db)
 		defer {
@@ -140,7 +140,7 @@ if(entity.todo != nil){
 	}
     
     func retrieve(id: Int) throws -> Task? {
-        let sql = "SELECT `description`,`id`,`title` FROM Task WHERE id = \(id)"
+        let sql = "SELECT `description`,`id`,`title`,`todo_id` FROM Task WHERE id = \(id)"
         
 		let queryResult = db.query(sql)
 		 if(queryResult){
@@ -168,7 +168,7 @@ if(entity.todo != nil){
     }
     
     func list() throws -> [Task]  {
-        let sql = "SELECT `description`,`id`,`title` FROM Task "
+        let sql = "SELECT `description`,`id`,`title`,`todo_id` FROM Task "
         
         var entities = [Task]()
          let queryResult = db.query(sql)
@@ -203,5 +203,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 38.15 minutes to type the 3815+ characters in this file.
+approximately 38.47 minutes to type the 3847+ characters in this file.
  */

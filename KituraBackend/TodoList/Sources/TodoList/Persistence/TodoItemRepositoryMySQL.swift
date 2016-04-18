@@ -31,7 +31,7 @@ import MySQL
 class TodoItemRepositoryMySQL : RepositoryMySQL , TodoItemRepository {
 
 func insert(entity: TodoItem) throws -> Int {
-       	let sql = "INSERT INTO TodoItem(`completed`,`dueDate`,`order`,`status`,`title`,`url`) VALUES ( ?, ?, ?, ?, ?)"
+       	let sql = "INSERT INTO TodoItem(`completed`,`dueDate`,`order`,`status_id`,`title`,`url`) VALUES ( ?, ?, ?, ?, ?, ?)"
        	
        	let statement = MySQLStmt(db)
 		defer {
@@ -114,7 +114,7 @@ if(entity.status != nil){
             return 0
         }
         
-        let sql = "UPDATE TodoItem SET `completed`= ? ,`dueDate`= ? ,`order`= ? ,`status`= ? ,`title`= ? ,`url`= ? WHERE id = ?"
+        let sql = "UPDATE TodoItem SET `completed` = ? ,`dueDate` = ? ,`order` = ? ,`status_id` = ? ,`title` = ? ,`url` = ? WHERE id = ?"
 
 let statement = MySQLStmt(db)
 		defer {
@@ -200,7 +200,7 @@ if(entity.status != nil){
 	}
     
     func retrieve(id: Int) throws -> TodoItem? {
-        let sql = "SELECT `completed`,`dueDate`,`id`,`order`,`title`,`url` FROM TodoItem WHERE id = \(id)"
+        let sql = "SELECT `completed`,`dueDate`,`id`,`order`,`status_id`,`title`,`url` FROM TodoItem WHERE id = \(id)"
         
 		let queryResult = db.query(sql)
 		 if(queryResult){
@@ -241,7 +241,7 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
     }
     
     func list() throws -> [TodoItem]  {
-        let sql = "SELECT `completed`,`dueDate`,`id`,`order`,`title`,`url` FROM TodoItem "
+        let sql = "SELECT `completed`,`dueDate`,`id`,`order`,`status_id`,`title`,`url` FROM TodoItem "
         
         var entities = [TodoItem]()
          let queryResult = db.query(sql)
@@ -289,5 +289,5 @@ todoItem.dueDate = (row[1] as String).SQLStringDate();
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 54.52 minutes to type the 5452+ characters in this file.
+approximately 54.91 minutes to type the 5491+ characters in this file.
  */
