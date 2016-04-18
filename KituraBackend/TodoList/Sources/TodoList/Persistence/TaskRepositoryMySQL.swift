@@ -31,7 +31,7 @@ import MySQL
 class TaskRepositoryMySQL : RepositoryMySQL , TaskRepository {
 
 func insert(entity: Task) throws -> Int {
-       	let sql = "INSERT INTO Task(`description`,`title`) VALUES ( ?, ?)"
+       	let sql = "INSERT INTO Task(`description`,`title`,`todo`) VALUES ( ?, ?)"
        	
        	let statement = MySQLStmt(db)
 		defer {
@@ -84,7 +84,7 @@ if(entity.todo != nil){
             return 0
         }
         
-        let sql = "UPDATE Task SET `description`= ? ,`title`= ? WHERE id = ?"
+        let sql = "UPDATE Task SET `description`= ? ,`title`= ? ,`todo`= ? WHERE id = ?"
 
 let statement = MySQLStmt(db)
 		defer {
@@ -203,5 +203,5 @@ if(entity.todo != nil){
 /* 
 [STATS]
 It would take a person typing  @ 100.0 cpm, 
-approximately 37.97 minutes to type the 3797+ characters in this file.
+approximately 38.15 minutes to type the 3815+ characters in this file.
  */
